@@ -54,11 +54,12 @@ public class Controller {
     /*Prototype of changing between scenes*/
     public void changeScreenButtonPushed(ActionEvent event) throws Exception {
 
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("HelpMenuScreen.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(tableViewScene);
         window.show();
     }
+
 
 }
