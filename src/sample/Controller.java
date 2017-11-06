@@ -56,7 +56,7 @@ public class Controller {
 
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("HelpMenuScreen.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(tableViewScene);
         window.show();
     }

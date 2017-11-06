@@ -30,7 +30,7 @@
       </MenuBar>
       <AnchorPane prefHeight="700.0" prefWidth="1024.0" style="-fx-background-color: #5d6777;">
          <children>
-            <Label layoutX="10.0" layoutY="195.0" prefHeight="36.0" prefWidth="177.0" text="Vehicle Options" textFill="#e1dbdb">
+            <Label layoutX="10.0" layoutY="195.0" prefHeight="36.0" prefWidth="177.0" text="sample.Vehicle Options" textFill="#e1dbdb">
                <font>
                   <Font size="25.0" />
                </font></Label>
@@ -38,10 +38,10 @@
                <font>
                   <Font size="25.0" />
                </font></Label>
-            <JFXButton layoutX="28.0" layoutY="463.0" text="&gt; Rent Vehicle" textFill="WHITE" />
-            <JFXButton layoutX="28.0" layoutY="280.0" text="&gt; Vehicle Information And Statistics" textFill="WHITE" />
-            <JFXButton layoutX="28.0" layoutY="497.0" text="&gt; Vehicle Rent History" textFill="WHITE" />
-            <JFXButton layoutX="28.0" layoutY="307.0" text="&gt; Vehicle Accident Records" textFill="WHITE" />
+            <JFXButton layoutX="28.0" layoutY="463.0" text="&gt; Rent sample.Vehicle" textFill="WHITE" />
+            <JFXButton layoutX="28.0" layoutY="280.0" text="&gt; sample.Vehicle Information And Statistics" textFill="WHITE" />
+            <JFXButton layoutX="28.0" layoutY="497.0" text="&gt; sample.Vehicle Rent History" textFill="WHITE" />
+            <JFXButton layoutX="28.0" layoutY="307.0" text="&gt; sample.Vehicle Accident Records" textFill="WHITE" />
             <Line endX="100.0" layoutX="109.0" layoutY="453.0" startX="-100.0" stroke="WHITE" />
             <Line endX="100.0" layoutX="109.0" layoutY="231.0" startX="-100.0" stroke="WHITE" />
             <TableView layoutX="339.0" layoutY="195.0" prefHeight="414.0" prefWidth="632.0">
