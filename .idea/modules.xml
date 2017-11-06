@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RentACar.iml" filepath="$PROJECT_DIR$/RentACar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JFoenix-master/jfoenix/src/main/main1.iml" filepath="$PROJECT_DIR$/JFoenix-master/jfoenix/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JFoenix-master/demo/src/main/main2.iml" filepath="$PROJECT_DIR$/JFoenix-master/demo/src/main/main2.iml" />
     </modules>
   </component>
 </project>
