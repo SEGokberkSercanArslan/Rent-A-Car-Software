@@ -5,7 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-import javax.xml.soap.Text;
+
 
 public class addUserController {
 
