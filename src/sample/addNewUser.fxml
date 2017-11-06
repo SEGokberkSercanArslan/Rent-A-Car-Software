@@ -37,7 +37,7 @@
             <TextField fx:id="personSurnameFİeld" layoutX="638.0" layoutY="140.0" text="Person Surname" />
             <TextField fx:id="personAddressField" layoutX="438.0" layoutY="200.0" text="Person Address" />
             <TextField fx:id="usernameField" layoutX="438.0" layoutY="320.0" text="Username" />
-            <PasswordField fx:id="passwordField" layoutX="638.0" layoutY="320.0" text="Password" />
+            <PasswordField fx:id="userPasswordField" layoutX="638.0" layoutY="320.0" text="Password" />
             <Button fx:id="saveUserField" layoutX="438.0" layoutY="380.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="348.0" text="Save User" />
          </children>
       </AnchorPane>
