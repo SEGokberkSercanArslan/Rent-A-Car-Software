@@ -14,7 +14,7 @@ public class Personal {
     private String telephoneNumber;
     private String username;
     private String password;
-    List <Personal> info = new ArrayList<Personal>();
+    static List <Personal> info = new ArrayList<Personal>();
 
     Personal(String name,String surname,String emailAdress,String telephoneNumber,String username,String password){
         setEmailAdress(emailAdress);
@@ -23,7 +23,7 @@ public class Personal {
         setSurname(surname);
         setPassword(password);
         setUsername(username);
-
+        info.add(this);
     }
 
     //Set methods of attributes
