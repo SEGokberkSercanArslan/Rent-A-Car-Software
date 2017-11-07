@@ -16,7 +16,9 @@ public class Personal {
     private String password;
     static List <Personal> info = new ArrayList<Personal>();
 
-    Personal(String name,String surname,String emailAdress,String telephoneNumber,String username,String password){
+
+
+    public Personal(String name,String surname,String emailAdress,String telephoneNumber,String username,String password){
         setEmailAdress(emailAdress);
         setTelephoneNumber(telephoneNumber);
         setName(name);
