@@ -1,13 +1,15 @@
 package sample;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Rent {
     private String customerName;
     private String customerSurname;
     private String customerAddress;
     private String customerTelephoneNumber;
-    private String custoerEmailAdress;
+    private String customerEmailAdress;
     private Date vehicleRentDate;
     private Date vehicleOffDutyDatePlanned;
     private Date vehicleOffDutyDateReal;
@@ -16,12 +18,32 @@ public class Rent {
     private double delayFee;
     private double calculatedTotalFee;
 
+    static List<Rent> info = new ArrayList<Rent>();
+
+    Rent(String customerName,String customerSurname,String customerAddress,String customerTelephoneNumber,String customerEmailAdress
+    ,Date vehicleRentDate, Date vehicleOffDutyDatePlanned,Date vehicleOffDutyDateReal,boolean vehicleDutyStatus,double rentalFee
+    ,double delayFee , double calculatedTotalFee){
+        setCustomerName(customerName);
+        setCustomerSurname(customerSurname);
+        setCustomerAddress(customerAddress);
+        setCustomerTelephoneNumber(customerTelephoneNumber);
+        setCustomerEmailAdress(customerEmailAdress);
+        setVehicleRentDate(vehicleRentDate);
+        setVehicleOffDutyDatePlanned(vehicleOffDutyDatePlanned);
+        setVehicleOffDutyDateReal(vehicleOffDutyDateReal);
+        setVehicleDutyStatus(vehicleDutyStatus);
+        setRentalFee(rentalFee);
+        setDelayFee(delayFee);
+        setCalculatedTotalFee(calculatedTotalFee);
+        info.add(this);
+    }
+
     //Set methods of attributes
     public void setCalculatedTotalFee(double calculatedTotalFee) {
         this.calculatedTotalFee = calculatedTotalFee;
     }
-    public void setCustoerEmailAdress(String custoerEmailAdress) {
-        this.custoerEmailAdress = custoerEmailAdress;
+    public void setCustomerEmailAdress(String custoerEmailAdress) {
+        this.customerEmailAdress = custoerEmailAdress;
     }
     public void setCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
@@ -64,6 +86,9 @@ public class Rent {
     public Date getVehicleRentDate() {
         return vehicleRentDate;
     }
+    public boolean getVehicleDutyStatus(){
+        return vehicleDutyStatus;
+    }
     public double getCalculatedTotalFee() {
         return calculatedTotalFee;
     }
@@ -73,8 +98,8 @@ public class Rent {
     public double getRentalFee() {
         return rentalFee;
     }
-    public String getCustoerEmailAdress() {
-        return custoerEmailAdress;
+    public String getCustomerEmailAdress() {
+        return customerEmailAdress;
     }
     public String getCustomerAddress() {
         return customerAddress;
