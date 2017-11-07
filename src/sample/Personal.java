@@ -1,5 +1,12 @@
 package sample;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+
+
 public class Personal {
     private String name;
     private String surname;
@@ -7,6 +14,17 @@ public class Personal {
     private String telephoneNumber;
     private String username;
     private String password;
+    List <Personal> info = new ArrayList<Personal>();
+
+    Personal(String name,String surname,String emailAdress,String telephoneNumber,String username,String password){
+        setEmailAdress(emailAdress);
+        setTelephoneNumber(telephoneNumber);
+        setName(name);
+        setSurname(surname);
+        setPassword(password);
+        setUsername(username);
+
+    }
 
     //Set methods of attributes
     public void setSurname(String surname) {
