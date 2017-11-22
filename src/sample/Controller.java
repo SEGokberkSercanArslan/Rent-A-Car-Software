@@ -49,9 +49,8 @@ public class Controller {
     @FXML
     public void logInButton(ActionEvent event){
         System.out.println(UserNameField.getText());
-        if (UserNameField.getText() == null && PasswordField.getText() == null){
 
-        }
+
     }
     @FXML
     public void forgotPasswordButton(ActionEvent event){
@@ -61,7 +60,7 @@ public class Controller {
     /*Prototype of changing between scenes*/
     public void changeScreenButtonPushed(ActionEvent event) throws Exception {
 
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("HelpMenuScreen.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(tableViewScene);

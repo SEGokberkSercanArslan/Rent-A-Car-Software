@@ -6,7 +6,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.image.*?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <MenuBar>
@@ -39,7 +38,7 @@
                <children>
                   <PasswordField fx:id="PasswordField" layoutX="195.0" layoutY="173.0" prefHeight="25.0" prefWidth="250.0" text="Password" />
                   <TextField fx:id="UserNameField" layoutX="195.0" layoutY="121.0" prefHeight="25.0" prefWidth="250.0" text="Username" />
-                  <Button fx:id="LogInButton" layoutX="356.0" layoutY="221.0" mnemonicParsing="false" onAction="#logInButton" prefHeight="25.0" prefWidth="89.0" text="Log In" />
+                  <Button fx:id="LogInButton" layoutX="356.0" layoutY="221.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefHeight="25.0" prefWidth="89.0" text="Log In" />
                   <ImageView fx:id="PersonLogo" fitHeight="60.0" fitWidth="25.0" layoutX="163.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Images/icons8-admin-100.png" />
@@ -55,7 +54,7 @@
                         <Image url="@../Images/CarLogo.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="ForgotPasswordField" layoutX="195.0" layoutY="221.0" mnemonicParsing="false" onAction="#forgotPasswordButton" prefHeight="25.0" prefWidth="140.0" text="Forgot My Password" />
+                  <Button fx:id="ForgotPasswordButton" layoutX="195.0" layoutY="221.0" mnemonicParsing="false" onAction="#forgotPasswordButton" prefHeight="25.0" prefWidth="140.0" text="Forgot My Password" />
                </children>
             </AnchorPane>
          </children>
