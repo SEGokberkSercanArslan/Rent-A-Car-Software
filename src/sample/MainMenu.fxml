@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <MenuBar prefHeight="20.0" prefWidth="1024.0">
+      <MenuBar>
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -28,29 +28,47 @@
           </Menu>
         </menus>
       </MenuBar>
-      <AnchorPane prefHeight="700.0" prefWidth="1024.0" style="-fx-background-color: #5d6777;">
+      <AnchorPane prefHeight="640.0" prefWidth="1024.0">
          <children>
-            <Label layoutX="10.0" layoutY="195.0" prefHeight="36.0" prefWidth="271.0" text="Vehicle Options" textFill="#e1dbdb">
-               <font>
-                  <Font size="25.0" />
-               </font></Label>
-            <Label layoutX="8.0" layoutY="417.0" prefHeight="36.0" prefWidth="154.0" text="Rent Options" textFill="#e1dbdb">
-               <font>
-                  <Font size="25.0" />
-               </font></Label>
-            <JFXButton layoutX="28.0" layoutY="463.0" text="&gt; RentVehicle" textFill="WHITE" />
-            <JFXButton layoutX="28.0" layoutY="280.0" text="&gt; Vehicle Information And Statistics" textFill="WHITE" />
-            <JFXButton layoutX="28.0" layoutY="497.0" text="&gt; Vehicle Rent History" textFill="WHITE" />
-            <JFXButton layoutX="28.0" layoutY="307.0" text="&gt; Vehicle Accident Records" textFill="WHITE" />
-            <Line endX="100.0" layoutX="109.0" layoutY="453.0" startX="-100.0" stroke="WHITE" />
-            <Line endX="100.0" layoutX="109.0" layoutY="231.0" startX="-100.0" stroke="WHITE" />
-            <Label layoutX="10.0" layoutY="57.0" prefHeight="36.0" prefWidth="271.0" text="User Options" textFill="#e1dbdb">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Label>
-            <JFXButton layoutX="28.0" layoutY="106.0" text="&gt; System Users" textFill="WHITE" />
-            <JFXButton layoutX="28.0" layoutY="137.0" text="&gt; System Users" textFill="WHITE" />
+            <ImageView fitHeight="640.0" fitWidth="1024.0">
+               <image>
+                  <Image url="@../Images/FERRARI.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane prefHeight="640.0" prefWidth="207.0" style="-fx-background-color: #575b60; -fx-opacity: 0.60;">
+               <children>
+                  <Text fill="WHITE" layoutX="42.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Management" wrappingWidth="150.13671875">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="14.0" layoutY="75.0">
+                     <image>
+                        <Image url="@../Images/icons8-admin-100.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="42.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Management">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="14.0" layoutY="200.0">
+                     <image>
+                        <Image url="@../Images/icons8-car-100.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="42.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rent Options">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="14.0" layoutY="335.0">
+                     <image>
+                        <Image url="@../Images/icons8-car-rental-100.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>

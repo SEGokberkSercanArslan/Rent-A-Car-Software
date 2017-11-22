@@ -25,6 +25,8 @@ public class Controller {
     private PasswordField PasswordField;
     @FXML
     private Button LogInField;
+    @FXML
+    private Button ForgotPasswordField;
 
 
     @FXML
@@ -44,11 +46,16 @@ public class Controller {
         return userName;
     }
 
-    public void logInMenuButton(ActionEvent event){
+    @FXML
+    public void logInButton(ActionEvent event){
         System.out.println(UserNameField.getText());
         if (UserNameField.getText() == null && PasswordField.getText() == null){
 
         }
+    }
+    @FXML
+    public void forgotPasswordButton(ActionEvent event){
+
     }
 
     /*Prototype of changing between scenes*/
