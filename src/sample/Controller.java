@@ -24,9 +24,9 @@ public class Controller {
     @FXML
     private PasswordField PasswordField;
     @FXML
-    private Button LogInField;
+    private Button LogInButton;
     @FXML
-    private Button ForgotPasswordField;
+    private Button ForgotPasswordButton;
 
 
     @FXML
