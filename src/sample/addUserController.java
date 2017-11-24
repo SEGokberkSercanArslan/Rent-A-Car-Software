@@ -34,7 +34,7 @@ public class addUserController {
     @FXML
     public void initNewUser(ActionEvent event){
         Personal person = new Personal(personNameField.getText(),personSurnameField.getText(),personEMailField.getText()
-        ,telephoneNumberField.getText(),usernameField.getText(),userPasswordField.getText());
+                ,telephoneNumberField.getText(),usernameField.getText(),userPasswordField.getText(),personAddressField.getText());
 
     }
 

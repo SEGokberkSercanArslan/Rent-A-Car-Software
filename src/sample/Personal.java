@@ -12,19 +12,21 @@ public class Personal {
     private String surname;
     private String emailAdress;
     private String telephoneNumber;
+    private String address;
     private String username;
     private String password;
     static List <Personal> info = new ArrayList<Personal>();
 
 
 
-    public Personal(String name,String surname,String emailAdress,String telephoneNumber,String username,String password){
+    public Personal(String name,String surname,String emailAdress,String telephoneNumber,String username,String password,String address){
         setEmailAdress(emailAdress);
         setTelephoneNumber(telephoneNumber);
         setName(name);
         setSurname(surname);
         setPassword(password);
         setUsername(username);
+        setAddress(address);
         info.add(this);
     }
 
@@ -47,6 +49,9 @@ public class Personal {
     public void setUsername(String username) {
         this.username = username;
     }
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     //Get methods of attributes
     public String getSurname() {
@@ -67,5 +72,7 @@ public class Personal {
     public String getUsername() {
         return username;
     }
-
+    public String getAddress() {
+        return address;
+    }
 }
