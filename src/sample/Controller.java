@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
@@ -58,6 +59,7 @@ public class Controller {
     }
 
     /*Prototype of changing between scenes*/
+    @FXML
     public void changeScreenButtonPushed(ActionEvent event) throws Exception {
 
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
@@ -66,6 +68,16 @@ public class Controller {
         window.setScene(tableViewScene);
         window.show();
     }
+
+    @FXML
+    public void menuItemAbout(ActionEvent event){
+        Alert softwareInfo = new Alert(Alert.AlertType.INFORMATION);
+        softwareInfo.setTitle("About Software");
+        softwareInfo.setHeaderText("Rent A Car software for more information please contact se-sercan@outlook.com");
+        softwareInfo.setContentText("The software created by Gökberk Sercan Arslan and Kübra Korkmaz");
+        softwareInfo.showAndWait();
+    }
+
 
 
 }
