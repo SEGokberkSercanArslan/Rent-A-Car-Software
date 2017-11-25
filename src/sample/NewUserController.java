@@ -2,8 +2,27 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 public class NewUserController extends MainMenuController {
+
+
+    public TextField NameField;
+    public TextField SurnameField;
+    public TextField TelephoneField;
+    public TextField UsernameField;
+    public TextField EmailField;
+    public PasswordField PasswordField;
+    public TextField AddressField;
+    public TextField IdNumberField;
+
+    @FXML
+    public void saveUser(ActionEvent event){
+
+    }
+
     @Override
     public void menuItemAbout(ActionEvent event) {
         super.menuItemAbout(event);
