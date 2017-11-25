@@ -2,9 +2,12 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+
+import java.util.Objects;
 
 public class NewUserController extends MainMenuController {
 
@@ -20,6 +23,20 @@ public class NewUserController extends MainMenuController {
 
     @FXML
     public void saveUser(ActionEvent event){
+        Personal newPersonal = new Personal(NameField.getText(),SurnameField.getText(),EmailField.getText(),TelephoneField.getText()
+        ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText());
+
+        for (int counter=0;counter<Personal.info.size();counter++){
+            if (Objects.equals(newPersonal.getIdNumber(), Personal.info.get(counter).getIdNumber())){
+                Alert IdMatchedDB = new Alert(Alert.AlertType.ERROR);
+                IdMatchedDB.setTitle("Error");
+                IdMatchedDB.setHeaderText("ID match");
+                IdMatchedDB.setContentText("Given ID number matched another person's ID in database Please check ID again.");
+                IdMatchedDB.showAndWait();
+                Personal.info.remove(Personal.info.size()-1);
+                break;
+            }
+        }
 
     }
 

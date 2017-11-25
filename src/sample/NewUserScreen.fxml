@@ -88,7 +88,7 @@
                   <PasswordField fx:id="PasswordField" layoutX="388.0" layoutY="176.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1;" text="Password" />
                   <ChoiceBox layoutX="168.0" layoutY="216.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1;" />
                   <TextField fx:id="AddressField" layoutX="168.0" layoutY="139.0" prefHeight="25.0" prefWidth="401.0" style="-fx-opacity: 1;" text="Address" />
-                  <Button fx:id="SaveUserButton" layoutX="169.0" layoutY="256.0" mnemonicParsing="false" onAction="#saveUser" prefHeight="25.0" prefWidth="401.0" style="-fx-opacity: 1;" text="Save User" />
+                  <Button fx:id="SaveUserButton" layoutX="169.0" layoutY="256.0" mnemonicParsing="false" onAction="#saveUser" onDragDetected="#saveUser" prefHeight="25.0" prefWidth="401.0" style="-fx-opacity: 1;" text="Save User" />
                   <TextField fx:id="IdNumberField" layoutX="388.0" layoutY="216.0" prefHeight="25.0" prefWidth="180.0" text="ID NUMBER" />
                </children></AnchorPane>
             </children>
