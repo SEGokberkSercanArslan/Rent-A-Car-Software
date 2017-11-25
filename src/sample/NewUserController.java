@@ -20,29 +20,57 @@ public class NewUserController extends MainMenuController {
     public PasswordField PasswordField;
     public TextField AddressField;
     public TextField IdNumberField;
+    public boolean isEmployee=false;
 
     @FXML
     public void saveUser(ActionEvent event){
-        Personal newPersonal = new Personal(NameField.getText(),SurnameField.getText(),EmailField.getText(),TelephoneField.getText()
-        ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText());
 
-        for (int counter=0;counter<Personal.info.size();counter++){
-            if (Objects.equals(newPersonal.getIdNumber(), Personal.info.get(counter).getIdNumber())){
-                Alert IdMatchedDB = new Alert(Alert.AlertType.ERROR);
-                IdMatchedDB.setTitle("Error");
-                IdMatchedDB.setHeaderText("ID match");
-                IdMatchedDB.setContentText("Given ID number matched another person's ID in database Please check ID again.");
-                IdMatchedDB.showAndWait();
-                Personal.info.remove(Personal.info.size()-1);
-                break;
+        if (Personal.info.isEmpty()){
+            Personal newPersonal = new Personal(NameField.getText(),SurnameField.getText(),EmailField.getText(),TelephoneField.getText()
+                    ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText());
+            Alert SuccesfullyAdded = new Alert(Alert.AlertType.INFORMATION);
+            SuccesfullyAdded.setTitle("Info");
+            SuccesfullyAdded.setHeaderText("Personal Successfully Added");
+            SuccesfullyAdded.showAndWait();
+        }
+        else {
+
+            for (int counter=0;counter<Personal.info.size();counter++){
+
+                if (Objects.equals(IdNumberField.getText(), Personal.info.get(counter).getIdNumber())){
+                    Alert IdMatchedDB = new Alert(Alert.AlertType.ERROR);
+                    IdMatchedDB.setTitle("Error");
+                    IdMatchedDB.setHeaderText("ID match");
+                    IdMatchedDB.setContentText("Given ID number matched another person's ID in database Please check ID again.");
+                    IdMatchedDB.showAndWait();
+                    isEmployee = true;
+                    break;
+                }
+                else {
+                    isEmployee = false;
+                }
+
             }
-
         }
 
-        Alert SuccesfullyAdded = new Alert(Alert.AlertType.INFORMATION);
-        SuccesfullyAdded.setTitle("Info");
-        SuccesfullyAdded.setHeaderText("Personal Successfully Added");
-        SuccesfullyAdded.showAndWait();
+        if (!isEmployee){
+            Personal newPersonal = new Personal(NameField.getText(),SurnameField.getText(),EmailField.getText(),TelephoneField.getText()
+                    ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText());
+            NameField.clear();
+            SurnameField.clear();
+            TelephoneField.clear();
+            UsernameField.clear();
+            EmailField.clear();
+            PasswordField.clear();
+            AddressField.clear();
+            IdNumberField.clear();
+            Alert SuccesfullyAdded = new Alert(Alert.AlertType.INFORMATION);
+            SuccesfullyAdded.setTitle("Info");
+            SuccesfullyAdded.setHeaderText("Personal Successfully Added");
+            SuccesfullyAdded.showAndWait();
+        }
+
+
 
     }
 
