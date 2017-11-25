@@ -36,6 +36,12 @@ public class NewUserController extends MainMenuController {
                 Personal.info.remove(Personal.info.size()-1);
                 break;
             }
+            else {
+                Alert SuccesfullyAdded = new Alert(Alert.AlertType.INFORMATION);
+                SuccesfullyAdded.setTitle("Info");
+                SuccesfullyAdded.setHeaderText("Personal Successfully Added");
+                SuccesfullyAdded.showAndWait();
+            }
         }
 
     }
