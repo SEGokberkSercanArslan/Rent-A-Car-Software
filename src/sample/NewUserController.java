@@ -32,6 +32,7 @@ public class NewUserController extends MainMenuController {
             SuccesfullyAdded.setTitle("Info");
             SuccesfullyAdded.setHeaderText("Personal Successfully Added");
             SuccesfullyAdded.showAndWait();
+            isEmployee = true;
         }
         else {
 

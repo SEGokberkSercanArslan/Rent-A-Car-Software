@@ -80,16 +80,16 @@
                 </AnchorPane>
             <AnchorPane layoutX="246.0" layoutY="53.0" prefHeight="534.0" prefWidth="756.0" style="-fx-background-color: #575b60; -fx-opacity: 0.60;">
                <children>
-                  <TextField fx:id="NameField" layoutX="168.0" layoutY="56.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1;" text="Name" />
-                  <TextField fx:id="SurnameField" layoutX="388.0" layoutY="56.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1;" text="Surname" />
-                  <TextField fx:id="TelephoneField" layoutX="168.0" layoutY="96.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1;" text="Telephone" />
-                  <TextField fx:id="UsernameField" layoutX="168.0" layoutY="176.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1;" text="Username" />
-                  <TextField fx:id="EmailField" layoutX="388.0" layoutY="96.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1;" text="Email" />
-                  <PasswordField fx:id="PasswordField" layoutX="388.0" layoutY="176.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1;" text="Password" />
-                  <ChoiceBox layoutX="168.0" layoutY="216.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1;" />
-                  <TextField fx:id="AddressField" layoutX="168.0" layoutY="139.0" prefHeight="25.0" prefWidth="401.0" style="-fx-opacity: 1;" text="Address" />
-                  <Button fx:id="SaveUserButton" layoutX="169.0" layoutY="256.0" mnemonicParsing="false" onAction="#saveUser" onDragDetected="#saveUser" prefHeight="25.0" prefWidth="401.0" style="-fx-opacity: 1;" text="Save User" />
-                  <TextField fx:id="IdNumberField" layoutX="388.0" layoutY="216.0" prefHeight="25.0" prefWidth="180.0" text="ID NUMBER" />
+                  <TextField fx:id="NameField" layoutX="168.0" layoutY="56.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1; -fx-background-color: #ffffff;" text="Name" />
+                  <TextField fx:id="SurnameField" layoutX="388.0" layoutY="56.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1; -fx-background-color: #ffffff;" text="Surname" />
+                  <TextField fx:id="TelephoneField" layoutX="168.0" layoutY="96.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1; -fx-background-color: #ffffff;" text="Telephone" />
+                  <TextField fx:id="EmailField" layoutX="388.0" layoutY="96.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1; -fx-background-color: #ffffff;" text="Email" />
+                  <TextField fx:id="AddressField" layoutX="168.0" layoutY="139.0" prefHeight="25.0" prefWidth="401.0" style="-fx-opacity: 1; -fx-background-color: #ffffff;" text="Address" />
+                  <TextField fx:id="UsernameField" layoutX="168.0" layoutY="176.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1; -fx-background-color: #ffffff;" text="Username" />
+                  <PasswordField fx:id="PasswordField" layoutX="388.0" layoutY="176.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1; -fx-background-color: #ffffff;" text="Password" />
+                  <ChoiceBox layoutX="168.0" layoutY="216.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1; -fx-background-color: #ffffff;" />
+                  <TextField fx:id="IdNumberField" layoutX="388.0" layoutY="216.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;" text="ID NUMBER" />
+                  <Button fx:id="SaveUserButton" layoutX="169.0" layoutY="256.0" mnemonicParsing="false" onAction="#saveUser" onDragDetected="#saveUser" prefHeight="25.0" prefWidth="401.0" style="-fx-opacity: 1; -fx-background-color: #ffffff;" text="Save User" />
                </children></AnchorPane>
             </children>
         </AnchorPane>
