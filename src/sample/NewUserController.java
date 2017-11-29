@@ -1,15 +1,17 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class NewUserController extends MainMenuController {
+public class NewUserController extends MainMenuController implements Initializable {
 
 
     public TextField NameField;
@@ -21,13 +23,15 @@ public class NewUserController extends MainMenuController {
     public TextField AddressField;
     public TextField IdNumberField;
     public boolean isEmployee=false;
+    public ChoiceBox<String> PrivladgeChoiceBox;
+    ObservableList <String> items = FXCollections.observableArrayList("Admin","Employee");
 
     @FXML
     public void saveUser(ActionEvent event){
 
         if (Personal.info.isEmpty()){
             Personal newPersonal = new Personal(NameField.getText(),SurnameField.getText(),EmailField.getText(),TelephoneField.getText()
-                    ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText());
+                    ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText(),PrivladgeChoiceBox.getValue());
             Alert SuccesfullyAdded = new Alert(Alert.AlertType.INFORMATION);
             SuccesfullyAdded.setTitle("Info");
             SuccesfullyAdded.setHeaderText("Personal Successfully Added");
@@ -37,11 +41,18 @@ public class NewUserController extends MainMenuController {
         else {
 
             for (int counter=0;counter<Personal.info.size();counter++){
-
+                if (Objects.equals(UsernameField.getText(), Personal.info.get(counter).getUsername())){
+                    Alert UserNameMatched = new Alert(Alert.AlertType.ERROR);
+                    UserNameMatched.setTitle("Error");
+                    UserNameMatched.setHeaderText("User Name Matched ");
+                    UserNameMatched.setContentText("Look like another employee use this username please found another one.");
+                    UserNameMatched.showAndWait();
+                    isEmployee = true;
+                }
                 if (Objects.equals(IdNumberField.getText(), Personal.info.get(counter).getIdNumber())){
                     Alert IdMatchedDB = new Alert(Alert.AlertType.ERROR);
                     IdMatchedDB.setTitle("Error");
-                    IdMatchedDB.setHeaderText("ID match");
+                    IdMatchedDB.setHeaderText("ID Matched");
                     IdMatchedDB.setContentText("Given ID number matched another person's ID in database Please check ID again.");
                     IdMatchedDB.showAndWait();
                     isEmployee = true;
@@ -56,7 +67,7 @@ public class NewUserController extends MainMenuController {
 
         if (!isEmployee){
             Personal newPersonal = new Personal(NameField.getText(),SurnameField.getText(),EmailField.getText(),TelephoneField.getText()
-                    ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText());
+                    ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText(),PrivladgeChoiceBox.getValue());
             NameField.clear();
             SurnameField.clear();
             TelephoneField.clear();
@@ -130,4 +141,8 @@ public class NewUserController extends MainMenuController {
         super.vehicleOffDuty(event);
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        PrivladgeChoiceBox.setItems(items);
+    }
 }

@@ -16,11 +16,12 @@ public class Personal {
     private String username;
     private String password;
     private String idNumber;
+    private String privladge;
     static List <Personal> info = new ArrayList<Personal>();
 
 
 
-    public Personal(String name,String surname,String emailAdress,String telephoneNumber,String username,String password,String address,String idNumber){
+    public Personal(String name,String surname,String emailAdress,String telephoneNumber,String username,String password,String address,String idNumber,String privladge){
         setEmailAdress(emailAdress);
         setTelephoneNumber(telephoneNumber);
         setName(name);
@@ -29,6 +30,7 @@ public class Personal {
         setUsername(username);
         setAddress(address);
         setIdNumber(idNumber);
+        setPrivladge(privladge);
         info.add(this);
     }
 
@@ -57,6 +59,9 @@ public class Personal {
     public void setIdNumber(String idNumber) {
         this.idNumber = idNumber;
     }
+    public void setPrivladge(String privladge) {
+        this.privladge = privladge;
+    }
 
     //Get methods of attributes
     public String getSurname() {
@@ -82,5 +87,8 @@ public class Personal {
     }
     public String getIdNumber() {
         return idNumber;
+    }
+    public String getPrivladge() {
+        return privladge;
     }
 }
