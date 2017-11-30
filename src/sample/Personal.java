@@ -18,7 +18,7 @@ public class Personal {
     private String idNumber;
     private String privladge;
     static List <Personal> info = new ArrayList<Personal>();
-    private static Personal currentUser = new Personal();
+    protected static Personal currentUser = new Personal();
 
 
 

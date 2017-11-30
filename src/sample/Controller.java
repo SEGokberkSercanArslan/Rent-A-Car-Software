@@ -56,6 +56,7 @@ public class Controller {
         for(int counter =0;counter<Personal.info.size();counter++){
             if (Objects.equals(Personal.info.get(counter).getUsername(),getUserName())){
                 if(Objects.equals(Personal.info.get(counter).getPassword(),getPassword())){
+                    Personal.initializeCurrentUser(counter);
                     Parent MainMenu = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
                     Scene MainMenuScene = new Scene(MainMenu);
                     Stage MainMenuStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -84,6 +85,7 @@ public class Controller {
 
 
     /*Prototype of changing between scenes*/
+    /*Delete after create database */
     @FXML
     public void changeScreenButtonPushed(ActionEvent event) throws Exception {
 

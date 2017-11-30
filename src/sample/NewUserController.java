@@ -23,14 +23,14 @@ public class NewUserController extends MainMenuController implements Initializab
     public TextField AddressField;
     public TextField IdNumberField;
     public boolean isEmployee=false;
-    public ChoiceBox<String> PrivladgeChoiceBox;
+    public ChoiceBox<String> PrivilegeChoiceBox;
     ObservableList <String> items = FXCollections.observableArrayList("Admin","Employee");
 
     @FXML
     public void saveUser(ActionEvent event){
         if (Personal.info.isEmpty()){
             Personal newPersonal = new Personal(NameField.getText(),SurnameField.getText(),EmailField.getText(),TelephoneField.getText()
-                    ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText(),PrivladgeChoiceBox.getValue());
+                    ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText(), PrivilegeChoiceBox.getValue());
             Alert SuccesfullyAdded = new Alert(Alert.AlertType.INFORMATION);
             SuccesfullyAdded.setTitle("Info");
             SuccesfullyAdded.setHeaderText("Personal Successfully Added");
@@ -40,6 +40,14 @@ public class NewUserController extends MainMenuController implements Initializab
         else {
 
             for (int counter=0;counter<Personal.info.size();counter++){
+                if(!Objects.equals(Personal.currentUser.getPrivladge(), "Admin")){
+                    Alert PrivilegeError = new Alert(Alert.AlertType.ERROR);
+                    PrivilegeError.setTitle("Error");
+                    PrivilegeError.setHeaderText("Permission Error");
+                    PrivilegeError.setContentText("You don't have permission for add personal.");
+                    PrivilegeError.showAndWait();
+                    break;
+                }
                 if (Objects.equals(UsernameField.getText(), Personal.info.get(counter).getUsername())){
                     Alert UserNameMatched = new Alert(Alert.AlertType.ERROR);
                     UserNameMatched.setTitle("Error");
@@ -67,7 +75,7 @@ public class NewUserController extends MainMenuController implements Initializab
 
         if (!isEmployee){
             Personal newPersonal = new Personal(NameField.getText(),SurnameField.getText(),EmailField.getText(),TelephoneField.getText()
-                    ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText(),PrivladgeChoiceBox.getValue());
+                    ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText(), PrivilegeChoiceBox.getValue());
             NameField.clear();
             SurnameField.clear();
             TelephoneField.clear();
@@ -143,6 +151,6 @@ public class NewUserController extends MainMenuController implements Initializab
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        PrivladgeChoiceBox.setItems(items);
+        PrivilegeChoiceBox.setItems(items);
     }
 }
