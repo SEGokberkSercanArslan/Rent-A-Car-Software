@@ -28,7 +28,6 @@ public class NewUserController extends MainMenuController implements Initializab
 
     @FXML
     public void saveUser(ActionEvent event){
-
         if (Personal.info.isEmpty()){
             Personal newPersonal = new Personal(NameField.getText(),SurnameField.getText(),EmailField.getText(),TelephoneField.getText()
                     ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText(),PrivladgeChoiceBox.getValue());

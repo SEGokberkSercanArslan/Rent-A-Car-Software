@@ -13,6 +13,8 @@ import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
+import java.util.Objects;
+
 
 public class Controller {
 
@@ -21,13 +23,13 @@ public class Controller {
     @FXML
     private String password;
     @FXML
-    private TextField UserNameField;
+    public TextField UserNameField;
     @FXML
-    private PasswordField PasswordField;
+    public PasswordField PasswordField;
     @FXML
-    private Button LogInButton;
+    public Button LogInButton;
     @FXML
-    private Button ForgotPasswordButton;
+    public Button ForgotPasswordButton;
 
 
     @FXML
@@ -48,15 +50,38 @@ public class Controller {
     }
 
     @FXML
-    public void logInButton(ActionEvent event){
-        System.out.println(UserNameField.getText());
-
+    public void logInButton(ActionEvent event) throws Exception {
+        setUserName(UserNameField.getText());
+        setPassword(PasswordField.getText());
+        for(int counter =0;counter<Personal.info.size();counter++){
+            if (Objects.equals(Personal.info.get(counter).getUsername(),getUserName())){
+                if(Objects.equals(Personal.info.get(counter).getPassword(),getPassword())){
+                    Parent MainMenu = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+                    Scene MainMenuScene = new Scene(MainMenu);
+                    Stage MainMenuStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    MainMenuStage.setScene(MainMenuScene);
+                    MainMenuStage.show();
+                }
+                Alert WrongPassword = new Alert(Alert.AlertType.ERROR);
+                WrongPassword.setTitle("Error");
+                WrongPassword.setHeaderText("Wrong Password");
+                WrongPassword.setContentText("Password you've given us is not match username.");
+                WrongPassword.showAndWait();
+            }
+            Alert WrongUsername = new Alert(Alert.AlertType.ERROR);
+            WrongUsername.setTitle("Error");
+            WrongUsername.setHeaderText("Wrong Username");
+            WrongUsername.setContentText("Username you've given us is not match any username on database.");
+            WrongUsername.showAndWait();
+        }
 
     }
     @FXML
     public void forgotPasswordButton(ActionEvent event){
 
     }
+
+
 
     /*Prototype of changing between scenes*/
     @FXML
