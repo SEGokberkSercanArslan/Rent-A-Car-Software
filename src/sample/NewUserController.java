@@ -47,6 +47,7 @@ public class NewUserController extends MainMenuController implements Initializab
                     UserNameMatched.setContentText("Look like another employee use this username please found another one.");
                     UserNameMatched.showAndWait();
                     isEmployee = true;
+                    break;
                 }
                 if (Objects.equals(IdNumberField.getText(), Personal.info.get(counter).getIdNumber())){
                     Alert IdMatchedDB = new Alert(Alert.AlertType.ERROR);

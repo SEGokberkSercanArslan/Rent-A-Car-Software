@@ -18,6 +18,7 @@ public class Personal {
     private String idNumber;
     private String privladge;
     static List <Personal> info = new ArrayList<Personal>();
+    private static Personal currentUser = new Personal();
 
 
 
@@ -32,6 +33,9 @@ public class Personal {
         setIdNumber(idNumber);
         setPrivladge(privladge);
         info.add(this);
+    }
+    public Personal(){
+
     }
 
     //Set methods of attributes
@@ -61,6 +65,20 @@ public class Personal {
     }
     public void setPrivladge(String privladge) {
         this.privladge = privladge;
+    }
+
+    //Current User Prototype Function
+    public static void initializeCurrentUser(int index) {
+        //Personal.currentUser = currentUser;
+        Personal.currentUser.setName(info.get(index).getName());
+        Personal.currentUser.setUsername(info.get(index).getSurname());
+        Personal.currentUser.setEmailAdress(info.get(index).getEmailAdress());
+        Personal.currentUser.setTelephoneNumber(info.get(index).getTelephoneNumber());
+        Personal.currentUser.setUsername(info.get(index).getUsername());
+        Personal.currentUser.setPassword(info.get(index).getPassword());
+        Personal.currentUser.setAddress(info.get(index).getAddress());
+        Personal.currentUser.setIdNumber(info.get(index).getIdNumber());
+        Personal.currentUser.setPrivladge(info.get(index).getPrivladge());
     }
 
     //Get methods of attributes
