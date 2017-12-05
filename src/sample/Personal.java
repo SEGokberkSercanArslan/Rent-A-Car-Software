@@ -1,14 +1,15 @@
 package sample;
 
-import java.io.*;
+import org.json.simple.JSONObject;
+
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.*;
+import javax.xml.namespace.QName;
 
 
-
-
-
-public class Personal implements Serializable {
+public class Personal {
     private String name;
     private String surname;
     private String emailAdress;
@@ -82,33 +83,15 @@ public class Personal implements Serializable {
         Personal.currentUser.setPrivladge(info.get(index).getPrivladge());
     }
 
-    public void initializePersonalsToFile() throws IOException {
-        FileOutputStream fos = new FileOutputStream("Personals.data");
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
-        for (Personal per : info) {
-            oos.writeObject(per);
-        }
-        fos.close();
-    }
+    public void initializePersonalsToJson(Personal personals) throws JAXBException {
+        JAXBElement <Personal> personalJAXBElement = new JAXBElement(new QName(Personal.class.getSimpleName())
+                ,Personal.class,personals);
 
-    public void initializePersonalsFromFile() throws IOException, ClassNotFoundException {
-        FileInputStream fis = new FileInputStream("Personals.data");
-        ObjectInputStream ois = new ObjectInputStream(fis);
-        boolean eof = true;
-        try {
-            while (eof) {
-                Personal obj = (Personal) ois.readObject();
-                if (obj != null) {
-                    info.add(obj);
-                } else {
-                    eof = false;
-                }
-            }
-        } catch (EOFException eofex) {
+        StringWriter writer = new StringWriter();
+        JAXBContext context = JAXBContext.newInstance(Personal.class);
+        context.createMarshaller().marshal(personalJAXBElement,writer);
+        System.out.println(writer.toString());
 
-        } finally {
-            System.out.println("All Personals Recorded Successful");
-        }
     }
 
     //Get methods of attributes
