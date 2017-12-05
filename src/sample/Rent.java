@@ -2,10 +2,11 @@ package sample;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
-public class Rent {
+public class Rent implements Serializable,Comparable<Rent>{
     private String customerName;
     private String customerSurname;
     private String customerAddress;
@@ -143,4 +144,18 @@ public class Rent {
         return customerTelephoneNumber;
     }
 
+    private static Comparator<String> ALPHABETICAL_ORDER = new Comparator<String>() {
+        public int compare(String str1, String str2) {
+            int res = String.CASE_INSENSITIVE_ORDER.compare(str1, str2);
+            if (res == 0) {
+                res = str1.compareTo(str2);
+            }
+            return res;
+        }
+    };
+
+    @Override
+    public int compareTo(Rent o) {
+        return ALPHABETICAL_ORDER.compare(this.customerName,o.customerName);
+    }
 }
