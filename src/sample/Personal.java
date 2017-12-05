@@ -1,5 +1,6 @@
 package sample;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import java.util.List;
 
 
 
-public class Personal {
+public class Personal implements Serializable {
     private String name;
     private String surname;
     private String emailAdress;
@@ -79,6 +80,35 @@ public class Personal {
         Personal.currentUser.setAddress(info.get(index).getAddress());
         Personal.currentUser.setIdNumber(info.get(index).getIdNumber());
         Personal.currentUser.setPrivladge(info.get(index).getPrivladge());
+    }
+
+    public void initializePersonalsToFile() throws IOException {
+        FileOutputStream fos = new FileOutputStream("Personals.data");
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        for (Personal per : info) {
+            oos.writeObject(per);
+        }
+        fos.close();
+    }
+
+    public void initializePersonalsFromFile() throws IOException, ClassNotFoundException {
+        FileInputStream fis = new FileInputStream("Personals.data");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        boolean eof = true;
+        try {
+            while (eof) {
+                Personal obj = (Personal) ois.readObject();
+                if (obj != null) {
+                    info.add(obj);
+                } else {
+                    eof = false;
+                }
+            }
+        } catch (EOFException eofex) {
+
+        } finally {
+            System.out.println("All Personals Recorded Successful");
+        }
     }
 
     //Get methods of attributes
