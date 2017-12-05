@@ -1,6 +1,7 @@
 package sample;
 
 import javax.print.DocFlavor;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,6 +53,35 @@ public class Vehicle {
     }
     public void setVehicleType(String vehicleType) {
         this.vehicleType = vehicleType;
+    }
+
+    public void initializeVehicleToFile() throws IOException {
+        FileOutputStream fos = new FileOutputStream("Vehicle.data");
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        for (Vehicle vehicle : info) {
+            oos.writeObject(vehicle);
+        }
+        fos.close();
+    }
+
+    public void initializeVehicleFromFile() throws IOException, ClassNotFoundException {
+        FileInputStream fis = new FileInputStream("Vehicle.data");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        boolean eof = true;
+        try {
+            while (eof) {
+                Vehicle obj = (Vehicle) ois.readObject();
+                if (obj != null) {
+                    info.add(obj);
+                } else {
+                    eof = false;
+                }
+            }
+        } catch (EOFException eofex) {
+            System.out.println("End of file Exception");
+        } finally {
+
+        }
     }
 
     //Get methods of attributes

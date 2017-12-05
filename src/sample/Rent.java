@@ -1,5 +1,6 @@
 package sample;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -76,6 +77,34 @@ public class Rent {
         this.vehicleOffDutyDateReal = vehicleOffDutyDateReal;
     }
 
+    public void initializeRentToFile() throws IOException {
+        FileOutputStream fos = new FileOutputStream("Rent.data");
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        for (Rent rent : info) {
+            oos.writeObject(rent);
+        }
+        fos.close();
+    }
+
+    public void initializeRentFromFile() throws IOException, ClassNotFoundException {
+        FileInputStream fis = new FileInputStream("Rent.data");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        boolean eof = true;
+        try {
+            while (eof) {
+                Rent obj = (Rent) ois.readObject();
+                if (obj != null) {
+                    info.add(obj);
+                } else {
+                    eof = false;
+                }
+            }
+        } catch (EOFException eofex) {
+            System.out.println("End of file Exception");
+        } finally {
+
+        }
+    }
     //Get methods of attributes
     public Date getVehicleOffDutyDatePlanned() {
         return vehicleOffDutyDatePlanned;
