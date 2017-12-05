@@ -2,13 +2,14 @@ package sample;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 
 
 
 
-public class Personal implements Serializable {
+public class Personal implements Serializable , Comparable<Personal> {
     private String name;
     private String surname;
     private String emailAdress;
@@ -138,5 +139,19 @@ public class Personal implements Serializable {
     }
     public String getPrivladge() {
         return privladge;
+    }
+
+    private static Comparator<String> ALPHABETICAL_ORDER = new Comparator<String>() {
+        public int compare(String str1, String str2) {
+            int res = String.CASE_INSENSITIVE_ORDER.compare(str1, str2);
+            if (res == 0) {
+                res = str1.compareTo(str2);
+            }
+            return res;
+        }
+    };
+    @Override
+    public int compareTo(Personal personal) {
+        return ALPHABETICAL_ORDER.compare(this.name,personal.name);
     }
 }
