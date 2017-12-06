@@ -4,7 +4,9 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-public class  VehicleOffDutyController extends MainMenuController {
+public class VehicleOffDutyController extends MainMenuController {
+
+
     @Override
     public void menuItemAbout(ActionEvent event) {
         super.menuItemAbout(event);
