@@ -78,6 +78,11 @@
                         <Button fx:id="vehicleOffDutyButton" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#vehicleOffDuty" prefHeight="25.0" prefWidth="117.0" text="Vehicle Off Duty" />
                     </children>
                 </AnchorPane>
+            <AnchorPane layoutX="233.0" layoutY="53.0" prefHeight="534.0" prefWidth="756.0" style="-fx-background-color: #575b60; -fx-opacity: 0.60;">
+               <children>
+                  <ChoiceBox fx:id="VehicleTypes" layoutX="172.0" layoutY="91.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" />
+               </children>
+            </AnchorPane>
             </children>
         </AnchorPane>
     </children>

@@ -1,6 +1,5 @@
 package sample;
 
-import javax.print.DocFlavor;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,15 +9,14 @@ public class Vehicle {
     private String vehicleModel;
     private String vehicleColour;
     private String vehicleLisancePlate;
-    private String vehicleKilometer;    //it can be an integer ?
-    private String vehiclePrice;        //it can be an integer ?
+    private int vehicleKilometer;    //it can be an integer ?
+    private double vehiclePrice;        //it can be an integer ?
     private boolean vehicleStatus;       //Turn boolen
-    private String vehicleGains;        //it can be an integer ?
-
+    private double vehicleGains;        //it can be an integer ?
     static List<Vehicle> info = new ArrayList<>();
 
-    Vehicle(String vehicleType, String vehicleModel, String vehicleColour, String vehicleLisancePlate, String vehicleKilometer
-    , String vehiclePrice, boolean vehicleStatus,String vehicleGains){
+    Vehicle(String vehicleType, String vehicleModel, String vehicleColour, String vehicleLisancePlate, int vehicleKilometer
+    , double vehiclePrice, boolean vehicleStatus, double vehicleGains){
         setVehicleType(vehicleType);
         setVehicleModel(vehicleModel);
         setVehicleColour(vehicleColour);
@@ -29,14 +27,15 @@ public class Vehicle {
         setVehicleGains(vehicleGains);
         info.add(this);
     }
+
     //Set methods of Attributes
     public void setVehicleColour(String vehicleColour) {
         this.vehicleColour = vehicleColour;
     }
-    public void setVehicleGains(String vehicleGains) {
+    public void setVehicleGains(double vehicleGains) {
         this.vehicleGains = vehicleGains;
     }
-    public void setVehicleKilometer(String vehicleKilometer) {
+    public void setVehicleKilometer(int vehicleKilometer) {
         this.vehicleKilometer = vehicleKilometer;
     }
     public void setVehicleLisancePlate(String vehicleLisancePlate) {
@@ -45,7 +44,7 @@ public class Vehicle {
     public void setVehicleModel(String vehicleModel) {
         this.vehicleModel = vehicleModel;
     }
-    public void setVehiclePrice(String vehiclePrice) {
+    public void setVehiclePrice(double vehiclePrice) {
         this.vehiclePrice = vehiclePrice;
     }
     public void setVehicleStatus(boolean vehicleStatus) {
@@ -55,6 +54,7 @@ public class Vehicle {
         this.vehicleType = vehicleType;
     }
 
+
     public void initializeVehicleToFile() throws IOException {
         FileOutputStream fos = new FileOutputStream("Vehicle.data");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -63,7 +63,6 @@ public class Vehicle {
         }
         fos.close();
     }
-
     public void initializeVehicleFromFile() throws IOException, ClassNotFoundException {
         FileInputStream fis = new FileInputStream("Vehicle.data");
         ObjectInputStream ois = new ObjectInputStream(fis);
@@ -88,10 +87,10 @@ public class Vehicle {
     public String getVehicleColour() {
         return vehicleColour;
     }
-    public String getVehicleGains() {
+    public double getVehicleGains() {
         return vehicleGains;
     }
-    public String getVehicleKilometer() {
+    public int getVehicleKilometer() {
         return vehicleKilometer;
     }
     public String getVehicleLisancePlate() {
@@ -100,7 +99,7 @@ public class Vehicle {
     public String getVehicleModel() {
         return vehicleModel;
     }
-    public String getVehiclePrice() {
+    public double getVehiclePrice() {
         return vehiclePrice;
     }
     public boolean getVehicleStatus() {
