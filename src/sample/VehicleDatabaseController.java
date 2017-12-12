@@ -3,8 +3,23 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
 
-public class VehicleDatabaseController extends MainMenuController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class VehicleDatabaseController extends MainMenuController implements Initializable {
+
+    public TableColumn vehiclePlateNumber;
+    public TableColumn vehicleManufacturer;
+    public TableColumn vehicleType;
+    public TableColumn vehicleModel;
+    public TableColumn vehicleKilometer;
+    public TableColumn vehiclePrice;
+    public TableColumn vehicleGains;
+    public TableColumn vehicleStatus;
+
     @Override
     public void menuItemAbout(ActionEvent event) {
         super.menuItemAbout(event);
@@ -60,4 +75,8 @@ public class VehicleDatabaseController extends MainMenuController {
         super.vehicleOffDuty(event);
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 }

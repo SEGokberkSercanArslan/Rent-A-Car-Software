@@ -42,7 +42,7 @@ public class NewVehicleController extends MainMenuController implements Initiali
                     SamePlateNumberError.setHeaderText("There is a another vehicle use to same LicencePlate");
                     SamePlateNumberError.showAndWait();
                     licencePlateNumberField.clear();
-                    break;
+                    throw new IOException(); //Create new exception method later
                 }
             }
 
