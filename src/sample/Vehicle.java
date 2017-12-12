@@ -9,6 +9,7 @@ public class Vehicle {
     private String vehicleModel;
     private String vehicleColour;
     private String vehicleLisancePlate;
+    private String vehicleManufacturer;
     private int vehicleKilometer;    //it can be an integer ?
     private double vehiclePrice;        //it can be an integer ?
     private boolean vehicleStatus;       //Turn boolen
@@ -16,15 +17,14 @@ public class Vehicle {
     static List<Vehicle> info = new ArrayList<>();
 
     Vehicle(String vehicleType, String vehicleModel, String vehicleColour, String vehicleLisancePlate, int vehicleKilometer
-    , double vehiclePrice, boolean vehicleStatus, double vehicleGains){
+    , double vehiclePrice,String vehicleManufacturer){
         setVehicleType(vehicleType);
         setVehicleModel(vehicleModel);
         setVehicleColour(vehicleColour);
         setVehicleLisancePlate(vehicleLisancePlate);
         setVehicleKilometer(vehicleKilometer);
         setVehiclePrice(vehiclePrice);
-        setVehicleStatus(vehicleStatus);
-        setVehicleGains(vehicleGains);
+        setVehicleManufacturer(vehicleManufacturer);
         info.add(this);
     }
 
@@ -53,7 +53,9 @@ public class Vehicle {
     public void setVehicleType(String vehicleType) {
         this.vehicleType = vehicleType;
     }
-
+    public void setVehicleManufacturer(String vehicleManufacturer) {
+        this.vehicleManufacturer = vehicleManufacturer;
+    }
 
     public void initializeVehicleToFile() throws IOException {
         FileOutputStream fos = new FileOutputStream("Vehicle.data");
@@ -108,4 +110,9 @@ public class Vehicle {
     public String getVehicleType() {
         return vehicleType;
     }
+    public String getVehicleManufacturer() {
+        return vehicleManufacturer;
+    }
+
+
 }
