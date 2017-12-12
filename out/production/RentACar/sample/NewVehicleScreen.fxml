@@ -80,7 +80,14 @@
                 </AnchorPane>
             <AnchorPane layoutX="233.0" layoutY="53.0" prefHeight="534.0" prefWidth="756.0" style="-fx-background-color: #575b60; -fx-opacity: 0.60;">
                <children>
-                  <ChoiceBox fx:id="VehicleTypes" layoutX="172.0" layoutY="91.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" />
+                  <ChoiceBox fx:id="VehicleTypes" layoutX="190.0" layoutY="90.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" />
+                  <TextField fx:id="vehicleManufacturerField" layoutX="410.0" layoutY="90.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;" text="Vehicle Manufacturer" />
+                  <TextField fx:id="vehicleModelField" layoutX="190.0" layoutY="135.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;" text="Vehicle Model" />
+                  <TextField fx:id="vehicleColourField" layoutX="410.0" layoutY="135.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;" text="Vehicle Colour" />
+                  <TextField fx:id="licencePlateNumberField" layoutX="190.0" layoutY="180.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;" text="Lisance Plate Number" />
+                  <TextField fx:id="vehicleKilometerField" layoutX="410.0" layoutY="180.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;" text="Vehicle Kilometer" />
+                  <TextField fx:id="vehiclePriceField" layoutX="191.0" layoutY="225.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;" text="Vehicle Price" />
+                  <Button fx:id="saveVehicleButton" layoutX="190.0" layoutY="275.0" mnemonicParsing="false" onAction="#saveVehicle" prefHeight="25.0" prefWidth="374.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;" text="Save Vehicle" />
                </children>
             </AnchorPane>
             </children>
