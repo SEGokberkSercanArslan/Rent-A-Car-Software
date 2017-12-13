@@ -1,9 +1,11 @@
 package sample;
 
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -22,6 +24,16 @@ public class VehicleDatabaseController extends MainMenuController implements Ini
     public TableColumn<Vehicle,Double> vehicleGains;
     public TableColumn<Vehicle,String> vehicleStatus;
     public TableView<Vehicle> tableView;
+
+    @FXML//Need revision delete vehicle list and vehicle observable list
+    public final void deleteVehicleFromDatabase(ActionEvent event) {
+        ObservableList<Vehicle> selectedVehicleOnTable;
+        selectedVehicleOnTable = tableView.getSelectionModel().getSelectedItems();
+        Vehicle deleteThisVehicle = tableView.getSelectionModel().getSelectedItem();
+        Vehicle.vehicleObservableList.removeAll(selectedVehicleOnTable);
+        Vehicle.info.remove(deleteThisVehicle);
+        System.out.println(deleteThisVehicle.getVehiclePlateNumber());
+    }
 
     @Override
     public void menuItemAbout(ActionEvent event) {
@@ -79,7 +91,7 @@ public class VehicleDatabaseController extends MainMenuController implements Ini
     }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public final void initialize(URL location, ResourceBundle resources) {
         vehiclePlateNumber.setCellValueFactory(new PropertyValueFactory<Vehicle,String>("vehiclePlateNumber"));
         vehicleManufacturer.setCellValueFactory(new PropertyValueFactory<Vehicle,String>("vehicleManufacturer"));
         vehicleType.setCellValueFactory(new PropertyValueFactory<Vehicle,String>("vehicleType"));
@@ -89,5 +101,6 @@ public class VehicleDatabaseController extends MainMenuController implements Ini
         vehicleGains.setCellValueFactory(new PropertyValueFactory<Vehicle,Double>("vehicleGains"));
         vehicleStatus.setCellValueFactory(new PropertyValueFactory<Vehicle,String>("vehicleStatus"));
         tableView.setItems(Vehicle.vehicleObservableList);
+
     }
 }
