@@ -1,6 +1,9 @@
 package sample;
 
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.ArrayList;
 
 public class Customer implements Comparable<Customer> {
@@ -17,9 +20,11 @@ public class Customer implements Comparable<Customer> {
         setTelephoneNumber(telephoneNumber);
         setIdNumber(idNumber);
         info.add(this);
+        customerObservableList.add(this);
     }
 
     public static ArrayList<Customer> info = new ArrayList<Customer>();
+    public static ObservableList<Customer> customerObservableList = FXCollections.observableArrayList();
 
     public void setName(String name) {
         this.name = name;

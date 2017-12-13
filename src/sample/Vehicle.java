@@ -1,5 +1,8 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,24 +11,28 @@ public class Vehicle {
     private String vehicleType;
     private String vehicleModel;
     private String vehicleColour;
-    private String vehicleLisancePlate;
+    private String vehiclePlateNumber;
     private String vehicleManufacturer;
     private int vehicleKilometer;    //it can be an integer ?
     private double vehiclePrice;        //it can be an integer ?
-    private boolean vehicleStatus;       //Turn boolen
+    private String vehicleStatus;       //Turn boolen
     private double vehicleGains;        //it can be an integer ?
-    static List<Vehicle> info = new ArrayList<>();
+    public static List<Vehicle> info = new ArrayList<>();
+    public static ObservableList <Vehicle> vehicleObservableList = FXCollections.observableArrayList();
 
     Vehicle(String vehicleType, String vehicleModel, String vehicleColour, String vehicleLisancePlate, int vehicleKilometer
     , double vehiclePrice,String vehicleManufacturer){
         setVehicleType(vehicleType);
         setVehicleModel(vehicleModel);
         setVehicleColour(vehicleColour);
-        setVehicleLisancePlate(vehicleLisancePlate);
+        setVehiclePlateNumber(vehicleLisancePlate);
         setVehicleKilometer(vehicleKilometer);
         setVehiclePrice(vehiclePrice);
         setVehicleManufacturer(vehicleManufacturer);
+        setVehicleStatus("OUT Service");
+        setVehicleGains(0);
         info.add(this);
+        vehicleObservableList.add(this);
     }
 
     //Set methods of Attributes
@@ -38,8 +45,8 @@ public class Vehicle {
     public void setVehicleKilometer(int vehicleKilometer) {
         this.vehicleKilometer = vehicleKilometer;
     }
-    public void setVehicleLisancePlate(String vehicleLisancePlate) {
-        this.vehicleLisancePlate = vehicleLisancePlate;
+    public void setVehiclePlateNumber(String vehiclePlateNumber) {
+        this.vehiclePlateNumber = vehiclePlateNumber;
     }
     public void setVehicleModel(String vehicleModel) {
         this.vehicleModel = vehicleModel;
@@ -47,7 +54,7 @@ public class Vehicle {
     public void setVehiclePrice(double vehiclePrice) {
         this.vehiclePrice = vehiclePrice;
     }
-    public void setVehicleStatus(boolean vehicleStatus) {
+    public void setVehicleStatus(String vehicleStatus) {
         this.vehicleStatus = vehicleStatus;
     }
     public void setVehicleType(String vehicleType) {
@@ -95,8 +102,8 @@ public class Vehicle {
     public int getVehicleKilometer() {
         return vehicleKilometer;
     }
-    public String getVehicleLisancePlate() {
-        return vehicleLisancePlate;
+    public String getVehiclePlateNumber() {
+        return vehiclePlateNumber;
     }
     public String getVehicleModel() {
         return vehicleModel;
@@ -104,7 +111,7 @@ public class Vehicle {
     public double getVehiclePrice() {
         return vehiclePrice;
     }
-    public boolean getVehicleStatus() {
+    public String getVehicleStatus() {
         return vehicleStatus;
     }
     public String getVehicleType() {

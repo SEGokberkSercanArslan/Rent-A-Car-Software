@@ -1,5 +1,8 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -21,7 +24,7 @@ public class Personal implements Serializable , Comparable<Personal> {
     private String privladge;
     static List <Personal> info = new ArrayList<Personal>();
     protected static Personal currentUser = new Personal();
-
+    public static ObservableList<Personal> personalObservableList = FXCollections.observableArrayList();
 
 
     public Personal(String name,String surname,String emailAdress,String telephoneNumber,String username,String password,String address,String idNumber,String privladge){
@@ -35,6 +38,7 @@ public class Personal implements Serializable , Comparable<Personal> {
         setIdNumber(idNumber);
         setPrivladge(privladge);
         info.add(this);
+        personalObservableList.add(this);
     }
     public Personal(){
 

@@ -36,7 +36,7 @@ public class NewVehicleController extends MainMenuController implements Initiali
 
         try {
             for(int counter=0;counter<Vehicle.info.size();counter++){
-                if (Objects.equals(licencePlateNumberField.getText(), Vehicle.info.get(counter).getVehicleLisancePlate())){
+                if (Objects.equals(licencePlateNumberField.getText(), Vehicle.info.get(counter).getVehiclePlateNumber())){
                     Alert SamePlateNumberError = new Alert(Alert.AlertType.ERROR);
                     SamePlateNumberError.setTitle("Error");
                     SamePlateNumberError.setHeaderText("There is a another vehicle use to same LicencePlate");
