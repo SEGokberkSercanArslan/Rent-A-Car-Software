@@ -15,20 +15,20 @@ import java.util.List;
 public class Personal implements Serializable , Comparable<Personal> {
     private String name;
     private String surname;
-    private String emailAdress;
+    private String emailAddress;
     private String telephoneNumber;
     private String address;
     private String username;
     private String password;
     private String idNumber;
-    private String privladge;
+    private String privilege;
     static List <Personal> info = new ArrayList<Personal>();
     protected static Personal currentUser = new Personal();
     public static ObservableList<Personal> personalObservableList = FXCollections.observableArrayList();
 
 
-    public Personal(String name,String surname,String emailAdress,String telephoneNumber,String username,String password,String address,String idNumber,String privladge){
-        setEmailAdress(emailAdress);
+    public Personal(String name, String surname, String emailAddress, String telephoneNumber, String username, String password, String address, String idNumber, String privilege){
+        setEmailAddress(emailAddress);
         setTelephoneNumber(telephoneNumber);
         setName(name);
         setSurname(surname);
@@ -36,7 +36,7 @@ public class Personal implements Serializable , Comparable<Personal> {
         setUsername(username);
         setAddress(address);
         setIdNumber(idNumber);
-        setPrivladge(privladge);
+        setPrivilege(privilege);
         info.add(this);
         personalObservableList.add(this);
     }
@@ -54,8 +54,8 @@ public class Personal implements Serializable , Comparable<Personal> {
     public void setPassword(String password) {
         this.password = password;
     }
-    public void setEmailAdress(String emailAdress) {
-        this.emailAdress = emailAdress;
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
     public void setTelephoneNumber(String telephoneNumber) {
         this.telephoneNumber = telephoneNumber;
@@ -69,8 +69,8 @@ public class Personal implements Serializable , Comparable<Personal> {
     public void setIdNumber(String idNumber) {
         this.idNumber = idNumber;
     }
-    public void setPrivladge(String privladge) {
-        this.privladge = privladge;
+    public void setPrivilege(String privilege) {
+        this.privilege = privilege;
     }
 
     //Current User Prototype Function
@@ -78,13 +78,13 @@ public class Personal implements Serializable , Comparable<Personal> {
         //Personal.currentUser = currentUser;
         Personal.currentUser.setName(info.get(index).getName());
         Personal.currentUser.setUsername(info.get(index).getSurname());
-        Personal.currentUser.setEmailAdress(info.get(index).getEmailAdress());
+        Personal.currentUser.setEmailAddress(info.get(index).getEmailAddress());
         Personal.currentUser.setTelephoneNumber(info.get(index).getTelephoneNumber());
         Personal.currentUser.setUsername(info.get(index).getUsername());
         Personal.currentUser.setPassword(info.get(index).getPassword());
         Personal.currentUser.setAddress(info.get(index).getAddress());
         Personal.currentUser.setIdNumber(info.get(index).getIdNumber());
-        Personal.currentUser.setPrivladge(info.get(index).getPrivladge());
+        Personal.currentUser.setPrivilege(info.get(index).getPrivilege());
     }
 
     public void initializePersonalsToFile() throws IOException {
@@ -126,8 +126,8 @@ public class Personal implements Serializable , Comparable<Personal> {
     public String getPassword() {
         return password;
     }
-    public String getEmailAdress() {
-        return emailAdress;
+    public String getEmailAddress() {
+        return emailAddress;
     }
     public String getTelephoneNumber() {
         return telephoneNumber;
@@ -141,8 +141,8 @@ public class Personal implements Serializable , Comparable<Personal> {
     public String getIdNumber() {
         return idNumber;
     }
-    public String getPrivladge() {
-        return privladge;
+    public String getPrivilege() {
+        return privilege;
     }
 
     private static Comparator<String> ALPHABETICAL_ORDER = new Comparator<String>() {

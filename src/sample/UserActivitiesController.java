@@ -1,9 +1,37 @@
 package sample;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class UserActivitiesController extends MainMenuController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class UserActivitiesController extends MainMenuController implements Initializable {
+    public TableColumn<Personal,String> userNameColumn;
+    public TableColumn<Personal,String> userSurnameColumn;
+    public TableColumn<Personal,String> usernameColumn;
+    public TableColumn<Personal,String> userPasswordColumn;
+    public TableColumn<Personal,String> userIDNumberColumn;
+    public TableColumn<Personal,String> userAddressColumn;
+    public TableColumn<Personal,String> userTelephoneColumn;
+    public TableColumn<Personal,String> userEMailColumn;
+    public TableColumn<Personal,String> userPrivilegeColumn;
+    public TableView<Personal> userActivitiesTableView;
+
+    @FXML
+    public void deleteUserFromDatabase(ActionEvent event) {
+        ObservableList<Personal> selectedPersonalOnTable;
+        selectedPersonalOnTable = userActivitiesTableView.getSelectionModel().getSelectedItems();
+        Personal deleteThisPersonal = userActivitiesTableView.getSelectionModel().getSelectedItem();
+        Personal.personalObservableList.removeAll(selectedPersonalOnTable);
+        Personal.info.remove(deleteThisPersonal);
+    }
+
     @Override
     public void menuItemAbout(ActionEvent event) {
         super.menuItemAbout(event);
@@ -59,4 +87,17 @@ public class UserActivitiesController extends MainMenuController {
         super.vehicleOffDuty(event);
     }
 
+    @Override
+    public final void initialize(URL location, ResourceBundle resources) {
+        userNameColumn.setCellValueFactory(new PropertyValueFactory<Personal,String>("name"));
+        userSurnameColumn.setCellValueFactory(new PropertyValueFactory<Personal,String>("surname"));
+        usernameColumn.setCellValueFactory(new PropertyValueFactory<Personal,String>("username"));
+        userPasswordColumn.setCellValueFactory(new PropertyValueFactory<Personal,String>("password"));
+        userIDNumberColumn.setCellValueFactory(new PropertyValueFactory<Personal,String>("idNumber"));
+        userAddressColumn.setCellValueFactory(new PropertyValueFactory<Personal,String>("address"));
+        userTelephoneColumn.setCellValueFactory(new PropertyValueFactory<Personal,String>("telephoneNumber"));
+        userEMailColumn.setCellValueFactory(new PropertyValueFactory<Personal,String>("emailAddress"));
+        userPrivilegeColumn.setCellValueFactory(new PropertyValueFactory<Personal,String>("privilege"));
+        userActivitiesTableView.setItems(Personal.personalObservableList);
+    }
 }

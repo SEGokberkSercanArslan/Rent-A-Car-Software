@@ -32,7 +32,6 @@ public class VehicleDatabaseController extends MainMenuController implements Ini
         Vehicle deleteThisVehicle = tableView.getSelectionModel().getSelectedItem();
         Vehicle.vehicleObservableList.removeAll(selectedVehicleOnTable);
         Vehicle.info.remove(deleteThisVehicle);
-        System.out.println(deleteThisVehicle.getVehiclePlateNumber());
     }
 
     @Override

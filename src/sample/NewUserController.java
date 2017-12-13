@@ -40,7 +40,7 @@ public class NewUserController extends MainMenuController implements Initializab
         else {
 
             for (int counter=0;counter<Personal.info.size();counter++){
-                if(!Objects.equals(Personal.currentUser.getPrivladge(), "Admin")){
+                if(!Objects.equals(Personal.currentUser.getPrivilege(), "Admin")){
                     Alert PrivilegeError = new Alert(Alert.AlertType.ERROR);
                     PrivilegeError.setTitle("Error");
                     PrivilegeError.setHeaderText("Permission Error");
