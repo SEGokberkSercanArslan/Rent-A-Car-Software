@@ -92,6 +92,8 @@
                         <TableColumn fx:id="vehicleStatus" prefWidth="90.0" text="Status" />
                     </columns>
                   </TableView>
+                  <Button fx:id="saveEditButton" layoutX="43.0" layoutY="447.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Save Edit" />
+                  <Button fx:id="deleteDatabaseVehicleButton" layoutX="180.0" layoutY="447.0" mnemonicParsing="false" onAction="#deleteVehicleFromDatabase" prefHeight="25.0" prefWidth="120.0" text="Delete Vehicle" />
                </children>
             </AnchorPane>
             </children>

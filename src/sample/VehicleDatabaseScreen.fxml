@@ -83,13 +83,13 @@
                   <TableView fx:id="tableView" layoutX="43.0" layoutY="100.0" prefHeight="335.0" prefWidth="720.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;">
                     <columns>
                       <TableColumn fx:id="vehiclePlateNumber" prefWidth="90.0" text="Plate Number" />
-                      <TableColumn fx:id="vehicleManufacturer" prefWidth="90.0" sortable="false" text="Manufacturer" />
-                        <TableColumn fx:id="vehicleType" prefWidth="90.0" sortable="false" text="Vehicle Type" />
-                        <TableColumn fx:id="vehicleModel" prefWidth="90.0" sortable="false" text="Model" />
-                        <TableColumn fx:id="vehicleKilometer" prefWidth="90.0" sortable="false" text="Kilometer" />
-                        <TableColumn fx:id="vehiclePrice" prefWidth="90.0" sortable="false" text="Price" />
-                        <TableColumn fx:id="vehicleGains" prefWidth="90.0" sortable="false" text="Gains" />
-                        <TableColumn fx:id="vehicleStatus" prefWidth="90.0" sortable="false" text="Status" />
+                      <TableColumn fx:id="vehicleManufacturer" prefWidth="90.0" text="Manufacturer" />
+                        <TableColumn fx:id="vehicleType" prefWidth="90.0" text="Vehicle Type" />
+                        <TableColumn fx:id="vehicleModel" prefWidth="90.0" text="Model" />
+                        <TableColumn fx:id="vehicleKilometer" prefWidth="90.0" text="Kilometer" />
+                        <TableColumn fx:id="vehiclePrice" prefWidth="90.0" text="Price" />
+                        <TableColumn fx:id="vehicleGains" prefWidth="90.0" text="Gains" />
+                        <TableColumn fx:id="vehicleStatus" prefWidth="90.0" text="Status" />
                     </columns>
                   </TableView>
                   <Button fx:id="saveEditButton" layoutX="43.0" layoutY="447.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Save Edit" />

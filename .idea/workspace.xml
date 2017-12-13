@@ -4,10 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/sample/Vehicle.java" line="113" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c97e5fc-d491-4f21-aa17-95ac71a3f390" name="Default" comment="Delete Vehicle on database is active now">
+    <list default="true" id="0c97e5fc-d491-4f21-aa17-95ac71a3f390" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RentACar/sample/MainMenu.fxml" afterPath="$PROJECT_DIR$/out/production/RentACar/sample/MainMenu.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/VehicleDatabaseController.java" afterPath="$PROJECT_DIR$/src/sample/VehicleDatabaseController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RentACar/sample/VehicleDatabaseScreen.fxml" afterPath="$PROJECT_DIR$/out/production/RentACar/sample/VehicleDatabaseScreen.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/VehicleDatabaseScreen.fxml" afterPath="$PROJECT_DIR$/src/sample/VehicleDatabaseScreen.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,8 +22,8 @@
       <file leaf-file-name="VehicleDatabaseController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/VehicleDatabaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1343">
-              <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="29" column="55" lean-forward="true" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -600,7 +599,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513075402475</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Delete Vehicle on database is active now">
+      <created>1513157276398</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1513157276398</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -669,7 +675,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="addNewUser Screen fxml added (Not completed)&#10;addUserScreenController java class added (Not completed)" />
     <MESSAGE value="addUserController Some basic structures Added" />
     <MESSAGE value="addUserController Some basic structures Added One bug Cleaned" />
     <MESSAGE value="Personal parameterized contructor added" />
@@ -694,7 +699,8 @@
     <MESSAGE value="FXML&#10;&#10;---Change Log---&#10;&#10;-All Screen buttons are active now." />
     <MESSAGE value="NewVehicleController Update" />
     <MESSAGE value="Vehicle Database Java Updated&#10;&#10;New GUI Contents added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vehicle Database Java Updated&#10;&#10;New GUI Contents added" />
+    <MESSAGE value="Delete Vehicle on database is active now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete Vehicle on database is active now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1138,8 +1144,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/VehicleDatabaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="29" column="55" lean-forward="true" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
           <folding />
         </state>
       </provider>
