@@ -10,6 +10,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class MainMenuController {
 
     @FXML
@@ -23,11 +25,18 @@ public class MainMenuController {
 
     @FXML
     public void userActivities(ActionEvent event) throws Exception{
+        if(Objects.equals(Personal.currentUser.getPrivilege(), "Admin")){
         Parent userActivitiesScreen = FXMLLoader.load(getClass().getResource("UserActivitiesScreen.fxml"));
         Scene userScene = new Scene(userActivitiesScreen);
         Stage userStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         userStage.setScene(userScene);
-        userStage.show();
+        userStage.show(); }
+        else{
+            Alert PrivliledgeWarning = new Alert(Alert.AlertType.WARNING);
+            PrivliledgeWarning.setTitle("Warning");
+            PrivliledgeWarning.setHeaderText("You don't have authorization for this.");
+            PrivliledgeWarning.showAndWait();
+        }
     }
 
     @FXML
