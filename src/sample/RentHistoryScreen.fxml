@@ -78,6 +78,18 @@
                         <Button fx:id="vehicleOffDutyButton" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#vehicleOffDuty" prefHeight="25.0" prefWidth="117.0" text="Vehicle Off Duty" />
                     </children>
                 </AnchorPane>
+            <AnchorPane layoutX="246.0" layoutY="53.0" prefHeight="534.0" prefWidth="756.0" style="-fx-background-color: #575b60; -fx-opacity: 0.60;">
+               <children>
+                  <TableView layoutX="25.0" layoutY="112.0" prefHeight="310.0" prefWidth="706.0">
+                    <columns>
+                      <TableColumn prefWidth="142.0" text="Car Model" />
+                      <TableColumn prefWidth="103.0" text="License Plate" />
+                        <TableColumn prefWidth="125.0" text="Date Rental Begins" />
+                        <TableColumn prefWidth="123.0" text="Date Rental Ends" />
+                        <TableColumn prefWidth="212.0" text="Rented By" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
             </children>
         </AnchorPane>
     </children>

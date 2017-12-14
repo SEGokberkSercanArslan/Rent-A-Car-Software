@@ -78,6 +78,21 @@
                         <Button fx:id="vehicleOffDutyButton" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#vehicleOffDuty" prefHeight="25.0" prefWidth="117.0" text="Vehicle Off Duty" />
                     </children>
                 </AnchorPane>
+            <AnchorPane layoutX="246.0" layoutY="53.0" prefHeight="534.0" prefWidth="756.0" style="-fx-background-color: #575b60; -fx-opacity: 0.60;">
+               <children>
+                  <ChoiceBox layoutX="85.0" layoutY="97.0" prefHeight="27.0" prefWidth="184.0" />
+                  <ChoiceBox layoutX="378.0" layoutY="97.0" prefHeight="27.0" prefWidth="184.0" />
+                  <Button layoutX="620.0" layoutY="436.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="102.0" text="Rent" />
+                  <TextField layoutX="85.0" layoutY="157.0" prefHeight="27.0" prefWidth="184.0" text="Customer Name&amp;Surname" />
+                  <TextField layoutX="378.0" layoutY="157.0" prefHeight="27.0" prefWidth="184.0" text="Date" />
+                  <TextField layoutX="85.0" layoutY="217.0" prefHeight="27.0" prefWidth="184.0" text="Customer ID" />
+                  <TextField layoutX="378.0" layoutY="217.0" prefHeight="27.0" prefWidth="184.0" text="Scheduled Delivery Date" />
+                  <TextField layoutX="378.0" layoutY="332.0" prefHeight="27.0" prefWidth="184.0" text="Price" />
+                  <TextField layoutX="85.0" layoutY="277.0" prefHeight="27.0" prefWidth="184.0" text="Customer Phone Number" />
+                  <Text fill="WHITE" layoutX="85.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Type" wrappingWidth="117.0" />
+                  <Text fill="WHITE" layoutX="378.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Vehicles" />
+               </children>
+            </AnchorPane>
             </children>
         </AnchorPane>
     </children>

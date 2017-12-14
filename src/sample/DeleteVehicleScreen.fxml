@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
@@ -78,6 +80,23 @@
                         <Button fx:id="vehicleOffDutyButton" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#vehicleOffDuty" prefHeight="25.0" prefWidth="117.0" text="Vehicle Off Duty" />
                     </children>
                 </AnchorPane>
+            <AnchorPane layoutX="220.0" layoutY="53.0" prefHeight="534.0" prefWidth="790.0" style="-fx-background-color: #575b60; -fx-opacity: .60;">
+               <children>
+                  <SplitMenuButton layoutX="76.0" layoutY="115.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="386.0" text="Vehicles">
+                    <items>
+                        <RadioMenuItem mnemonicParsing="false" text="Unspecified Action" />
+                      <MenuItem mnemonicParsing="false" text="delete 1" />
+                      <MenuItem mnemonicParsing="false" text="delete 2" />
+                    </items>
+                  </SplitMenuButton>
+                  <Button layoutX="76.0" layoutY="426.0" mnemonicParsing="false" text="Delete" />
+                  <Text fill="WHITE" layoutX="93.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select the vehicle to be deleted." wrappingWidth="351.46826171875">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
             </children>
         </AnchorPane>
     </children>

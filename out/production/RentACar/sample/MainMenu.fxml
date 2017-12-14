@@ -66,7 +66,7 @@
                         <Image url="@../Images/icons8-car-rental-100.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="userActivitiesButton" layoutX="70.0" layoutY="53.0" mnemonicParsing="false" onAction="#userActivities" prefHeight="25.0" prefWidth="117.0" text="User Activities" />
+                  <Button fx:id="userActivitiesButton" layoutX="70.0" layoutY="53.0" mnemonicParsing="false" onAction="#userActivities" prefHeight="25.0" prefWidth="117.0" text="User Management" />
                   <Button fx:id="newUserButton" layoutX="70.0" layoutY="93.0" mnemonicParsing="false" onAction="#newUser" prefHeight="25.0" prefWidth="117.0" text="New User" />
                   <Button fx:id="deleteUserButton" layoutX="70.0" layoutY="133.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="117.0" text="Delete User" />
                   <Button fx:id="newVehicleButton" layoutX="70.0" layoutY="273.0" mnemonicParsing="false" onAction="#newVehicle" prefHeight="25.0" prefWidth="117.0" text="New Vehicle" />
