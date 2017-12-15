@@ -29,16 +29,6 @@ public class NewUserController extends MainMenuController implements Initializab
 
     @FXML
     public void saveUser(ActionEvent event) throws IOException {
-        if (Personal.info.isEmpty()){
-            Personal newPersonal = new Personal(NameField.getText(),SurnameField.getText(),EmailField.getText(),TelephoneField.getText()
-                    ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText(), PrivilegeChoiceBox.getValue());
-            Alert SuccesfullyAdded = new Alert(Alert.AlertType.INFORMATION);
-            SuccesfullyAdded.setTitle("Info");
-            SuccesfullyAdded.setHeaderText("Personal Successfully Added");
-            SuccesfullyAdded.showAndWait();
-            isEmployee = true;
-        }
-        else {
 
             for (int counter=0;counter<Personal.info.size();counter++){
                 if(!Objects.equals(Personal.currentUser.getPrivilege(), "Admin")){
@@ -47,9 +37,10 @@ public class NewUserController extends MainMenuController implements Initializab
                     PrivilegeError.setHeaderText("Permission Error");
                     PrivilegeError.setContentText("You don't have permission for add personal.");
                     PrivilegeError.showAndWait();
+                    isEmployee = true;
                     break;
                 }
-                if (Objects.equals(UsernameField.getText(), Personal.info.get(counter).getUsername())){
+                else if (Objects.equals(UsernameField.getText(), Personal.info.get(counter).getUsername())){
                     Alert UserNameMatched = new Alert(Alert.AlertType.ERROR);
                     UserNameMatched.setTitle("Error");
                     UserNameMatched.setHeaderText("User Name Matched ");
@@ -58,7 +49,7 @@ public class NewUserController extends MainMenuController implements Initializab
                     isEmployee = true;
                     break;
                 }
-                if (Objects.equals(IdNumberField.getText(), Personal.info.get(counter).getIdNumber())){
+                else if(Objects.equals(IdNumberField.getText(), Personal.info.get(counter).getIdNumber())){
                     Alert IdMatchedDB = new Alert(Alert.AlertType.ERROR);
                     IdMatchedDB.setTitle("Error");
                     IdMatchedDB.setHeaderText("ID Matched");
@@ -72,7 +63,7 @@ public class NewUserController extends MainMenuController implements Initializab
                 }
 
             }
-        }
+
 
         if (!isEmployee){
             Personal newPersonal = new Personal(NameField.getText(),SurnameField.getText(),EmailField.getText(),TelephoneField.getText()
