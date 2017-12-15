@@ -32,10 +32,10 @@ public class MainMenuController {
         userStage.setScene(userScene);
         userStage.show(); }
         else{
-            Alert PrivliledgeWarning = new Alert(Alert.AlertType.WARNING);
-            PrivliledgeWarning.setTitle("Warning");
-            PrivliledgeWarning.setHeaderText("You don't have authorization for this.");
-            PrivliledgeWarning.showAndWait();
+            Alert PrivilegeWarning = new Alert(Alert.AlertType.WARNING);
+            PrivilegeWarning.setTitle("Warning");
+            PrivilegeWarning.setHeaderText("You don't have authorization for this.");
+            PrivilegeWarning.showAndWait();
         }
     }
 

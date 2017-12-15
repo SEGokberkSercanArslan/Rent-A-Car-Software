@@ -54,7 +54,7 @@ public class Controller {
     }
 
     @FXML
-    public void logInButton(ActionEvent event) throws Exception {
+    public void logInButton(ActionEvent event) throws IOException {
         setUserName(UserNameField.getText());
         setPassword(PasswordField.getText());
         boolean usernameFound = false;

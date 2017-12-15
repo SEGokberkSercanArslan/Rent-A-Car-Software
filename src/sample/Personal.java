@@ -126,7 +126,7 @@ public class Personal implements Serializable , Comparable<Personal> {
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(personal);
         objectOutputStream.close();
-    }
+    }//Delete method required 
 
     //Get methods of attributes
     public String getSurname() {
