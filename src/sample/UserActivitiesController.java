@@ -8,6 +8,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -24,12 +26,21 @@ public class UserActivitiesController extends MainMenuController implements Init
     public TableView<Personal> userActivitiesTableView;
 
     @FXML
-    public void deleteUserFromDatabase(ActionEvent event) {
+    public void deleteUserFromDatabase(ActionEvent event) throws IOException {
         ObservableList<Personal> selectedPersonalOnTable;
         selectedPersonalOnTable = userActivitiesTableView.getSelectionModel().getSelectedItems();
         Personal deleteThisPersonal = userActivitiesTableView.getSelectionModel().getSelectedItem();
         Personal.personalObservableList.removeAll(selectedPersonalOnTable);
         Personal.info.remove(deleteThisPersonal);
+        clearDatabase();
+        Personal.initializePersonalsToFile();
+    }
+
+    public void clearDatabase() throws IOException {
+        FileWriter fileWriter = new FileWriter("Personals.data");
+        fileWriter.write("");
+        fileWriter.flush();
+        fileWriter.close();
     }
 
     @Override

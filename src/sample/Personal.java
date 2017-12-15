@@ -166,6 +166,7 @@ public class Personal implements Serializable , Comparable<Personal> {
             return res;
         }
     };
+
     @Override
     public int compareTo(Personal personal) {
         return ALPHABETICAL_ORDER.compare(this.name,personal.name);
