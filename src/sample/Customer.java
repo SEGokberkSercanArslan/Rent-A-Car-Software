@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Customer implements Comparable<Customer> {
     private String name;
@@ -58,8 +59,18 @@ public class Customer implements Comparable<Customer> {
         return idNumber;
     }
 
+    private static Comparator<String> ALPHABETICAL_ORDER = new Comparator<String>() {
+        public int compare(String str1, String str2) {
+            int res = String.CASE_INSENSITIVE_ORDER.compare(str1, str2);
+            if (res == 0) {
+                res = str1.compareTo(str2);
+            }
+            return res;
+        }
+    };
+
     @Override
     public int compareTo(Customer o) {
-        return 0;
+        return ALPHABETICAL_ORDER.compare(this.name,o.name);
     }
 }

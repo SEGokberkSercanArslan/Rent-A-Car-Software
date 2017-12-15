@@ -27,7 +27,7 @@ public class Personal implements Serializable , Comparable<Personal> {
     public static ObservableList<Personal> personalObservableList = FXCollections.observableArrayList();
 
 
-    public Personal(String name, String surname, String emailAddress, String telephoneNumber, String username, String password, String address, String idNumber, String privilege){
+    public Personal(String name, String surname, String emailAddress, String telephoneNumber, String username, String password, String address, String idNumber, String privilege) throws IOException {
         setEmailAddress(emailAddress);
         setTelephoneNumber(telephoneNumber);
         setName(name);
@@ -39,6 +39,8 @@ public class Personal implements Serializable , Comparable<Personal> {
         setPrivilege(privilege);
         info.add(this);
         personalObservableList.add(this);
+        initilizePersonal(this);
+        initializePersonalsToFile();
     }
     public Personal(){
 
@@ -87,7 +89,7 @@ public class Personal implements Serializable , Comparable<Personal> {
         Personal.currentUser.setPrivilege(info.get(index).getPrivilege());
     }
 
-    public void initializePersonalsToFile() throws IOException {
+    public static void initializePersonalsToFile() throws IOException {
         FileOutputStream fos = new FileOutputStream("Personals.data");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         for (Personal per : info) {
@@ -96,7 +98,7 @@ public class Personal implements Serializable , Comparable<Personal> {
         fos.close();
     }
 
-    public void initializePersonalsFromFile() throws IOException, ClassNotFoundException {
+    public static void initializePersonalsFromFile() throws IOException, ClassNotFoundException {
         FileInputStream fis = new FileInputStream("Personals.data");
         ObjectInputStream ois = new ObjectInputStream(fis);
         boolean eof = true;
@@ -112,8 +114,18 @@ public class Personal implements Serializable , Comparable<Personal> {
         } catch (EOFException eofex) {
 
         } finally {
+            for(int counter = 0 ;counter<info.size();counter++){
+                personalObservableList.add(info.get(counter));
+            }
             System.out.println("All Personals Recorded Successful");
         }
+    }
+
+    public void initilizePersonal(Personal personal) throws IOException {
+        FileOutputStream fileOutputStream = new FileOutputStream("Personals.data");
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+        objectOutputStream.writeObject(personal);
+        objectOutputStream.close();
     }
 
     //Get methods of attributes

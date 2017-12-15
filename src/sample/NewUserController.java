@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -27,7 +28,7 @@ public class NewUserController extends MainMenuController implements Initializab
     ObservableList <String> items = FXCollections.observableArrayList("Admin","Employee");
 
     @FXML
-    public void saveUser(ActionEvent event){
+    public void saveUser(ActionEvent event) throws IOException {
         if (Personal.info.isEmpty()){
             Personal newPersonal = new Personal(NameField.getText(),SurnameField.getText(),EmailField.getText(),TelephoneField.getText()
                     ,UsernameField.getText(),PasswordField.getText(),AddressField.getText(),IdNumberField.getText(), PrivilegeChoiceBox.getValue());

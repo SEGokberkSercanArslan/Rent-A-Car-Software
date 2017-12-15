@@ -3,6 +3,7 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,7 +14,10 @@ import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 
 public class Controller {
@@ -53,8 +57,11 @@ public class Controller {
     public void logInButton(ActionEvent event) throws Exception {
         setUserName(UserNameField.getText());
         setPassword(PasswordField.getText());
+        boolean usernameFound = false;
+        boolean passwordFound = false;
         for(int counter =0;counter<Personal.info.size();counter++){
             if (Objects.equals(Personal.info.get(counter).getUsername(),getUserName())){
+                usernameFound = true;
                 if(Objects.equals(Personal.info.get(counter).getPassword(),getPassword())){
                     Personal.initializeCurrentUser(counter);
                     Parent MainMenu = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
@@ -63,12 +70,16 @@ public class Controller {
                     MainMenuStage.setScene(MainMenuScene);
                     MainMenuStage.show();
                 }
+                else {
                 Alert WrongPassword = new Alert(Alert.AlertType.ERROR);
                 WrongPassword.setTitle("Error");
                 WrongPassword.setHeaderText("Wrong Password");
                 WrongPassword.setContentText("Password you've given us is not match username.");
                 WrongPassword.showAndWait();
+                }
             }
+        }
+        if(!usernameFound){
             Alert WrongUsername = new Alert(Alert.AlertType.ERROR);
             WrongUsername.setTitle("Error");
             WrongUsername.setHeaderText("Wrong Username");
@@ -104,7 +115,6 @@ public class Controller {
         softwareInfo.setContentText("The software created by Gökberk Sercan Arslan and Kübra Korkmaz");
         softwareInfo.showAndWait();
     }
-
 
 
 }
