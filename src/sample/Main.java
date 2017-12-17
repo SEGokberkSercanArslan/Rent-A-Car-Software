@@ -20,8 +20,9 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) throws IOException {
-        //SerializeObjects.initializePersonalObjectToFile(new Personal("Gökberk Sercan","Arslan","example@outlook.com","5554441010","admin","admin","None","SE360","Admin"));
+       // SerializeObjects.initializePersonalObjectToFile(new Personal("Gökberk Sercan","Arslan","example@outlook.com","5554441010","admin","admin","None","SE360","Admin"));
         SerializeObjects.initializePersonalObjectsFromFile();
+        SerializeObjects.initializeVehicleObjectsFromFile();
         launch(args);
     }
 }

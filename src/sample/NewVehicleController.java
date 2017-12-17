@@ -32,7 +32,7 @@ public class NewVehicleController extends MainMenuController implements Initiali
             "Full-Size SUV","Mini Pickup Truck","Mid-Size Pickup Truck","Full-Size Pickup Truck","Heavy Duty Pickup Truck");
 
     @FXML
-    public void saveVehicle(){
+    public void saveVehicle() throws IOException {
 
         try {
             for(int counter=0;counter<Vehicle.info.size();counter++){
@@ -77,7 +77,8 @@ public class NewVehicleController extends MainMenuController implements Initiali
             vehiclePriceField.clear();
         }
         finally {
-
+            SerializeObjects.clearVehicleData();
+            SerializeObjects.initializeVehicleObjectsToFile();
         }
 
     }

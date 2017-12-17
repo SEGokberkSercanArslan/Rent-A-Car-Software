@@ -32,15 +32,9 @@ public class UserActivitiesController extends MainMenuController implements Init
         Personal deleteThisPersonal = userActivitiesTableView.getSelectionModel().getSelectedItem();
         Personal.personalObservableList.removeAll(selectedPersonalOnTable);
         Personal.info.remove(deleteThisPersonal);
-        clearDatabase();
+        SerializeObjects.clearPersonalsData();
+        SerializeObjects.initialziePersonalObjectsToFile();
 
-    }
-
-    public void clearDatabase() throws IOException {
-        FileWriter fileWriter = new FileWriter("Personals.data");
-        fileWriter.write("");
-        fileWriter.flush();
-        fileWriter.close();
     }
 
     @Override

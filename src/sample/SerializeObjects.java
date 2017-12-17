@@ -82,11 +82,27 @@ public class SerializeObjects implements Serializable {
             System.out.println("class not found");
             e.printStackTrace();
         } finally {
-            for (int counter = 0; counter < Personal.info.size(); counter++) {
-                Vehicle.vehicleObservableList.add(Vehicle.info.get(counter));
+            try {
+                for (int counter = 0; counter < Personal.info.size(); counter++) {
+                    Vehicle.vehicleObservableList.add(Vehicle.info.get(counter));
+                }
             }
+            catch (IndexOutOfBoundsException ex){
+                System.out.println("No vehicles in file");
+            }
+
             System.out.println("All Vehicles Recorded Successful");
             file.close();
         }
+    }
+    public static void clearVehicleData() throws FileNotFoundException {
+        PrintWriter printWriter = new PrintWriter("Vehicle.data");
+        printWriter.write("");
+        printWriter.close();
+    }
+    public static void clearPersonalsData() throws FileNotFoundException {
+        PrintWriter printWriter = new PrintWriter("Personals.data");
+        printWriter.write("");
+        printWriter.close();
     }
 }

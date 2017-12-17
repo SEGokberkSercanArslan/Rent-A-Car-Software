@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Vehicle {
+public class Vehicle implements Serializable {
     private String vehicleType;
     private String vehicleModel;
     private String vehicleColour;
