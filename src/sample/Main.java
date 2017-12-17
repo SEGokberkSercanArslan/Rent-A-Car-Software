@@ -16,12 +16,12 @@ public class Main extends Application {
         primaryStage.setTitle("Rent A Car");
         primaryStage.setScene(new Scene(root, 1024, 640));
         primaryStage.show();
+
     }
 
-    
-
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
-        Personal.initializePersonalsFromFile();
+    public static void main(String[] args) throws IOException {
+        //SerializeObjects.initializePersonalObjectToFile(new Personal("Gökberk Sercan","Arslan","example@outlook.com","5554441010","admin","admin","None","SE360","Admin"));
+        SerializeObjects.initializePersonalObjectsFromFile();
         launch(args);
     }
 }

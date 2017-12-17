@@ -68,9 +68,7 @@
                         </ImageView>
                         <Button fx:id="userActivitiesButton" layoutX="70.0" layoutY="53.0" mnemonicParsing="false" onAction="#userActivities" prefHeight="25.0" prefWidth="117.0" text="User Management" />
                         <Button fx:id="newUserButton" layoutX="70.0" layoutY="93.0" mnemonicParsing="false" onAction="#newUser" prefHeight="25.0" prefWidth="117.0" text="New User" />
-                        <Button fx:id="deleteUserButton" layoutX="70.0" layoutY="133.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="117.0" text="Delete User" />
                         <Button fx:id="newVehicleButton" layoutX="70.0" layoutY="273.0" mnemonicParsing="false" onAction="#newVehicle" prefHeight="25.0" prefWidth="117.0" text="New Vehicle" />
-                        <Button fx:id="deleteVehicleButton" layoutX="70.0" layoutY="313.0" mnemonicParsing="false" onAction="#deleteVehicle" prefHeight="25.0" prefWidth="117.0" text="Delete Vehicle" />
                         <Button fx:id="vehicleDatabaseButton" layoutX="70.0" layoutY="233.0" mnemonicParsing="false" onAction="#vehicleDatabase" prefHeight="25.0" prefWidth="117.0" text="Vehicle Database" />
                         <Button fx:id="rentVehicleButton" layoutX="70.0" layoutY="400.0" mnemonicParsing="false" onAction="#rentVehicle" prefHeight="25.0" prefWidth="117.0" text="Rent Vehicle" />
                         <Button fx:id="rentHistoryButton" layoutX="70.0" layoutY="440.0" mnemonicParsing="false" onAction="#rentHistory" prefHeight="25.0" prefWidth="117.0" text="Rent History" />
@@ -78,21 +76,7 @@
                         <Button fx:id="vehicleOffDutyButton" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#vehicleOffDuty" prefHeight="25.0" prefWidth="117.0" text="Vehicle Off Duty" />
                     </children>
                 </AnchorPane>
-            <AnchorPane layoutX="246.0" layoutY="53.0" prefHeight="534.0" prefWidth="756.0" style="-fx-background-color: #575b60; -fx-opacity: 0.60;">
-               <children>
-                  <ChoiceBox layoutX="85.0" layoutY="97.0" prefHeight="27.0" prefWidth="184.0" />
-                  <ChoiceBox layoutX="378.0" layoutY="97.0" prefHeight="27.0" prefWidth="184.0" />
-                  <Button layoutX="620.0" layoutY="436.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="102.0" text="Rent" />
-                  <TextField layoutX="85.0" layoutY="157.0" prefHeight="27.0" prefWidth="184.0" text="Customer Name&amp;Surname" />
-                  <TextField layoutX="378.0" layoutY="157.0" prefHeight="27.0" prefWidth="184.0" text="Date" />
-                  <TextField layoutX="85.0" layoutY="217.0" prefHeight="27.0" prefWidth="184.0" text="Customer ID" />
-                  <TextField layoutX="378.0" layoutY="217.0" prefHeight="27.0" prefWidth="184.0" text="Scheduled Delivery Date" />
-                  <TextField layoutX="378.0" layoutY="332.0" prefHeight="27.0" prefWidth="184.0" text="Price" />
-                  <TextField layoutX="85.0" layoutY="277.0" prefHeight="27.0" prefWidth="184.0" text="Customer Phone Number" />
-                  <Text fill="WHITE" layoutX="85.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Type" wrappingWidth="117.0" />
-                  <Text fill="WHITE" layoutX="378.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Vehicles" />
-               </children>
-            </AnchorPane>
+            <AnchorPane layoutX="246.0" layoutY="53.0" prefHeight="534.0" prefWidth="756.0" style="-fx-background-color: #575b60; -fx-opacity: 0.60;" />
             </children>
         </AnchorPane>
     </children>

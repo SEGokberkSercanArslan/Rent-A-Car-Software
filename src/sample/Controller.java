@@ -93,11 +93,7 @@ public class Controller {
 
     }
 
-
-
-    /*Prototype of changing between scenes*/
-    /*Delete after create database */
-    @FXML
+    @FXML//Don't need anymore
     public void changeScreenButtonPushed(ActionEvent event) throws Exception {
 
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
@@ -112,7 +108,7 @@ public class Controller {
         Alert softwareInfo = new Alert(Alert.AlertType.INFORMATION);
         softwareInfo.setTitle("About Software");
         softwareInfo.setHeaderText("Rent A Car software for more information please contact se-sercan@outlook.com");
-        softwareInfo.setContentText("The software created by Gökberk Sercan Arslan and Kübra Korkmaz");
+        softwareInfo.setContentText("The software created by Gökberk Sercan Arslan");
         softwareInfo.showAndWait();
     }
 

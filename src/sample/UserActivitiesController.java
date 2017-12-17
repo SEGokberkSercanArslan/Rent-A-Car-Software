@@ -33,7 +33,7 @@ public class UserActivitiesController extends MainMenuController implements Init
         Personal.personalObservableList.removeAll(selectedPersonalOnTable);
         Personal.info.remove(deleteThisPersonal);
         clearDatabase();
-        Personal.initializePersonalsToFile();
+
     }
 
     public void clearDatabase() throws IOException {

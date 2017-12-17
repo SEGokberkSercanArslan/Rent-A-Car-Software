@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 public class RentHistoryController extends MainMenuController {
+
     @Override
     public void menuItemAbout(ActionEvent event) {
         super.menuItemAbout(event);

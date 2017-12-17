@@ -1,5 +1,4 @@
 package sample;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -7,9 +6,6 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-
-
-
 
 
 public class Personal implements Serializable , Comparable<Personal> {
@@ -26,7 +22,9 @@ public class Personal implements Serializable , Comparable<Personal> {
     protected static Personal currentUser = new Personal();
     public static ObservableList<Personal> personalObservableList = FXCollections.observableArrayList();
 
+    public Personal(){
 
+    }
     public Personal(String name, String surname, String emailAddress, String telephoneNumber, String username, String password, String address, String idNumber, String privilege) throws IOException {
         setEmailAddress(emailAddress);
         setTelephoneNumber(telephoneNumber);
@@ -39,12 +37,8 @@ public class Personal implements Serializable , Comparable<Personal> {
         setPrivilege(privilege);
         info.add(this);
         personalObservableList.add(this);
-        initilizePersonal(this);
-        initializePersonalsToFile();
     }
-    public Personal(){
 
-    }
 
     //Set methods of attributes
     public void setSurname(String surname) {
@@ -89,44 +83,6 @@ public class Personal implements Serializable , Comparable<Personal> {
         Personal.currentUser.setPrivilege(info.get(index).getPrivilege());
     }
 
-    public static void initializePersonalsToFile() throws IOException {
-        FileOutputStream fos = new FileOutputStream("Personals.data");
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
-        for (Personal per : info) {
-            oos.writeObject(per);
-        }
-        fos.close();
-    }
-
-    public static void initializePersonalsFromFile() throws IOException, ClassNotFoundException {
-        FileInputStream fis = new FileInputStream("Personals.data");
-        ObjectInputStream ois = new ObjectInputStream(fis);
-        boolean eof = true;
-        try {
-            while (eof) {
-                Personal obj = (Personal) ois.readObject();
-                if (obj != null) {
-                    info.add(obj);
-                } else {
-                    eof = false;
-                }
-            }
-        } catch (EOFException eofex) {
-
-        } finally {
-            for(int counter = 0 ;counter<info.size();counter++){
-                personalObservableList.add(info.get(counter));
-            }
-            System.out.println("All Personals Recorded Successful");
-        }
-    }
-
-    public void initilizePersonal(Personal personal) throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream("Personals.data");
-        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-        objectOutputStream.writeObject(personal);
-        objectOutputStream.close();
-    }//Delete method required 
 
     //Get methods of attributes
     public String getSurname() {
@@ -171,4 +127,5 @@ public class Personal implements Serializable , Comparable<Personal> {
     public int compareTo(Personal personal) {
         return ALPHABETICAL_ORDER.compare(this.name,personal.name);
     }
+
 }
