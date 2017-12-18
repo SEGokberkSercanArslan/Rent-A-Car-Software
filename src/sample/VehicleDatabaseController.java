@@ -25,10 +25,10 @@ public class VehicleDatabaseController extends MainMenuController implements Ini
     public TableColumn<Vehicle,String> vehicleStatus;
     public TableView<Vehicle> tableView;
 
-    @FXML//Need revision delete vehicle list and vehicle observable list
+    @FXML
     public final void deleteVehicleFromDatabase(ActionEvent event) {
         ObservableList<Vehicle> selectedVehicleOnTable;
-        selectedVehicleOnTable = tableView.getSelectionModel().getSelectedItems();
+        selectedVehicleOnTable = tableView.getSelectionModel().getSelectedItems();      //When You select item on table
         Vehicle deleteThisVehicle = tableView.getSelectionModel().getSelectedItem();
         Vehicle.vehicleObservableList.removeAll(selectedVehicleOnTable);
         Vehicle.info.remove(deleteThisVehicle);

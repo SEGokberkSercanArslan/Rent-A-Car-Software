@@ -76,7 +76,42 @@
                         <Button fx:id="vehicleOffDutyButton" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#vehicleOffDuty" prefHeight="25.0" prefWidth="117.0" text="Vehicle Off Duty" />
                     </children>
                 </AnchorPane>
-                <AnchorPane layoutX="246.0" layoutY="53.0" prefHeight="534.0" prefWidth="756.0" style="-fx-background-color: #575b60; -fx-opacity: 0.60;" />
+                <AnchorPane layoutX="246.0" layoutY="76.0" prefHeight="511.0" prefWidth="756.0" style="-fx-background-color: #575b60; -fx-opacity: 0.60;">
+               <children>
+                  <TableView fx:id="vehicleSelectionTableView" layoutX="18.0" layoutY="88.0" prefHeight="335.0" prefWidth="720.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;">
+                     <columns>
+                        <TableColumn fx:id="vehiclePlateNumber" prefWidth="90.0" text="Plate Number" />
+                        <TableColumn fx:id="vehicleManufacturer" prefWidth="90.0" text="Manufacturer" />
+                        <TableColumn fx:id="vehicleType" prefWidth="90.0" text="Vehicle Type" />
+                        <TableColumn fx:id="vehicleModel" prefWidth="90.0" text="Model" />
+                        <TableColumn fx:id="vehicleKilometer" prefWidth="90.0" text="Kilometer" />
+                        <TableColumn fx:id="vehiclePrice" prefWidth="90.0" text="Investment" />
+                        <TableColumn fx:id="vehicleGains" prefWidth="90.0" text="Gains" />
+                        <TableColumn fx:id="vehicleStatus" prefWidth="90.0" text="Status" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="18.0" layoutY="27.0" text="Vehicle Selection" textFill="WHITE">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="billngScreenNextButton" layoutX="598.0" layoutY="439.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" text="Next" />
+               </children></AnchorPane>
+            <ImageView layoutX="487.0" layoutY="26.0">
+               <image>
+                  <Image url="@../Images/icons8_1_50px.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="587.0" layoutY="26.0">
+               <image>
+                  <Image url="@../Images/icons8_2_50px.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="687.0" layoutY="26.0">
+               <image>
+                  <Image url="@../Images/icons8_3_50px_3.png" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
     </children>

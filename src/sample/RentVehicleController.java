@@ -3,20 +3,24 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.ResourceBundle;
 
-public class RentVehicleController extends MainMenuController {
+public class RentVehicleController extends MainMenuController implements Initializable  {
 
+    private static Vehicle  chosenVehicle;
+    private static Customer chosenCustomer;
 
     public TextField customerNameField;
     public TextField customerSurnameField;
@@ -24,6 +28,17 @@ public class RentVehicleController extends MainMenuController {
     public TextField customerTelephoneField;
     public TextField customerDriverLicenceNumberField;
     public TextField customerIdentificationField;
+/*
+    public TableView<Vehicle> vehicleSelectionTableView;
+    public TableColumn<Vehicle,String> vehiclePlateNumber;
+    public TableColumn<Vehicle,String> vehicleManufacturer;
+    public TableColumn<Vehicle,String> vehicleType;
+    public TableColumn<Vehicle,String> vehicleModel;
+    public TableColumn<Vehicle,Integer> vehicleKilometer;
+    public TableColumn<Vehicle,Double> vehiclePrice;
+    public TableColumn<Vehicle,Double> vehicleGains;
+    public TableColumn<Vehicle,String> vehicleStatus;
+*/
 
     @FXML
     public void nextVehicleButton(ActionEvent event) throws IOException {
@@ -84,8 +99,8 @@ public class RentVehicleController extends MainMenuController {
                 Optional<ButtonType> result = DoYouWantToContinue.showAndWait();
                 if (result.get() == ButtonType.OK) {
 
-                    new Customer(customerNameField.getText(),customerSurnameField.getText(),customerAddressField.getText(),customerTelephoneField.getText(),
-                            customerIdentificationField.getText(),customerDriverLicenceNumberField.getText());
+                    setChosenCustomer(new Customer(customerNameField.getText(),customerSurnameField.getText(),customerAddressField.getText(),customerTelephoneField.getText(),
+                            customerIdentificationField.getText(),customerDriverLicenceNumberField.getText()));
 
                     Parent RentVehicleScreen2 = FXMLLoader.load(getClass().getResource("RentVehicleScreen2.fxml"));
                     Scene RentVehicleScreen2Scene = new Scene(RentVehicleScreen2);
@@ -101,6 +116,21 @@ public class RentVehicleController extends MainMenuController {
         }
 
     }
+
+
+    public static void setChosenCustomer(Customer chosenCustomer) {
+        RentVehicleController.chosenCustomer = chosenCustomer;
+    }
+    public static void setChosenVehicle(Vehicle chosenVehicle) {
+        RentVehicleController.chosenVehicle = chosenVehicle;
+    }
+    public static Customer getChosenCustomer() {
+        return chosenCustomer;
+    }
+    public static Vehicle getChosenVehicle() {
+        return chosenVehicle;
+    }
+
     @Override
     public void menuItemAbout(ActionEvent event) {
         super.menuItemAbout(event);
@@ -156,4 +186,18 @@ public class RentVehicleController extends MainMenuController {
         super.vehicleOffDuty(event);
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        /*
+        vehiclePlateNumber.setCellValueFactory(new PropertyValueFactory<Vehicle,String>("vehiclePlateNumber"));
+        vehicleManufacturer.setCellValueFactory(new PropertyValueFactory<Vehicle,String>("vehicleManufacturer"));
+        vehicleType.setCellValueFactory(new PropertyValueFactory<Vehicle,String>("vehicleType"));
+        vehicleModel.setCellValueFactory(new PropertyValueFactory<Vehicle,String>("vehicleModel"));
+        vehicleKilometer.setCellValueFactory(new PropertyValueFactory<Vehicle,Integer>("vehicleKilometer"));
+        vehiclePrice.setCellValueFactory(new PropertyValueFactory<Vehicle,Double>("vehiclePrice"));
+        vehicleGains.setCellValueFactory(new PropertyValueFactory<Vehicle,Double>("vehicleGains"));
+        vehicleStatus.setCellValueFactory(new PropertyValueFactory<Vehicle,String>("vehicleStatus"));
+        vehicleSelectionTableView.setItems(Vehicle.vehicleObservableList);
+        */
+    }
 }
