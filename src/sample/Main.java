@@ -6,7 +6,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main extends Application {
 
@@ -20,9 +22,16 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) throws IOException {
-       // SerializeObjects.initializePersonalObjectToFile(new Personal("Gökberk Sercan","Arslan","example@outlook.com","5554441010","admin","admin","None","SE360","Admin"));
+        //SerializeObjects.initializePersonalObjectToFile(new Personal("Gökberk Sercan","Arslan","example@outlook.com","5554441010","admin","admin","None","SE360","Admin"));
         SerializeObjects.initializePersonalObjectsFromFile();
-        SerializeObjects.initializeVehicleObjectsFromFile();
+
+        FileInputStream fileInputStream = new FileInputStream("Vehicle.data");
+        Scanner scanner = new Scanner(fileInputStream);
+        if (scanner.hasNext()) {
+            fileInputStream.close();
+            SerializeObjects.initializeVehicleObjectsFromFile();
+        }
+
         launch(args);
     }
 }

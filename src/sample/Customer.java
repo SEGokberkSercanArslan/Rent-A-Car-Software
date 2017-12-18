@@ -12,14 +12,16 @@ public class Customer implements Comparable<Customer> {
     private String surname;
     private String address;
     private String telephoneNumber;
+    private String driverLicenceNumber;
     private String idNumber;
 
-    Customer(String name , String surname, String address , String telephoneNumber , String idNumber){
+    Customer(String name , String surname, String address , String telephoneNumber , String idNumber , String driverLisanceNumber){
         setName(name);
         setSurname(surname);
         setAddress(address);
         setTelephoneNumber(telephoneNumber);
         setIdNumber(idNumber);
+        setDriverLicenceNumber(driverLisanceNumber);
         info.add(this);
         customerObservableList.add(this);
     }
@@ -42,6 +44,9 @@ public class Customer implements Comparable<Customer> {
     public void setIdNumber(String idNumber) {
         this.idNumber = idNumber;
     }
+    public void setDriverLicenceNumber(String driverLicenceNumber) {
+        this.driverLicenceNumber = driverLicenceNumber;
+    }
 
     public String getName() {
         return name;
@@ -58,6 +63,9 @@ public class Customer implements Comparable<Customer> {
     public String getIdNumber() {
         return idNumber;
     }
+    public String getDriverLicenceNumber() {
+        return driverLicenceNumber;
+    }
 
     private static Comparator<String> ALPHABETICAL_ORDER = new Comparator<String>() {
         public int compare(String str1, String str2) {
@@ -68,7 +76,6 @@ public class Customer implements Comparable<Customer> {
             return res;
         }
     };
-
     @Override
     public int compareTo(Customer o) {
         return ALPHABETICAL_ORDER.compare(this.name,o.name);

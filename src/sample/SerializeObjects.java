@@ -11,7 +11,7 @@ public class SerializeObjects implements Serializable {
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(file);
         objectOutputStream.writeObject(object);
     }
-    public static void initialziePersonalObjectsToFile() throws IOException {
+    public static void initializePersonalObjectsToFile() throws IOException {
         FileOutputStream fileOutputStream = new FileOutputStream("Personals.data");
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         for(int counter=0;counter<Personal.info.size();counter++){
@@ -83,7 +83,7 @@ public class SerializeObjects implements Serializable {
             e.printStackTrace();
         } finally {
             try {
-                for (int counter = 0; counter < Personal.info.size(); counter++) {
+                for (int counter = 0; counter < Vehicle.info.size(); counter++) {
                     Vehicle.vehicleObservableList.add(Vehicle.info.get(counter));
                 }
             }
@@ -95,6 +95,53 @@ public class SerializeObjects implements Serializable {
             file.close();
         }
     }
+    public static void initializeCustomerObjectsFromFile() throws IOException {
+        FileInputStream file = new FileInputStream("Customer.data");
+        ObjectInputStream objectInputStream = new ObjectInputStream(file);
+        boolean eof = true;
+        try {
+            while (eof) {
+                Customer obj = (Customer) objectInputStream.readObject();
+                if (obj != null) {
+                    Customer.info.add(obj);
+                    System.out.println("Object written");
+
+                } else {
+                    eof = false;
+                    System.out.println("end of file");
+                }
+            }
+        } catch (EOFException eofex) {
+            objectInputStream.close();
+        } catch (ClassNotFoundException e) {
+            System.out.println("class not found");
+            e.printStackTrace();
+        } finally {
+            try {
+                for (int counter = 0; counter < Customer.info.size(); counter++) {
+                    Customer.customerObservableList.add(Customer.info.get(counter));
+                }
+            }
+            catch (IndexOutOfBoundsException ex){
+                System.out.println("No customer in file");
+            }
+
+            System.out.println("All Customers Recorded Successful");
+            file.close();
+        }
+
+
+    }
+    public static void initializeCustomerObjectsToFile() throws IOException {
+        FileOutputStream fileOutputStream = new FileOutputStream("Customer.data");
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+        for(int counter=0;counter<Customer.info.size();counter++){
+            objectOutputStream.writeObject(Customer.info.get(counter));
+        }
+        System.out.println("All customer objects written in file successfully");
+        objectOutputStream.close();
+        fileOutputStream.close();
+    }
     public static void clearVehicleData() throws FileNotFoundException {
         PrintWriter printWriter = new PrintWriter("Vehicle.data");
         printWriter.write("");
@@ -105,4 +152,10 @@ public class SerializeObjects implements Serializable {
         printWriter.write("");
         printWriter.close();
     }
+    public static void clearCustomerData() throws FileNotFoundException {
+        PrintWriter printWriter = new PrintWriter("Customer.data");
+        printWriter.write("");
+        printWriter.close();
+    }
+
 }

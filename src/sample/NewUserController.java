@@ -77,7 +77,7 @@ public class NewUserController extends MainMenuController implements Initializab
             AddressField.clear();
             IdNumberField.clear();
             SerializeObjects.clearPersonalsData();
-            SerializeObjects.initialziePersonalObjectsToFile();
+            SerializeObjects.initializePersonalObjectsToFile();
             Alert SuccessfullyAdded = new Alert(Alert.AlertType.INFORMATION);
             SuccessfullyAdded.setTitle("Info");
             SuccessfullyAdded.setHeaderText("Personal Successfully Added");

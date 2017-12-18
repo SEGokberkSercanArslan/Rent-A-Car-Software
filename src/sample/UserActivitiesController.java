@@ -8,7 +8,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -33,7 +32,7 @@ public class UserActivitiesController extends MainMenuController implements Init
         Personal.personalObservableList.removeAll(selectedPersonalOnTable);
         Personal.info.remove(deleteThisPersonal);
         SerializeObjects.clearPersonalsData();
-        SerializeObjects.initialziePersonalObjectsToFile();
+        SerializeObjects.initializePersonalObjectsToFile();
 
     }
 
