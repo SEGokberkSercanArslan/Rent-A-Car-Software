@@ -76,6 +76,23 @@
                         <Button fx:id="vehicleOffDutyButton" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#vehicleOffDuty" prefHeight="25.0" prefWidth="117.0" text="Vehicle Off Duty" />
                     </children>
                 </AnchorPane>
+            <AnchorPane layoutX="246.0" layoutY="76.0" prefHeight="511.0" prefWidth="756.0" style="-fx-background-color: #575b60; -fx-opacity: 0.60;">
+               <children>
+                  <TableView fx:id="vehicleOffServiceTableView" layoutX="28.0" layoutY="69.0" prefHeight="331.0" prefWidth="700.0">
+                    <columns>
+                      <TableColumn fx:id="customerNameColumn" prefWidth="100.0" text="Name" />
+                      <TableColumn fx:id="customerSurnameColumn" prefWidth="100.0" text="Surname" />
+                        <TableColumn fx:id="vehicleTypeColumn" prefWidth="100.0" text="Vehicle Type" />
+                        <TableColumn fx:id="vehicleManufacturerColumn" prefWidth="100.0" text="Vehicle Manufacturer" />
+                        <TableColumn fx:id="vehicleModelColumn" prefWidth="100.0" text="Vehicle Model" />
+                        <TableColumn fx:id="vehiclePlateNumberColumn" prefWidth="100.0" text="Plate Number" />
+                        <TableColumn fx:id="vehicleStatusColumn" prefWidth="100.0" text="Status" />
+                    </columns>
+                  </TableView>
+                  <DatePicker fx:id="rentOutDatePicker" layoutX="28.0" layoutY="414.0" prefHeight="25.0" prefWidth="207.0" promptText="Rent out time" />
+                  <Button fx:id="rentOutButton" layoutX="578.0" layoutY="414.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Rent Out" />
+               </children>
+            </AnchorPane>
             </children>
         </AnchorPane>
     </children>

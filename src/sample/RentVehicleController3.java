@@ -42,6 +42,7 @@ public class RentVehicleController3 extends MainMenuController implements Serial
             }
         }
         catch (Exception ex){
+            ex.printStackTrace();
             Alert WrongTypeOfInput = new Alert(Alert.AlertType.ERROR);
             WrongTypeOfInput.setTitle("Error");
             WrongTypeOfInput.setHeaderText("You must give numbers Rental and Delay Fee box.");

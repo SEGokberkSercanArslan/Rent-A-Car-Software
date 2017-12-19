@@ -142,7 +142,10 @@ public class SerializeObjects implements Serializable {
         objectOutputStream.close();
         fileOutputStream.close();
     }
+    public static void initializeRentObjectsFromFile(){}
+    public static void initializeRentObjectsToFile(){}
 
+    public static void clearRentData(){}
     public static void clearVehicleData() throws FileNotFoundException {
         PrintWriter printWriter = new PrintWriter("Vehicle.data");
         printWriter.write("");

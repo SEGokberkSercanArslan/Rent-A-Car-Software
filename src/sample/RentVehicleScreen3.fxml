@@ -83,6 +83,11 @@
                   <TextField fx:id="rentalFeeField" layoutX="165.0" layoutY="180.0" prefHeight="25.0" prefWidth="174.0" promptText="Rental Fee" style="-fx-background-color: #ffffff;" />
                   <TextField fx:id="delayFeeField" layoutX="435.0" layoutY="180.0" prefHeight="25.0" prefWidth="174.0" promptText="Delay Fee" style="-fx-background-color: #ffffff;" />
                   <Button fx:id="rentThisVehicleButton" layoutX="435.0" layoutY="230.0" mnemonicParsing="false" onAction="#rentThisVehicle" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #ffffff;" text="Rent Vehicle" />
+                  <Label layoutX="165.0" layoutY="56.0" text="Fee and Schedule" textFill="WHITE">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
                </children></AnchorPane>
                 <ImageView layoutX="487.0" layoutY="26.0">
                     <image>

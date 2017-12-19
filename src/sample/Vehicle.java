@@ -13,10 +13,10 @@ public class Vehicle implements Serializable {
     private String vehicleColour;
     private String vehiclePlateNumber;
     private String vehicleManufacturer;
-    private int vehicleKilometer;    //it can be an integer ?
-    private double vehiclePrice;        //it can be an integer ?
-    private String vehicleStatus;       //Turn boolen
-    private double vehicleGains;        //it can be an integer ?
+    private int vehicleKilometer;
+    private double vehiclePrice;
+    private String vehicleStatus;
+    private double vehicleGains;
     public static List<Vehicle> info = new ArrayList<>();
     public static ObservableList <Vehicle> vehicleObservableList = FXCollections.observableArrayList();
 
@@ -63,33 +63,17 @@ public class Vehicle implements Serializable {
     public void setVehicleManufacturer(String vehicleManufacturer) {
         this.vehicleManufacturer = vehicleManufacturer;
     }
-
-    public void initializeVehicleToFile() throws IOException {
-        FileOutputStream fos = new FileOutputStream("Vehicle.data");
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
-        for (Vehicle vehicle : info) {
-            oos.writeObject(vehicle);
-        }
-        fos.close();
+    public void increaseVehicleGains(double gains){
+        this.vehicleGains += gains;
     }
-    public void initializeVehicleFromFile() throws IOException, ClassNotFoundException {
-        FileInputStream fis = new FileInputStream("Vehicle.data");
-        ObjectInputStream ois = new ObjectInputStream(fis);
-        boolean eof = true;
-        try {
-            while (eof) {
-                Vehicle obj = (Vehicle) ois.readObject();
-                if (obj != null) {
-                    info.add(obj);
-                } else {
-                    eof = false;
-                }
-            }
-        } catch (EOFException eofex) {
-            System.out.println("End of file Exception");
-        } finally {
-
-        }
+    public void decreseVehicleGains(double gains){
+        this.vehicleGains -= gains;
+    }
+    public void increaseVehicleKilometer(int vehicleKilometer){
+        this.vehicleKilometer += vehicleKilometer;
+    }
+    public void decreseVehicleKilometer(int vehicleKilometer){
+        this.vehicleKilometer -= vehicleKilometer;
     }
 
     //Get methods of attributes
