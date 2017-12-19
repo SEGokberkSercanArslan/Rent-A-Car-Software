@@ -46,34 +46,45 @@
                         <Image url="@../Images/icons8-admin-100.png" />
                      </image>
                   </ImageView>
-                  <Text fill="WHITE" layoutX="42.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Management">
+                  <Text fill="WHITE" layoutX="42.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Management">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="14.0" layoutY="200.0">
+                  <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="14.0" layoutY="134.0">
                      <image>
                         <Image url="@../Images/icons8-car-100.png" />
                      </image>
                   </ImageView>
-                  <Text fill="WHITE" layoutX="41.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rent Options">
+                  <Text fill="WHITE" layoutX="42.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rent Options">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="13.0" layoutY="367.0">
+                  <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="14.0" layoutY="244.0">
                      <image>
                         <Image url="@../Images/icons8-car-rental-100.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="userActivitiesButton" layoutX="70.0" layoutY="53.0" mnemonicParsing="false" onAction="#userActivities" prefHeight="25.0" prefWidth="117.0" text="User Management" />
-                  <Button fx:id="newUserButton" layoutX="70.0" layoutY="93.0" mnemonicParsing="false" onAction="#newUser" prefHeight="25.0" prefWidth="117.0" text="New User" />
-                  <Button fx:id="newVehicleButton" layoutX="70.0" layoutY="273.0" mnemonicParsing="false" onAction="#newVehicle" prefHeight="25.0" prefWidth="117.0" text="New Vehicle" />
-                  <Button fx:id="vehicleDatabaseButton" layoutX="70.0" layoutY="233.0" mnemonicParsing="false" onAction="#vehicleDatabase" prefHeight="25.0" prefWidth="117.0" text="Vehicle Database" />
-                  <Button fx:id="rentVehicleButton" layoutX="70.0" layoutY="400.0" mnemonicParsing="false" onAction="#rentVehicle" prefHeight="25.0" prefWidth="117.0" text="Rent Vehicle" />
-                  <Button fx:id="rentHistoryButton" layoutX="70.0" layoutY="440.0" mnemonicParsing="false" onAction="#rentHistory" prefHeight="25.0" prefWidth="117.0" text="Rent History" />
-                  <Button fx:id="customerHistoryButton" layoutX="70.0" layoutY="520.0" mnemonicParsing="false" onAction="#customerHistory" prefHeight="25.0" prefWidth="117.0" text="Customer History" />
-                  <Button fx:id="vehicleOffDutyButton" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#vehicleOffDuty" prefHeight="25.0" prefWidth="117.0" text="Vehicle Off Duty" />
+                  <Button fx:id="userActivitiesButton" layoutX="70.0" layoutY="55.0" mnemonicParsing="false" onAction="#userActivities" prefHeight="25.0" prefWidth="117.0" text="User Management" />
+                  <Button fx:id="newUserButton" layoutX="70.0" layoutY="90.0" mnemonicParsing="false" onAction="#newUser" prefHeight="25.0" prefWidth="117.0" text="New User" />
+                  <Button fx:id="newVehicleButton" layoutX="70.0" layoutY="200.0" mnemonicParsing="false" onAction="#newVehicle" prefHeight="25.0" prefWidth="117.0" text="New Vehicle" />
+                  <Button fx:id="vehicleDatabaseButton" layoutX="70.0" layoutY="165.0" mnemonicParsing="false" onAction="#vehicleDatabase" prefHeight="25.0" prefWidth="117.0" text="Vehicle Database" />
+                  <Button fx:id="rentVehicleButton" layoutX="70.0" layoutY="275.0" mnemonicParsing="false" onAction="#rentVehicle" prefHeight="25.0" prefWidth="117.0" text="Rent Vehicle" />
+                  <Button fx:id="rentHistoryButton" layoutX="70.0" layoutY="385.0" mnemonicParsing="false" onAction="#rentHistory" prefHeight="25.0" prefWidth="117.0" text="Rent History" />
+                  <Button fx:id="customerHistoryButton" layoutX="70.0" layoutY="420.0" mnemonicParsing="false" onAction="#customerHistory" prefHeight="25.0" prefWidth="117.0" text="Customer History" />
+                  <Button fx:id="vehicleOffDutyButton" layoutX="70.0" layoutY="310.0" mnemonicParsing="false" onAction="#vehicleOffDuty" prefHeight="25.0" prefWidth="117.0" text="Vehicle Off Duty" />
+                  <Text fill="WHITE" layoutX="42.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="History Log" wrappingWidth="150.13671875">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane />
+                  <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="14.0" layoutY="354.0">
+                     <image>
+                        <Image url="@../Images/icons8_Activity_History_64px_3.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </children>
