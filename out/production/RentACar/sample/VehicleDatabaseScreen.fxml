@@ -85,7 +85,7 @@
                         <TableColumn fx:id="vehicleType" prefWidth="90.0" text="Vehicle Type" />
                         <TableColumn fx:id="vehicleModel" prefWidth="90.0" text="Model" />
                         <TableColumn fx:id="vehicleKilometer" prefWidth="90.0" text="Kilometer" />
-                        <TableColumn fx:id="vehiclePrice" prefWidth="90.0" text="Price" />
+                        <TableColumn fx:id="vehiclePrice" prefWidth="90.0" text="Investment" />
                         <TableColumn fx:id="vehicleGains" prefWidth="90.0" text="Gains" />
                         <TableColumn fx:id="vehicleStatus" prefWidth="90.0" text="Status" />
                     </columns>

@@ -1,63 +1,49 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.io.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 
-public class Rent implements Serializable,Comparable<Rent>{
-    private String customerName;
-    private String customerSurname;
-    private String customerAddress;
-    private String customerTelephoneNumber;
-    private String customerEmailAdress;
-    private Date vehicleRentDate;
-    private Date vehicleOffDutyDatePlanned;
-    private Date vehicleOffDutyDateReal;
-    private boolean vehicleDutyStatus;
+public class Rent implements Serializable{
+    private LocalDate vehicleRentDate;
+    private LocalDate vehicleOffDutyDatePlanned;
+    private LocalDate vehicleOffDutyDateReal;
+    private static Vehicle  rentVehicle;
+    private static Customer rentCustomer;
     private double rentalFee;
     private double delayFee;
     private double calculatedTotalFee;
 
-    static List<Rent> info = new ArrayList<Rent>();
+    public static List<Rent> info = new ArrayList<Rent>();
+    public static ObservableList<Rent> rentObservableList = FXCollections.observableArrayList();
 
-    Rent(String customerName,String customerSurname,String customerAddress,String customerTelephoneNumber,String customerEmailAdress
-    ,Date vehicleRentDate, Date vehicleOffDutyDatePlanned,Date vehicleOffDutyDateReal,boolean vehicleDutyStatus,double rentalFee
-    ,double delayFee , double calculatedTotalFee){
-        setCustomerName(customerName);
-        setCustomerSurname(customerSurname);
-        setCustomerAddress(customerAddress);
-        setCustomerTelephoneNumber(customerTelephoneNumber);
-        setCustomerEmailAdress(customerEmailAdress);
+    Rent(Vehicle rentVehicle, Customer rentCustomer, LocalDate vehicleRentDate, LocalDate vehicleOffDutyDatePlanned, boolean vehicleDutyStatus, double rentalFee
+    , double delayFee){
+        setRentVehicle(rentVehicle);
+        setRentCustomer(rentCustomer);
         setVehicleRentDate(vehicleRentDate);
         setVehicleOffDutyDatePlanned(vehicleOffDutyDatePlanned);
-        setVehicleOffDutyDateReal(vehicleOffDutyDateReal);
-        setVehicleDutyStatus(vehicleDutyStatus);
         setRentalFee(rentalFee);
         setDelayFee(delayFee);
-        setCalculatedTotalFee(calculatedTotalFee);
+        setCalculatedTotalFee(0);
         info.add(this);
+        rentObservableList.add(this);
     }
 
     //Set methods of attributes
+
+    public static void setRentCustomer(Customer rentCustomer) {
+        Rent.rentCustomer = rentCustomer;
+    }
+    public static void setRentVehicle(Vehicle rentVehicle) {
+        Rent.rentVehicle = rentVehicle;
+    }
     public void setCalculatedTotalFee(double calculatedTotalFee) {
         this.calculatedTotalFee = calculatedTotalFee;
-    }
-    public void setCustomerEmailAdress(String custoerEmailAdress) {
-        this.customerEmailAdress = custoerEmailAdress;
-    }
-    public void setCustomerAddress(String customerAddress) {
-        this.customerAddress = customerAddress;
-    }
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-    public void setCustomerSurname(String customerSurname) {
-        this.customerSurname = customerSurname;
-    }
-    public void setCustomerTelephoneNumber(String customerTelephoneNumber) {
-        this.customerTelephoneNumber = customerTelephoneNumber;
     }
     public void setDelayFee(double delayFee) {
         this.delayFee = delayFee;
@@ -65,59 +51,32 @@ public class Rent implements Serializable,Comparable<Rent>{
     public void setRentalFee(double rentalFee) {
         this.rentalFee = rentalFee;
     }
-    public void setVehicleDutyStatus(boolean vehicleDutyStatus) {
-        this.vehicleDutyStatus = vehicleDutyStatus;
-    }
-    public void setVehicleOffDutyDatePlanned(Date vehicleOffDutyDatePlanned) {
+    public void setVehicleOffDutyDatePlanned(LocalDate vehicleOffDutyDatePlanned) {
         this.vehicleOffDutyDatePlanned = vehicleOffDutyDatePlanned;
     }
-    public void setVehicleRentDate(Date vehicleRentDate) {
+    public void setVehicleRentDate(LocalDate vehicleRentDate) {
         this.vehicleRentDate = vehicleRentDate;
     }
-    public void setVehicleOffDutyDateReal(Date vehicleOffDutyDateReal) {
+    public void setVehicleOffDutyDateReal(LocalDate vehicleOffDutyDateReal) {
         this.vehicleOffDutyDateReal = vehicleOffDutyDateReal;
     }
 
-    public void initializeRentToFile() throws IOException {
-        FileOutputStream fos = new FileOutputStream("Rent.data");
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
-        for (Rent rent : info) {
-            oos.writeObject(rent);
-        }
-        fos.close();
-    }
-
-    public void initializeRentFromFile() throws IOException, ClassNotFoundException {
-        FileInputStream fis = new FileInputStream("Rent.data");
-        ObjectInputStream ois = new ObjectInputStream(fis);
-        boolean eof = true;
-        try {
-            while (eof) {
-                Rent obj = (Rent) ois.readObject();
-                if (obj != null) {
-                    info.add(obj);
-                } else {
-                    eof = false;
-                }
-            }
-        } catch (EOFException eofex) {
-            System.out.println("End of file Exception");
-        } finally {
-
-        }
-    }
     //Get methods of attributes
-    public Date getVehicleOffDutyDatePlanned() {
+
+    public static Customer getRentCustomer() {
+        return rentCustomer;
+    }
+    public static Vehicle getRentVehicle() {
+        return rentVehicle;
+    }
+    public LocalDate getVehicleOffDutyDatePlanned() {
         return vehicleOffDutyDatePlanned;
     }
-    public Date getVehicleOffDutyDateReal() {
+    public LocalDate getVehicleOffDutyDateReal() {
         return vehicleOffDutyDateReal;
     }
-    public Date getVehicleRentDate() {
+    public LocalDate getVehicleRentDate() {
         return vehicleRentDate;
-    }
-    public boolean getVehicleDutyStatus(){
-        return vehicleDutyStatus;
     }
     public double getCalculatedTotalFee() {
         return calculatedTotalFee;
@@ -128,34 +87,6 @@ public class Rent implements Serializable,Comparable<Rent>{
     public double getRentalFee() {
         return rentalFee;
     }
-    public String getCustomerEmailAdress() {
-        return customerEmailAdress;
-    }
-    public String getCustomerAddress() {
-        return customerAddress;
-    }
-    public String getCustomerName() {
-        return customerName;
-    }
-    public String getCustomerSurname() {
-        return customerSurname;
-    }
-    public String getCustomerTelephoneNumber() {
-        return customerTelephoneNumber;
-    }
 
-    private static Comparator<String> ALPHABETICAL_ORDER = new Comparator<String>() {
-        public int compare(String str1, String str2) {
-            int res = String.CASE_INSENSITIVE_ORDER.compare(str1, str2);
-            if (res == 0) {
-                res = str1.compareTo(str2);
-            }
-            return res;
-        }
-    };
 
-    @Override
-    public int compareTo(Rent o) {
-        return ALPHABETICAL_ORDER.compare(this.customerName,o.customerName);
-    }
 }

@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RentVehicleController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RentVehicleController3">
     <children>
         <MenuBar>
             <menus>
@@ -76,7 +76,14 @@
                         <Button fx:id="vehicleOffDutyButton" layoutX="70.0" layoutY="480.0" mnemonicParsing="false" onAction="#vehicleOffDuty" prefHeight="25.0" prefWidth="117.0" text="Vehicle Off Duty" />
                     </children>
                 </AnchorPane>
-                <AnchorPane layoutX="246.0" layoutY="76.0" prefHeight="511.0" prefWidth="756.0" style="-fx-background-color: #575b60; -fx-opacity: 0.60;" />
+                <AnchorPane layoutX="246.0" layoutY="76.0" prefHeight="511.0" prefWidth="756.0" style="-fx-background-color: #575b60; -fx-opacity: 0.60;">
+               <children>
+                  <DatePicker fx:id="dayPickerRentFrom" layoutX="165.0" layoutY="130.0" promptText="Rent From" style="-fx-background-color: #ffffff;" />
+                  <DatePicker fx:id="dayPickerRentTo" layoutX="435.0" layoutY="130.0" promptText="Rent To" style="-fx-background-color: #ffffff;" />
+                  <TextField fx:id="rentalFeeField" layoutX="165.0" layoutY="180.0" prefHeight="25.0" prefWidth="174.0" promptText="Rental Fee" style="-fx-background-color: #ffffff;" />
+                  <TextField fx:id="delayFeeField" layoutX="435.0" layoutY="180.0" prefHeight="25.0" prefWidth="174.0" promptText="Delay Fee" style="-fx-background-color: #ffffff;" />
+                  <Button fx:id="rentThisVehicleButton" layoutX="435.0" layoutY="230.0" mnemonicParsing="false" onAction="#rentThisVehicle" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #ffffff;" text="Rent Vehicle" />
+               </children></AnchorPane>
                 <ImageView layoutX="487.0" layoutY="26.0">
                     <image>
                         <Image url="@../Images/icons8_1_50px.png" />

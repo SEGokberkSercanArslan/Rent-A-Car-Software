@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RentVehicleController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RentVehicleController2">
     <children>
         <MenuBar>
             <menus>
@@ -95,7 +95,7 @@
                         <Font size="32.0" />
                      </font>
                   </Label>
-                  <Button fx:id="billngScreenNextButton" layoutX="598.0" layoutY="439.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" text="Next" />
+                  <Button fx:id="billngScreenNextButton" layoutX="598.0" layoutY="439.0" mnemonicParsing="false" onAction="#billingScreenNextButton" prefHeight="25.0" prefWidth="140.0" text="Next" />
                </children></AnchorPane>
             <ImageView layoutX="487.0" layoutY="26.0">
                <image>
