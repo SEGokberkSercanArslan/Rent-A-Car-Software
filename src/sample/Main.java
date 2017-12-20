@@ -31,7 +31,18 @@ public class Main extends Application {
             fileInputStream.close();
             SerializeObjects.initializeVehicleObjectsFromFile();
         }
-
+        FileInputStream fileInputStream2 = new FileInputStream("Vehicle.data");
+        Scanner scanner2 = new Scanner(fileInputStream);
+        if(!scanner2.hasNext()){
+            fileInputStream2.close();
+            SerializeObjects.initializeRentObjectsFromFile();
+        }
+        FileInputStream fileInputStream3 = new FileInputStream("Vehicle.data");
+        Scanner scanner3 = new Scanner(fileInputStream);
+        if(!scanner3.hasNext()){
+            fileInputStream3.close();
+            SerializeObjects.initializeRentLogObjectsFromFile();
+        }
         launch(args);
     }
 }

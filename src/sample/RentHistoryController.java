@@ -6,21 +6,22 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class RentHistoryController extends MainMenuController implements Initializable{
 
-    public TableView rentHistoryTableView;
-    public TableColumn rentPErsonalColumn;
-    public TableColumn customerNameColumn;
-    public TableColumn customerSurnameColumn;
-    public TableColumn customerIDColumn;
-    public TableColumn vehiclePlateColumn;
-    public TableColumn vehicleTypeColumn;
-    public TableColumn rentDateColumn;
-    public TableColumn rentOffDateColumn;
+    public TableView<Rent> rentHistoryTableView;
+    public TableColumn<Rent,String> rentPersonalColumn;
+    public TableColumn<Rent,String> customerNameColumn;
+    public TableColumn<Rent,String> customerSurnameColumn;
+    public TableColumn<Rent,String> customerIDColumn;
+    public TableColumn<Rent,String> vehiclePlateColumn;
+    public TableColumn<Rent,String> vehicleTypeColumn;
+    public TableColumn<Rent,String> rentDateColumn;
+    public TableColumn<Rent,String> rentOffDateColumn;
 
     @Override
     public void menuItemAbout(ActionEvent event) {
@@ -89,6 +90,14 @@ public class RentHistoryController extends MainMenuController implements Initial
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        rentPersonalColumn.setCellValueFactory(new PropertyValueFactory<Rent,String>("personalName"));
+        customerNameColumn.setCellValueFactory(new PropertyValueFactory<Rent,String>("name"));
+        customerSurnameColumn.setCellValueFactory(new PropertyValueFactory<Rent,String>("surname"));
+        customerIDColumn.setCellValueFactory(new PropertyValueFactory<Rent,String>("idNumber"));
+        vehiclePlateColumn.setCellValueFactory(new PropertyValueFactory<Rent,String>("vehiclePlateNumber"));
+        vehicleTypeColumn.setCellValueFactory(new PropertyValueFactory<Rent,String>("vehicleType"));
+        rentDateColumn.setCellValueFactory(new PropertyValueFactory<Rent,String>("rentDate"));
+        rentOffDateColumn.setCellValueFactory(new PropertyValueFactory<Rent,String>("rentOffDate"));
+        rentHistoryTableView.setItems(Rent.rentLogObservableList);
     }
 }

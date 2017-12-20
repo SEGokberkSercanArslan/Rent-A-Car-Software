@@ -10,6 +10,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -26,12 +28,14 @@ public class VehicleDatabaseController extends MainMenuController implements Ini
     public TableView<Vehicle> tableView;
 
     @FXML
-    public final void deleteVehicleFromDatabase(ActionEvent event) {
+    public final void deleteVehicleFromDatabase(ActionEvent event) throws IOException {
         ObservableList<Vehicle> selectedVehicleOnTable;
         selectedVehicleOnTable = tableView.getSelectionModel().getSelectedItems();      //When You select item on table
         Vehicle deleteThisVehicle = tableView.getSelectionModel().getSelectedItem();
         Vehicle.vehicleObservableList.removeAll(selectedVehicleOnTable);
         Vehicle.info.remove(deleteThisVehicle);
+        SerializeObjects.clearVehicleData();
+        SerializeObjects.initializeVehicleObjectsToFile();
     }
 
     @Override

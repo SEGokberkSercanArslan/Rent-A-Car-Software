@@ -37,11 +37,16 @@ public class RentVehicleController3 extends MainMenuController implements Serial
                 if (result.get() == ButtonType.OK) {
                     new Rent(RentVehicleController2.getChosenVehicle(), RentVehicleController.getChosenCustomer(),Personal.currentUser,
                             dayPickerRentFrom.getValue().toEpochDay(), dayPickerRentTo.getValue().toEpochDay(), true
-                            , Double.parseDouble(rentalFeeField.getText()), Double.parseDouble(delayFeeField.getText()),false);
+                            , Double.parseDouble(rentalFeeField.getText()), Double.parseDouble(delayFeeField.getText()),false
+                            ,dayPickerRentFrom.getValue().toString());
+
                     Alert SuccessfullyRented = new Alert(Alert.AlertType.INFORMATION);
                     SuccessfullyRented.setTitle("Information");
                     SuccessfullyRented.setHeaderText("Vehicle Successfully Rented All Records Saved.");
                     SuccessfullyRented.showAndWait();
+
+                    SerializeObjects.clearVehicleData();
+                    SerializeObjects.initializeVehicleObjectsToFile();
                     rentalFeeField.clear();
                     delayFeeField.clear();
                 } else {

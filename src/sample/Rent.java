@@ -21,6 +21,8 @@ public class Rent implements Serializable{
     private double delayFee;
     private double calculatedTotalFee;
     private boolean isItLog;
+    private String rentDate;
+    private String rentOffDate;
     //Vehicle info
     private String vehicleType;
     private String vehicleModel;
@@ -51,7 +53,7 @@ public class Rent implements Serializable{
 
 
     Rent(Vehicle rentVehicle, Customer rentCustomer,Personal rentPersonal, long vehicleRentDate, long vehicleOffDutyDatePlanned, boolean vehicleDutyStatus, double rentalFee
-    , double delayFee,boolean isItLog){
+    , double delayFee,boolean isItLog,String rentDate) throws IOException {
         setRentVehicle(rentVehicle);
         setRentCustomer(rentCustomer);
         setVehicleRentDate(vehicleRentDate);
@@ -61,6 +63,7 @@ public class Rent implements Serializable{
         setCalculatedTotalFee(0);
         setRentPersonal(rentPersonal);
         setItLog(isItLog);
+        setRentDate(rentDate);
         // Vehicle Objects
         setVehicleType(rentVehicle.getVehicleType());
         setVehicleModel(rentVehicle.getVehicleModel());
@@ -86,6 +89,9 @@ public class Rent implements Serializable{
         info.add(this);
         rentObservableList.add(this);
         initializedVehicleInWork();
+        //Serialize object
+        SerializeObjects.clearRentData();
+        SerializeObjects.initializeRentObjectsToFile();
     }
 
     public static void initializedVehicleInWork(){
@@ -308,5 +314,21 @@ public class Rent implements Serializable{
 
     public void setItLog(boolean itLog) {
         isItLog = itLog;
+    }
+
+    public String getRentDate() {
+        return rentDate;
+    }
+
+    public void setRentDate(String rentDate) {
+        this.rentDate = rentDate;
+    }
+
+    public String getRentOffDate() {
+        return rentOffDate;
+    }
+
+    public void setRentOffDate(String rentOffDate) {
+        this.rentOffDate = rentOffDate;
     }
 }

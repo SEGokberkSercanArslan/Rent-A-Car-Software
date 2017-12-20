@@ -7,6 +7,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +28,7 @@ public class VehicleOffDutyController extends MainMenuController implements Init
     public DatePicker rentOutDatePicker;
 
     @FXML
-    public void rentOutButton(ActionEvent event) {
+    public void rentOutButton(ActionEvent event) throws IOException {
         long rentDate =0;
         long planedRentOutDate=0;
         long actualRentOutDate=0;
@@ -56,18 +58,28 @@ public class VehicleOffDutyController extends MainMenuController implements Init
         Optional<ButtonType> result = CalculatedTotalFee.showAndWait();
         if (result.get() == ButtonType.OK) {
             rentObj.setItLog(true);
+            rentObj.setRentOffDate(rentOutDatePicker.getValue().toString());
             Rent.rentLog.add(rentObj);
             Rent.rentLogObservableList.add(rentObj);
             Rent.info.remove(rentObj);
             Rent.rentObservableList.removeAll(rentObj);
+            SerializeObjects.clearRentData();
+            SerializeObjects.initializeRentObjectsToFile();
+            SerializeObjects.clearRentLogData();
+            SerializeObjects.initializeRentLogObjectsToFile();
+
             for (int counter=0;counter<Vehicle.info.size();counter++){
                 if(Objects.equals(rentObj.getVehiclePlateNumber(), Vehicle.info.get(counter).getVehiclePlateNumber())){
                     Vehicle.info.get(counter).setVehicleStatus("OUT Service");
+                    Vehicle.info.get(counter).increaseVehicleGains(totalFee);
+                    SerializeObjects.clearVehicleData();
+                    SerializeObjects.initializeVehicleObjectsToFile();
                 }
             }
             for (int counter=0;counter<Vehicle.vehicleObservableList.size();counter++){
                 if(Objects.equals(rentObj.getVehiclePlateNumber(), Vehicle.vehicleObservableList.get(counter).getVehiclePlateNumber())){
                     Vehicle.vehicleObservableList.get(counter).setVehicleStatus("OUT Service");
+                    Vehicle.vehicleObservableList.get(counter).increaseVehicleGains(totalFee);
                 }
             }
         } else {
@@ -152,4 +164,5 @@ public class VehicleOffDutyController extends MainMenuController implements Init
         vehicleStatusColumn.setCellValueFactory(new PropertyValueFactory<Rent,String>("vehicleStatus"));
         vehicleOffServiceTableView.setItems(Rent.rentObservableList);
     }
+
 }
