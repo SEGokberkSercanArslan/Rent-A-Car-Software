@@ -74,7 +74,7 @@ public class RentVehicleController extends MainMenuController implements Initial
         }
         else {
             for(int counter=0;counter<Customer.info.size();counter++){
-                if (Objects.equals(customerIdentificationField.getText(), Customer.info.get(counter).getIdNumber())){
+                if (Objects.equals(customerIdentificationField.getText(), Rent.info.get(counter).getIdNumber())){
                     Alert customerIdentificationMatch = new Alert(Alert.AlertType.ERROR);
                     customerIdentificationMatch.setTitle("Error");
                     customerIdentificationMatch.setHeaderText("Customer already rent a car");

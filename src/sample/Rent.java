@@ -11,8 +11,8 @@ import java.util.Objects;
 
 public class Rent implements Serializable{
     //Rent info
-    private LocalDate vehicleRentDate;
-    private LocalDate vehicleOffDutyDatePlanned;
+    private long vehicleRentDate;
+    private long vehicleOffDutyDatePlanned;
     private LocalDate vehicleOffDutyDateReal;
     private static Vehicle  rentVehicle;
     private static Customer rentCustomer;
@@ -39,8 +39,11 @@ public class Rent implements Serializable{
 
     public static List<Rent> info = new ArrayList<Rent>();
     public static ObservableList<Rent> rentObservableList = FXCollections.observableArrayList();
+    public static List<Rent> rentLog = new ArrayList<Rent>();
+    public static ObservableList<Rent> rentLogObservableList = FXCollections.observableArrayList();
 
-    Rent(Vehicle rentVehicle, Customer rentCustomer, LocalDate vehicleRentDate, LocalDate vehicleOffDutyDatePlanned, boolean vehicleDutyStatus, double rentalFee
+
+    Rent(Vehicle rentVehicle, Customer rentCustomer, long vehicleRentDate, long vehicleOffDutyDatePlanned, boolean vehicleDutyStatus, double rentalFee
     , double delayFee){
         setRentVehicle(rentVehicle);
         setRentCustomer(rentCustomer);
@@ -57,7 +60,7 @@ public class Rent implements Serializable{
         setVehicleManufacturer(rentVehicle.getVehicleManufacturer());
         setVehicleKilometer(rentVehicle.getVehicleKilometer());
         setVehiclePrice(rentVehicle.getVehiclePrice());
-        setVehicleStatus(rentVehicle.getVehicleStatus());
+        setVehicleStatus("IN Service");
         setVehicleGains(rentVehicle.getVehicleGains());
         // Customer Objects
         setName(rentCustomer.getName());
@@ -221,10 +224,10 @@ public class Rent implements Serializable{
     public void setRentalFee(double rentalFee) {
         this.rentalFee = rentalFee;
     }
-    public void setVehicleOffDutyDatePlanned(LocalDate vehicleOffDutyDatePlanned) {
+    public void setVehicleOffDutyDatePlanned(long vehicleOffDutyDatePlanned) {
         this.vehicleOffDutyDatePlanned = vehicleOffDutyDatePlanned;
     }
-    public void setVehicleRentDate(LocalDate vehicleRentDate) {
+    public void setVehicleRentDate(long vehicleRentDate) {
         this.vehicleRentDate = vehicleRentDate;
     }
     public void setVehicleOffDutyDateReal(LocalDate vehicleOffDutyDateReal) {
@@ -233,13 +236,13 @@ public class Rent implements Serializable{
 
     //Get methods of attributes
 
-    public LocalDate getVehicleOffDutyDatePlanned() {
+    public long getVehicleOffDutyDatePlanned() {
         return vehicleOffDutyDatePlanned;
     }
     public LocalDate getVehicleOffDutyDateReal() {
         return vehicleOffDutyDateReal;
     }
-    public LocalDate getVehicleRentDate() {
+    public long getVehicleRentDate() {
         return vehicleRentDate;
     }
     public double getCalculatedTotalFee() {

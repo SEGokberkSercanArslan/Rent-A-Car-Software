@@ -8,9 +8,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 import java.util.Objects;
+import java.util.Optional;
 
 public class MainMenuController {
 
@@ -118,6 +120,33 @@ public class MainMenuController {
         Stage customerHistoryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         customerHistoryStage.setScene(customerHistoryScene);
         customerHistoryStage.show();
+    }
+
+    public void personalLog(ActionEvent event) throws Exception {
+
+        Parent PersonalLog = FXMLLoader.load(getClass().getResource("PersonalLog.fxml"));
+        Scene PersonalLogScene = new Scene(PersonalLog);
+        Stage PersonalLogStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        PersonalLogStage.setScene(PersonalLogScene);
+        PersonalLogStage.show();
+    }
+
+    public void logOut(ActionEvent event) throws Exception {
+        Alert LogOutDialog = new Alert(Alert.AlertType.CONFIRMATION);
+        LogOutDialog.setTitle("Confirmation");
+        LogOutDialog.setHeaderText("Do you want to continue log out ?");
+
+        Optional<ButtonType> result = LogOutDialog.showAndWait();
+        if (result.get() == ButtonType.OK) {
+            Parent LogOut = FXMLLoader.load(getClass().getResource("LoginMenu.fxml"));
+            Scene LogOutScene = new Scene(LogOut);
+            Stage LogOutStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            LogOutStage.setScene(LogOutScene);
+            LogOutStage.show();
+            Personal.currentUser = null;
+        } else {
+            LogOutDialog.close();
+        }
     }
 
 

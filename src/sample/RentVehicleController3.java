@@ -22,23 +22,31 @@ public class RentVehicleController3 extends MainMenuController implements Serial
     @FXML
     public void rentThisVehicle(ActionEvent event) {
         try {
-            Alert DoYouWantToContinue = new Alert(Alert.AlertType.CONFIRMATION);
-            DoYouWantToContinue.setTitle("Confirmation");
-            DoYouWantToContinue.setHeaderText("Do you want to continue rent ?");
+            if (dayPickerRentFrom.getValue().toEpochDay()>dayPickerRentTo.getValue().toEpochDay()){
+                Alert DayCompareError = new Alert(Alert.AlertType.ERROR);
+                DayCompareError.setTitle("Error");
+                DayCompareError.setHeaderText("Car rental day can not be in the future due to vehicle rent-off day.");
+                DayCompareError.showAndWait();
+            }
+            else {
+                Alert DoYouWantToContinue = new Alert(Alert.AlertType.CONFIRMATION);
+                DoYouWantToContinue.setTitle("Confirmation");
+                DoYouWantToContinue.setHeaderText("Do you want to continue rent ?");
 
-            Optional<ButtonType> result = DoYouWantToContinue.showAndWait();
-            if (result.get() == ButtonType.OK) {
-                new Rent(RentVehicleController2.getChosenVehicle(),RentVehicleController.getChosenCustomer(),
-                        dayPickerRentFrom.getValue(),dayPickerRentTo.getValue(),true
-                        ,Double.parseDouble(rentalFeeField.getText()),Double.parseDouble(delayFeeField.getText()));
-                Alert SuccessfullyRented = new Alert(Alert.AlertType.INFORMATION);
-                SuccessfullyRented.setTitle("Information");
-                SuccessfullyRented.setHeaderText("Vehicle Successfully Rented All Records Saved.");
-                SuccessfullyRented.showAndWait();
-                rentalFeeField.clear();
-                delayFeeField.clear();
-            } else {
-                DoYouWantToContinue.close();
+                Optional<ButtonType> result = DoYouWantToContinue.showAndWait();
+                if (result.get() == ButtonType.OK) {
+                    new Rent(RentVehicleController2.getChosenVehicle(), RentVehicleController.getChosenCustomer(),
+                            dayPickerRentFrom.getValue().toEpochDay(), dayPickerRentTo.getValue().toEpochDay(), true
+                            , Double.parseDouble(rentalFeeField.getText()), Double.parseDouble(delayFeeField.getText()));
+                    Alert SuccessfullyRented = new Alert(Alert.AlertType.INFORMATION);
+                    SuccessfullyRented.setTitle("Information");
+                    SuccessfullyRented.setHeaderText("Vehicle Successfully Rented All Records Saved.");
+                    SuccessfullyRented.showAndWait();
+                    rentalFeeField.clear();
+                    delayFeeField.clear();
+                } else {
+                    DoYouWantToContinue.close();
+                }
             }
         }
         catch (Exception ex){
