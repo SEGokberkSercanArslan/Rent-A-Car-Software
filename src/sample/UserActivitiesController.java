@@ -92,6 +92,16 @@ public class UserActivitiesController extends MainMenuController implements Init
     }
 
     @Override
+    public void logOut(ActionEvent event) throws Exception {
+        super.logOut(event);
+    }
+
+    @Override
+    public void personalLog(ActionEvent event) throws Exception {
+        super.personalLog(event);
+    }
+
+    @Override
     public final void initialize(URL location, ResourceBundle resources) {
         userNameColumn.setCellValueFactory(new PropertyValueFactory<Personal,String>("name"));
         userSurnameColumn.setCellValueFactory(new PropertyValueFactory<Personal,String>("surname"));

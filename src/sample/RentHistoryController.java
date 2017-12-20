@@ -3,8 +3,24 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
-public class RentHistoryController extends MainMenuController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class RentHistoryController extends MainMenuController implements Initializable{
+
+    public TableView rentHistoryTableView;
+    public TableColumn rentPErsonalColumn;
+    public TableColumn customerNameColumn;
+    public TableColumn customerSurnameColumn;
+    public TableColumn customerIDColumn;
+    public TableColumn vehiclePlateColumn;
+    public TableColumn vehicleTypeColumn;
+    public TableColumn rentDateColumn;
+    public TableColumn rentOffDateColumn;
 
     @Override
     public void menuItemAbout(ActionEvent event) {
@@ -59,5 +75,20 @@ public class RentHistoryController extends MainMenuController {
     @Override
     public void vehicleOffDuty(ActionEvent event) throws Exception {
         super.vehicleOffDuty(event);
+    }
+
+    @Override
+    public void logOut(ActionEvent event) throws Exception {
+        super.logOut(event);
+    }
+
+    @Override
+    public void personalLog(ActionEvent event) throws Exception {
+        super.personalLog(event);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
     }
 }

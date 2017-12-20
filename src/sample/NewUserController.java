@@ -144,6 +144,16 @@ public class NewUserController extends MainMenuController implements Initializab
     }
 
     @Override
+    public void logOut(ActionEvent event) throws Exception {
+        super.logOut(event);
+    }
+
+    @Override
+    public void personalLog(ActionEvent event) throws Exception {
+        super.personalLog(event);
+    }
+
+    @Override
     public void initialize(URL location, ResourceBundle resources) {
         PrivilegeChoiceBox.setItems(items);
     }

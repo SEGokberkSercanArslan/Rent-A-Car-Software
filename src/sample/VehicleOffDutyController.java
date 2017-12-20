@@ -55,6 +55,7 @@ public class VehicleOffDutyController extends MainMenuController implements Init
 
         Optional<ButtonType> result = CalculatedTotalFee.showAndWait();
         if (result.get() == ButtonType.OK) {
+            rentObj.setItLog(true);
             Rent.rentLog.add(rentObj);
             Rent.rentLogObservableList.add(rentObj);
             Rent.info.remove(rentObj);
@@ -128,6 +129,16 @@ public class VehicleOffDutyController extends MainMenuController implements Init
     @Override
     public void vehicleOffDuty(ActionEvent event) throws Exception {
         super.vehicleOffDuty(event);
+    }
+
+    @Override
+    public void logOut(ActionEvent event) throws Exception {
+        super.logOut(event);
+    }
+
+    @Override
+    public void personalLog(ActionEvent event) throws Exception {
+        super.personalLog(event);
     }
 
     @Override

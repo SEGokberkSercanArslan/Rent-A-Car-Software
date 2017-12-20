@@ -16,9 +16,11 @@ public class Rent implements Serializable{
     private LocalDate vehicleOffDutyDateReal;
     private static Vehicle  rentVehicle;
     private static Customer rentCustomer;
+    private static Personal rentPersonal;
     private double rentalFee;
     private double delayFee;
     private double calculatedTotalFee;
+    private boolean isItLog;
     //Vehicle info
     private String vehicleType;
     private String vehicleModel;
@@ -36,6 +38,11 @@ public class Rent implements Serializable{
     private String telephoneNumber;
     private String driverLicenceNumber;
     private String idNumber;
+    //Personal Info
+    private String personalName;
+    private String personalSurname;
+    private String personalID;
+    private String personalPrivilege;
 
     public static List<Rent> info = new ArrayList<Rent>();
     public static ObservableList<Rent> rentObservableList = FXCollections.observableArrayList();
@@ -43,8 +50,8 @@ public class Rent implements Serializable{
     public static ObservableList<Rent> rentLogObservableList = FXCollections.observableArrayList();
 
 
-    Rent(Vehicle rentVehicle, Customer rentCustomer, long vehicleRentDate, long vehicleOffDutyDatePlanned, boolean vehicleDutyStatus, double rentalFee
-    , double delayFee){
+    Rent(Vehicle rentVehicle, Customer rentCustomer,Personal rentPersonal, long vehicleRentDate, long vehicleOffDutyDatePlanned, boolean vehicleDutyStatus, double rentalFee
+    , double delayFee,boolean isItLog){
         setRentVehicle(rentVehicle);
         setRentCustomer(rentCustomer);
         setVehicleRentDate(vehicleRentDate);
@@ -52,6 +59,8 @@ public class Rent implements Serializable{
         setRentalFee(rentalFee);
         setDelayFee(delayFee);
         setCalculatedTotalFee(0);
+        setRentPersonal(rentPersonal);
+        setItLog(isItLog);
         // Vehicle Objects
         setVehicleType(rentVehicle.getVehicleType());
         setVehicleModel(rentVehicle.getVehicleModel());
@@ -69,6 +78,11 @@ public class Rent implements Serializable{
         setTelephoneNumber(rentCustomer.getTelephoneNumber());
         setDriverLicenceNumber(rentCustomer.getDriverLicenceNumber());
         setIdNumber(rentCustomer.getIdNumber());
+        //Personal Objects
+        setPersonalName(rentPersonal.getName());
+        setPersonalSurname(rentPersonal.getSurname());
+        setPersonalID(rentPersonal.getIdNumber());
+        setPersonalPrivilege(rentPersonal.getPrivilege());
         info.add(this);
         rentObservableList.add(this);
         initializedVehicleInWork();
@@ -109,6 +123,8 @@ public class Rent implements Serializable{
     public static void setRentCustomer(Customer rentCustomer) {
         Rent.rentCustomer = rentCustomer;
     }
+
+
 
     public void setName(String name) {
         this.name = name;
@@ -214,7 +230,9 @@ public class Rent implements Serializable{
     }
 
     //Set methods of attributes
-
+    public static void setRentPersonal(Personal rentPersonal) {
+        Rent.rentPersonal = rentPersonal;
+    }
     public void setCalculatedTotalFee(double calculatedTotalFee) {
         this.calculatedTotalFee = calculatedTotalFee;
     }
@@ -236,6 +254,9 @@ public class Rent implements Serializable{
 
     //Get methods of attributes
 
+    public static Personal getRentPersonal() {
+        return rentPersonal;
+    }
     public long getVehicleOffDutyDatePlanned() {
         return vehicleOffDutyDatePlanned;
     }
@@ -255,5 +276,37 @@ public class Rent implements Serializable{
         return rentalFee;
     }
 
+    //Personal getter and setter methods
+    public String getPersonalPrivilege() {
+        return personalPrivilege;
+    }
+    public void setPersonalPrivilege(String personalPrivilege) {
+        this.personalPrivilege = personalPrivilege;
+    }
+    public String getPersonalID() {
+        return personalID;
+    }
+    public void setPersonalID(String personalID) {
+        this.personalID = personalID;
+    }
+    public String getPersonalSurname() {
+        return personalSurname;
+    }
+    public void setPersonalSurname(String personalSurname) {
+        this.personalSurname = personalSurname;
+    }
+    public String getPersonalName() {
+        return personalName;
+    }
+    public void setPersonalName(String personalName) {
+        this.personalName = personalName;
+    }
 
+    public boolean isItLog() {
+        return isItLog;
+    }
+
+    public void setItLog(boolean itLog) {
+        isItLog = itLog;
+    }
 }

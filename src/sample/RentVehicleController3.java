@@ -35,9 +35,9 @@ public class RentVehicleController3 extends MainMenuController implements Serial
 
                 Optional<ButtonType> result = DoYouWantToContinue.showAndWait();
                 if (result.get() == ButtonType.OK) {
-                    new Rent(RentVehicleController2.getChosenVehicle(), RentVehicleController.getChosenCustomer(),
+                    new Rent(RentVehicleController2.getChosenVehicle(), RentVehicleController.getChosenCustomer(),Personal.currentUser,
                             dayPickerRentFrom.getValue().toEpochDay(), dayPickerRentTo.getValue().toEpochDay(), true
-                            , Double.parseDouble(rentalFeeField.getText()), Double.parseDouble(delayFeeField.getText()));
+                            , Double.parseDouble(rentalFeeField.getText()), Double.parseDouble(delayFeeField.getText()),false);
                     Alert SuccessfullyRented = new Alert(Alert.AlertType.INFORMATION);
                     SuccessfullyRented.setTitle("Information");
                     SuccessfullyRented.setHeaderText("Vehicle Successfully Rented All Records Saved.");
@@ -114,4 +114,15 @@ public class RentVehicleController3 extends MainMenuController implements Serial
     public void vehicleOffDuty(ActionEvent event) throws Exception {
         super.vehicleOffDuty(event);
     }
+
+    @Override
+    public void logOut(ActionEvent event) throws Exception {
+        super.logOut(event);
+    }
+
+    @Override
+    public void personalLog(ActionEvent event) throws Exception {
+        super.personalLog(event);
+    }
+
 }

@@ -142,8 +142,54 @@ public class SerializeObjects implements Serializable {
         objectOutputStream.close();
         fileOutputStream.close();
     }
-    public static void initializeRentObjectsFromFile(){}
-    public static void initializeRentObjectsToFile(){}
+    //Rent Log Tricky Bussiness
+    public static void initializeRentObjectsFromFile() throws IOException {
+        FileInputStream file = new FileInputStream("Rent.data");
+        ObjectInputStream objectInputStream = new ObjectInputStream(file);
+        boolean eof = true;
+        try {
+            while (eof) {
+                Rent obj = (Rent) objectInputStream.readObject();
+                if (obj != null) {
+                    Rent.info.add(obj);
+                    System.out.println("Object written");
+
+                } else {
+                    eof = false;
+                    System.out.println("end of file");
+                }
+            }
+        } catch (EOFException eofex) {
+            objectInputStream.close();
+        } catch (ClassNotFoundException e) {
+            System.out.println("class not found");
+            e.printStackTrace();
+        } finally {
+            try {
+                for (int counter = 0; counter < Rent.info.size(); counter++) {
+                    Rent.rentObservableList.add(Rent.info.get(counter));
+
+                }
+            }
+            catch (IndexOutOfBoundsException ex){
+                System.out.println("No customer in file");
+            }
+
+            System.out.println("All Customers Recorded Successful");
+            file.close();
+        }
+    }
+    public static void initializeRentObjectsToFile() throws IOException {
+        FileOutputStream fileOutputStream = new FileOutputStream("Rent.data");
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+        for(int counter=0;counter<Rent.info.size();counter++){
+            objectOutputStream.writeObject(Rent.info.get(counter));
+        }
+        System.out.println("All rent objects written in file successfully");
+        objectOutputStream.close();
+        fileOutputStream.close();
+    }
+
 
     public static void clearRentData(){}
     public static void clearVehicleData() throws FileNotFoundException {

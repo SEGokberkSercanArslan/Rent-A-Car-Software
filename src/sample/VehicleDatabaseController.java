@@ -90,6 +90,16 @@ public class VehicleDatabaseController extends MainMenuController implements Ini
     }
 
     @Override
+    public void logOut(ActionEvent event) throws Exception {
+        super.logOut(event);
+    }
+
+    @Override
+    public void personalLog(ActionEvent event) throws Exception {
+        super.personalLog(event);
+    }
+
+    @Override
     public final void initialize(URL location, ResourceBundle resources) {
         vehiclePlateNumber.setCellValueFactory(new PropertyValueFactory<Vehicle,String>("vehiclePlateNumber"));
         vehicleManufacturer.setCellValueFactory(new PropertyValueFactory<Vehicle,String>("vehicleManufacturer"));
