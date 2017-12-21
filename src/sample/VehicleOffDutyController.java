@@ -44,47 +44,58 @@ public class VehicleOffDutyController extends MainMenuController implements Init
         dayDifferenceActual = (int) Math.abs(rentOutDatePicker.getValue().toEpochDay()-rentDate);
         System.out.println("Day Difference planed :"+dayDifferencePlaned);
         System.out.println("Day Difference actual :"+dayDifferenceActual);
-        if(dayDifferencePlaned>dayDifferenceActual){
-            totalFee = dayDifferencePlaned*rentObj.getRentalFee();
+        if(rentOutDatePicker.getValue().toEpochDay()>rentDate){
+            if(dayDifferencePlaned>dayDifferenceActual){
+                totalFee = dayDifferencePlaned*rentObj.getRentalFee();
+            }
+            else {
+                totalFee = dayDifferencePlaned*rentObj.getRentalFee()+(dayDifferenceActual-dayDifferencePlaned)*rentObj.getDelayFee();
+            }
+
+            Alert CalculatedTotalFee = new Alert(Alert.AlertType.CONFIRMATION);
+            CalculatedTotalFee.setTitle("Confirmation");
+            CalculatedTotalFee.setHeaderText("The rental fee is calculated below the detailed information.");
+            CalculatedTotalFee.setContentText("Total Fee :"+totalFee);
+            Optional<ButtonType> result = CalculatedTotalFee.showAndWait();
+            if (result.get() == ButtonType.OK) {
+                rentObj.setItLog(true);
+                rentObj.setRentOffDate(rentOutDatePicker.getValue().toString());
+                Rent.rentLog.add(rentObj);
+                Rent.rentLogObservableList.add(rentObj);
+                Rent.info.remove(rentObj);
+                Rent.rentObservableList.removeAll(rentObj);
+                SerializeObjects.clearRentData();
+                SerializeObjects.initializeRentObjectsToFile();
+                SerializeObjects.clearRentLogData();
+                SerializeObjects.initializeRentLogObjectsToFile();
+
+                for (int counter=0;counter<Vehicle.info.size();counter++){
+                    if(Objects.equals(rentObj.getVehiclePlateNumber(), Vehicle.info.get(counter).getVehiclePlateNumber())){
+                        Vehicle.info.get(counter).setVehicleStatus("OUT Service");
+                        Vehicle.info.get(counter).increaseVehicleGains(totalFee);
+                        SerializeObjects.clearVehicleData();
+                        SerializeObjects.initializeVehicleObjectsToFile();
+                    }
+                }
+                for (int counter=0;counter<Vehicle.vehicleObservableList.size();counter++){
+                    if(Objects.equals(rentObj.getVehiclePlateNumber(), Vehicle.vehicleObservableList.get(counter).getVehiclePlateNumber())){
+                        Vehicle.vehicleObservableList.get(counter).setVehicleStatus("OUT Service");
+                        Vehicle.vehicleObservableList.get(counter).increaseVehicleGains(totalFee);
+                    }
+                }
+            } else {
+                CalculatedTotalFee.close();
+            }
         }
         else {
-            totalFee = dayDifferencePlaned*rentObj.getRentalFee()+(dayDifferenceActual-dayDifferencePlaned)*rentObj.getDelayFee();
-        }
-        Alert CalculatedTotalFee = new Alert(Alert.AlertType.CONFIRMATION);
-        CalculatedTotalFee.setTitle("Confirmation");
-        CalculatedTotalFee.setHeaderText("The rental fee is calculated below the detailed information.");
-        CalculatedTotalFee.setContentText("Total Fee :"+totalFee);
+            Alert DateError = new Alert(Alert.AlertType.ERROR);
+            DateError.setTitle("Error");
+            DateError.setHeaderText("Rent-out date cannot lesser than rent date");
+            DateError.setContentText("Rent Date : "+rentObj.getRentDate());
+            DateError.showAndWait();
 
-        Optional<ButtonType> result = CalculatedTotalFee.showAndWait();
-        if (result.get() == ButtonType.OK) {
-            rentObj.setItLog(true);
-            rentObj.setRentOffDate(rentOutDatePicker.getValue().toString());
-            Rent.rentLog.add(rentObj);
-            Rent.rentLogObservableList.add(rentObj);
-            Rent.info.remove(rentObj);
-            Rent.rentObservableList.removeAll(rentObj);
-            SerializeObjects.clearRentData();
-            SerializeObjects.initializeRentObjectsToFile();
-            SerializeObjects.clearRentLogData();
-            SerializeObjects.initializeRentLogObjectsToFile();
-
-            for (int counter=0;counter<Vehicle.info.size();counter++){
-                if(Objects.equals(rentObj.getVehiclePlateNumber(), Vehicle.info.get(counter).getVehiclePlateNumber())){
-                    Vehicle.info.get(counter).setVehicleStatus("OUT Service");
-                    Vehicle.info.get(counter).increaseVehicleGains(totalFee);
-                    SerializeObjects.clearVehicleData();
-                    SerializeObjects.initializeVehicleObjectsToFile();
-                }
-            }
-            for (int counter=0;counter<Vehicle.vehicleObservableList.size();counter++){
-                if(Objects.equals(rentObj.getVehiclePlateNumber(), Vehicle.vehicleObservableList.get(counter).getVehiclePlateNumber())){
-                    Vehicle.vehicleObservableList.get(counter).setVehicleStatus("OUT Service");
-                    Vehicle.vehicleObservableList.get(counter).increaseVehicleGains(totalFee);
-                }
-            }
-        } else {
-            CalculatedTotalFee.close();
         }
+
 
     }
 
