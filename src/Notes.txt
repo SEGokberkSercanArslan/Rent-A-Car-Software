@@ -1,3 +1,5 @@
 
 
-There is a problem vehicle observable list , it's not show full item list.
+Vehicle off duty controller line 48 calculation error fix it .
+Still read a one log , fix the error.
+Main menu log out bux fix.

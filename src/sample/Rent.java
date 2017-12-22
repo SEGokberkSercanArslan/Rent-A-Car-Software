@@ -20,7 +20,7 @@ public class Rent implements Serializable{
     private double rentalFee;
     private double delayFee;
     private double calculatedTotalFee;
-    private boolean isItLog;
+    private boolean isItLog=false;
     private String rentDate;
     private String rentOffDate;
     //Vehicle info

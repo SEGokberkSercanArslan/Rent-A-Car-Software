@@ -66,8 +66,8 @@ public class VehicleOffDutyController extends MainMenuController implements Init
                 Rent.rentObservableList.removeAll(rentObj);
                 SerializeObjects.clearRentData();
                 SerializeObjects.initializeRentObjectsToFile();
-                SerializeObjects.clearRentLogData();
-                SerializeObjects.initializeRentLogObjectsToFile();
+                //SerializeObjects.clearRentLogData();
+                //SerializeObjects.initializeRentLogObjectsToFile();
 
                 for (int counter=0;counter<Vehicle.info.size();counter++){
                     if(Objects.equals(rentObj.getVehiclePlateNumber(), Vehicle.info.get(counter).getVehiclePlateNumber())){

@@ -151,8 +151,14 @@ public class SerializeObjects implements Serializable {
             while (eof) {
                 Rent obj = (Rent) objectInputStream.readObject();
                 if (obj != null) {
-                    Rent.info.add(obj);
-                    System.out.println("Object written");
+                    if (!obj.isItLog()){
+                        Rent.info.add(obj);
+                        System.out.println("Object written");
+                    }
+                    else{
+                        Rent.rentLog.add(obj);
+                        System.out.println("Log object written");
+                    }
 
                 } else {
                     eof = false;
@@ -168,7 +174,9 @@ public class SerializeObjects implements Serializable {
             try {
                 for (int counter = 0; counter < Rent.info.size(); counter++) {
                     Rent.rentObservableList.add(Rent.info.get(counter));
-
+                }
+                for (int counter = 0;counter< Rent.rentLogObservableList.size();counter++){
+                    Rent.rentLogObservableList.add(Rent.info.get(counter));
                 }
             }
             catch (IndexOutOfBoundsException ex){

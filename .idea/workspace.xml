@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="0c97e5fc-d491-4f21-aa17-95ac71a3f390" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Personals.data" afterPath="$PROJECT_DIR$/Personals.data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rent.data" afterPath="$PROJECT_DIR$/Rent.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RentLog.data" afterPath="$PROJECT_DIR$/RentLog.data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vehicle.data" afterPath="$PROJECT_DIR$/Vehicle.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Notes.txt" afterPath="$PROJECT_DIR$/src/Notes.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/LoginMenu.fxml" afterPath="$PROJECT_DIR$/src/sample/LoginMenu.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MainMenuController.java" afterPath="$PROJECT_DIR$/src/sample/MainMenuController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/NewUserController.java" afterPath="$PROJECT_DIR$/src/sample/NewUserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Rent.java" afterPath="$PROJECT_DIR$/src/sample/Rent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/SerializeObjects.java" afterPath="$PROJECT_DIR$/src/sample/SerializeObjects.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/VehicleDatabaseController.java" afterPath="$PROJECT_DIR$/src/sample/VehicleDatabaseController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/VehicleDatabaseScreen.fxml" afterPath="$PROJECT_DIR$/src/sample/VehicleDatabaseScreen.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/VehicleOffDutyController.java" afterPath="$PROJECT_DIR$/src/sample/VehicleOffDutyController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,48 +29,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainMenuController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/MainMenuController.java">
+      <file leaf-file-name="Rent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Rent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="39" column="43" lean-forward="false" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+            <state relative-caret-position="450">
+              <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
               <folding>
-                <marker date="1513852050000" expanded="false" signature="6672:6678" ph="{...}" />
+                <element signature="method#initializedVehicleInWork#0;class#Rent#0" expanded="false" />
+                <element signature="method#initializeVehicleOutWork#0;class#Rent#0" expanded="false" />
+                <element signature="method#setVehicleOffDutyDateReal#0;class#Rent#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserActivitiesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/UserActivitiesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="34" column="45" lean-forward="false" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-              <folding>
-                <marker date="1513852050000" expanded="true" signature="3189:3203" ph="{...}" />
-              </folding>
-            </state>
+      <file leaf-file-name="UserActivitiesScreen.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/UserActivitiesScreen.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Personal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Personal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="80" column="19" lean-forward="false" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#585#595#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VehicleOffDutyController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/VehicleOffDutyController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="1380">
+              <caret line="92" column="18" lean-forward="false" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -71,40 +59,92 @@
       <file leaf-file-name="NewUserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/NewUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vehicle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Vehicle.java">
+      <file leaf-file-name="VehicleOffDutyController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/VehicleOffDutyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="-14">
+              <caret line="47" column="56" lean-forward="true" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="145">
+              <caret line="65" column="59" lean-forward="true" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Personal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Personal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VehicleDatabaseController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/VehicleDatabaseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainMenuController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/MainMenuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1770">
+              <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
               <folding>
-                <marker date="1513852050000" expanded="true" signature="1737:1765" ph="{...}" />
+                <marker date="1513937770000" expanded="false" signature="6674:6680" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Personals.data" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Personals.data">
+      <file leaf-file-name="RentVehicleController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/RentVehicleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+            <state relative-caret-position="807">
+              <caret line="82" column="26" lean-forward="true" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+              <folding>
+                <element signature="method#setChosenCustomer#0;class#RentVehicleController#0" expanded="false" />
+                <element signature="method#deleteUser#0;class#RentVehicleController#0" expanded="false" />
+                <element signature="method#deleteVehicle#0;class#RentVehicleController#0" expanded="false" />
+                <element signature="method#customerHistory#0;class#RentVehicleController#0" expanded="false" />
+                <element signature="method#newUser#0;class#RentVehicleController#0" expanded="false" />
+                <element signature="method#newVehicle#0;class#RentVehicleController#0" expanded="false" />
+                <element signature="method#vehicleDatabase#0;class#RentVehicleController#0" expanded="false" />
+                <element signature="method#rentHistory#0;class#RentVehicleController#0" expanded="false" />
+                <element signature="method#rentVehicle#0;class#RentVehicleController#0" expanded="false" />
+                <element signature="method#userActivities#0;class#RentVehicleController#0" expanded="false" />
+                <element signature="method#vehicleOffDuty#0;class#RentVehicleController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RentHistoryController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/RentHistoryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1335">
+              <caret line="99" column="96" lean-forward="false" selection-start-line="99" selection-start-column="96" selection-end-line="99" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -155,9 +195,7 @@
         <option value="$PROJECT_DIR$/Personals.json" />
         <option value="$PROJECT_DIR$/src/sample/deneme.java" />
         <option value="$PROJECT_DIR$/src/deneme2.java" />
-        <option value="$PROJECT_DIR$/src/sample/Personal.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
-        <option value="$PROJECT_DIR$/src/Notes.txt" />
         <option value="$PROJECT_DIR$/Personals.data" />
         <option value="$PROJECT_DIR$/src/sample/Customer.java" />
         <option value="$PROJECT_DIR$/Vehicle.data" />
@@ -165,14 +203,11 @@
         <option value="$PROJECT_DIR$/src/sample/CustomerHistoryScreen.fxml" />
         <option value="$PROJECT_DIR$/src/sample/MainMenu.fxml" />
         <option value="$PROJECT_DIR$/src/sample/LogOut.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/MainMenuController.java" />
         <option value="$PROJECT_DIR$/src/sample/PersonalLog.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/NewUserController.java" />
         <option value="$PROJECT_DIR$/src/sample/NewVehicleController.java" />
         <option value="$PROJECT_DIR$/src/sample/RentVehicleController.java" />
         <option value="$PROJECT_DIR$/src/sample/RentVehicleController2.java" />
         <option value="$PROJECT_DIR$/src/sample/UserActivitiesController.java" />
-        <option value="$PROJECT_DIR$/src/sample/VehicleDatabaseController.java" />
         <option value="$PROJECT_DIR$/src/sample/NewUserScreen.fxml" />
         <option value="$PROJECT_DIR$/src/sample/NewVehicleScreen.fxml" />
         <option value="$PROJECT_DIR$/src/sample/RentHistoryScreen.fxml" />
@@ -182,12 +217,17 @@
         <option value="$PROJECT_DIR$/src/sample/UserActivitiesScreen.fxml" />
         <option value="$PROJECT_DIR$/src/sample/VehicleDatabaseScreen.fxml" />
         <option value="$PROJECT_DIR$/src/sample/VehicleOffDutyScreen.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Rent.java" />
         <option value="$PROJECT_DIR$/src/sample/RentVehicleController3.java" />
         <option value="$PROJECT_DIR$/src/sample/RentHistoryController.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/SerializeObjects.java" />
         <option value="$PROJECT_DIR$/src/sample/VehicleOffDutyController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Rent.java" />
+        <option value="$PROJECT_DIR$/src/Notes.txt" />
+        <option value="$PROJECT_DIR$/src/sample/NewUserController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Personal.java" />
+        <option value="$PROJECT_DIR$/src/sample/MainMenuController.java" />
+        <option value="$PROJECT_DIR$/src/sample/VehicleDatabaseController.java" />
       </list>
     </option>
   </component>
@@ -239,8 +279,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -269,8 +311,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -444,13 +484,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1509724830326</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Personal parameterized contructor added">
-      <created>1510042165176</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1510042165176</updated>
     </task>
     <task id="LOCAL-00008" summary="Personal objects adds itself when object construted">
       <created>1510042530877</created>
@@ -788,11 +821,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513773781004</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Vehicle off duty datePicker logic bug fix">
+      <created>1513857562706</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1513857562707</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="817" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="817" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -803,7 +843,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32751676" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3261745" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -865,7 +905,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bug Fixes" />
     <MESSAGE value="Small Amount but important changes on NewUserController.java&#10;&#10;---Change Log---&#10;&#10;Added implements initialize method for choicebox&#10;Added privladge for person &#10;Implemented Username Check" />
     <MESSAGE value="Personal.java&#10;&#10;---Change Log---&#10;&#10;-Initialize Personal to File enable now&#10;-Initialize Personal from File enable now" />
     <MESSAGE value="Rent.java - Vehicle.java&#10;&#10;---Change Log---&#10;&#10;-Initialize Rent to File enable now&#10;-Initialize Rent from File enable now&#10;-Initialize Vehicle to File enable now&#10;-Initialize Vehicle from File enable now" />
@@ -890,11 +929,12 @@
     <MESSAGE value="GUI Changes" />
     <MESSAGE value="GUI Changes&#10;&#10;VehicleOffDuty is now active &#10;&#10;There is a problem delete customer on the list needs to be check" />
     <MESSAGE value="Controller Integration new buttons&#10;&#10;Serialize Object integration rent object&#10;New methods added Rent object" />
-    <option name="LAST_COMMIT_MESSAGE" value="Controller Integration new buttons&#10;&#10;Serialize Object integration rent object&#10;New methods added Rent object" />
+    <MESSAGE value="Vehicle off duty datePicker logic bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vehicle off duty datePicker logic bug fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -921,18 +961,10 @@
     <entry file="file://$PROJECT_DIR$/src/deneme2.java" />
     <entry file="file://$PROJECT_DIR$/deneme.json" />
     <entry file="file://$PROJECT_DIR$/src/sample/deneme.java" />
-    <entry file="file://$PROJECT_DIR$/src/Notes.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Personals.data">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,56 +988,10 @@
     <entry file="file://$PROJECT_DIR$/src/sample/LogOut.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/LogOutController.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/PersonalLog.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="89" column="5" lean-forward="false" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MainMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="39" column="43" lean-forward="false" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
-          <folding>
-            <marker date="1513852050000" expanded="false" signature="6672:6678" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/RentVehicleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="173" column="5" lean-forward="true" selection-start-line="173" selection-start-column="5" selection-end-line="173" selection-end-column="5" />
-          <folding>
-            <element signature="method#setChosenCustomer#0;class#RentVehicleController#0" expanded="false" />
-            <element signature="method#deleteUser#0;class#RentVehicleController#0" expanded="false" />
-            <element signature="method#deleteVehicle#0;class#RentVehicleController#0" expanded="false" />
-            <element signature="method#customerHistory#0;class#RentVehicleController#0" expanded="false" />
-            <element signature="method#newUser#0;class#RentVehicleController#0" expanded="false" />
-            <element signature="method#newVehicle#0;class#RentVehicleController#0" expanded="false" />
-            <element signature="method#vehicleDatabase#0;class#RentVehicleController#0" expanded="false" />
-            <element signature="method#rentHistory#0;class#RentVehicleController#0" expanded="false" />
-            <element signature="method#rentVehicle#0;class#RentVehicleController#0" expanded="false" />
-            <element signature="method#userActivities#0;class#RentVehicleController#0" expanded="false" />
-            <element signature="method#vehicleOffDuty#0;class#RentVehicleController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/RentVehicleController2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/NewUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,205 +1004,87 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/PersonalLogController.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Personal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="80" column="19" lean-forward="false" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#585#595#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/VehicleDatabaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Vehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/UserActivitiesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="34" column="45" lean-forward="false" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-          <folding>
-            <marker date="1513852050000" expanded="true" signature="3189:3203" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MainMenu.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="98" column="25" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="98" selection-end-column="25" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/NewUserScreen.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/NewUserScreen.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="98" column="29" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/NewVehicleScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="98" column="29" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/RentHistoryScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="98" column="29" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/RentVehicleScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="98" column="29" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/RentVehicleScreen2.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="98" column="29" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/RentVehicleScreen3.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="98" column="29" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/UserActivitiesScreen.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="98" column="29" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/VehicleDatabaseScreen.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="98" column="29" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/VehicleOffDutyScreen.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Rent.data">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/RentHistoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="99" column="96" lean-forward="false" selection-start-line="99" selection-start-column="96" selection-end-line="99" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/RentVehicleController3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#deleteUser#0;class#RentVehicleController3#0" expanded="false" />
-            <element signature="method#deleteVehicle#0;class#RentVehicleController3#0" expanded="false" />
-            <element signature="method#customerHistory#0;class#RentVehicleController3#0" expanded="false" />
-            <element signature="method#newUser#0;class#RentVehicleController3#0" expanded="false" />
-            <element signature="method#newVehicle#0;class#RentVehicleController3#0" expanded="false" />
-            <element signature="method#vehicleDatabase#0;class#RentVehicleController3#0" expanded="false" />
-            <element signature="method#rentHistory#0;class#RentVehicleController3#0" expanded="false" />
-            <element signature="method#rentVehicle#0;class#RentVehicleController3#0" expanded="false" />
-            <element signature="method#userActivities#0;class#RentVehicleController3#0" expanded="false" />
-            <element signature="method#vehicleOffDuty#0;class#RentVehicleController3#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Rent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="method#initializedVehicleInWork#0;class#Rent#0" expanded="false" />
-            <element signature="method#initializeVehicleOutWork#0;class#Rent#0" expanded="false" />
-            <element signature="method#setVehicleOffDutyDateReal#0;class#Rent#0" expanded="false" />
-            <element signature="e#10736#10737#0" expanded="true" />
-            <element signature="e#10767#10768#0" expanded="true" />
-            <element signature="e#10815#10816#0" expanded="true" />
-            <element signature="e#10855#10856#0" expanded="true" />
-            <element signature="e#10893#10894#0" expanded="true" />
-            <element signature="e#10927#10928#0" expanded="true" />
-            <element signature="e#10981#10982#0" expanded="true" />
-            <element signature="e#11027#11028#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1237,10 +1105,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/UserActivitiesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="34" column="45" lean-forward="false" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+          <folding>
+            <marker date="1513852050000" expanded="true" signature="3189:3203" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/SerializeObjects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="236" column="33" lean-forward="true" selection-start-line="236" selection-start-column="33" selection-end-line="236" selection-end-column="33" />
+        <state relative-caret-position="720">
+          <caret line="178" column="75" lean-forward="false" selection-start-line="178" selection-start-column="75" selection-end-line="178" selection-end-column="75" />
           <folding>
             <element signature="method#initializePersonalObjectToFile#0;class#SerializeObjects#0" expanded="false" />
             <element signature="method#initializePersonalObjectsToFile#0;class#SerializeObjects#0" expanded="false" />
@@ -1249,8 +1127,9 @@
             <element signature="method#initializeVehicleObjectsFromFile#0;class#SerializeObjects#0" expanded="false" />
             <element signature="method#initializeCustomerObjectsFromFile#0;class#SerializeObjects#0" expanded="false" />
             <element signature="method#initializeCustomerObjectsToFile#0;class#SerializeObjects#0" expanded="false" />
-            <element signature="method#initializeRentObjectsFromFile#0;class#SerializeObjects#0" expanded="false" />
             <element signature="method#initializeRentObjectsToFile#0;class#SerializeObjects#0" expanded="false" />
+            <element signature="method#initializeRentLogObjectsFromFile#0;class#SerializeObjects#0" expanded="false" />
+            <element signature="method#initializeRentLogObjectsToFile#0;class#SerializeObjects#0" expanded="false" />
             <element signature="method#clearVehicleData#0;class#SerializeObjects#0" expanded="false" />
             <element signature="method#clearPersonalsData#0;class#SerializeObjects#0" expanded="false" />
             <element signature="method#clearCustomerData#0;class#SerializeObjects#0" expanded="false" />
@@ -1259,10 +1138,162 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/RentVehicleController3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="method#deleteUser#0;class#RentVehicleController3#0" expanded="false" />
+            <element signature="method#deleteVehicle#0;class#RentVehicleController3#0" expanded="false" />
+            <element signature="method#customerHistory#0;class#RentVehicleController3#0" expanded="false" />
+            <element signature="method#newUser#0;class#RentVehicleController3#0" expanded="false" />
+            <element signature="method#newVehicle#0;class#RentVehicleController3#0" expanded="false" />
+            <element signature="method#vehicleDatabase#0;class#RentVehicleController3#0" expanded="false" />
+            <element signature="method#rentHistory#0;class#RentVehicleController3#0" expanded="false" />
+            <element signature="method#rentVehicle#0;class#RentVehicleController3#0" expanded="false" />
+            <element signature="method#userActivities#0;class#RentVehicleController3#0" expanded="false" />
+            <element signature="method#vehicleOffDuty#0;class#RentVehicleController3#0" expanded="false" />
+            <element signature="method#logOut#0;class#RentVehicleController3#0" expanded="false" />
+            <element signature="method#personalLog#0;class#RentVehicleController3#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/VehicleOffDutyScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/VehicleDatabaseScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="98" column="29" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Vehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Notes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/RentHistoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="99" column="96" lean-forward="false" selection-start-line="99" selection-start-column="96" selection-end-line="99" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Rent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+          <folding>
+            <element signature="method#initializedVehicleInWork#0;class#Rent#0" expanded="false" />
+            <element signature="method#initializeVehicleOutWork#0;class#Rent#0" expanded="false" />
+            <element signature="method#setVehicleOffDutyDateReal#0;class#Rent#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/UserActivitiesScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="92" column="18" lean-forward="false" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/VehicleOffDutyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="-14">
+          <caret line="47" column="56" lean-forward="true" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="65" column="59" lean-forward="true" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Personal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MainMenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1770">
+          <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <folding>
+            <marker date="1513937770000" expanded="false" signature="6674:6680" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/RentVehicleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="807">
+          <caret line="82" column="26" lean-forward="true" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+          <folding>
+            <element signature="method#setChosenCustomer#0;class#RentVehicleController#0" expanded="false" />
+            <element signature="method#deleteUser#0;class#RentVehicleController#0" expanded="false" />
+            <element signature="method#deleteVehicle#0;class#RentVehicleController#0" expanded="false" />
+            <element signature="method#customerHistory#0;class#RentVehicleController#0" expanded="false" />
+            <element signature="method#newUser#0;class#RentVehicleController#0" expanded="false" />
+            <element signature="method#newVehicle#0;class#RentVehicleController#0" expanded="false" />
+            <element signature="method#vehicleDatabase#0;class#RentVehicleController#0" expanded="false" />
+            <element signature="method#rentHistory#0;class#RentVehicleController#0" expanded="false" />
+            <element signature="method#rentVehicle#0;class#RentVehicleController#0" expanded="false" />
+            <element signature="method#userActivities#0;class#RentVehicleController#0" expanded="false" />
+            <element signature="method#vehicleOffDuty#0;class#RentVehicleController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/NewUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/VehicleDatabaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
           <folding />
         </state>
       </provider>

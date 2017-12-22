@@ -143,7 +143,7 @@ public class MainMenuController {
             Stage LogOutStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             LogOutStage.setScene(LogOutScene);
             LogOutStage.show();
-            Personal.currentUser = null;
+            //Personal.currentUser = null;
         } else {
             LogOutDialog.close();
         }

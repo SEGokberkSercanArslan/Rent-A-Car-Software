@@ -30,40 +30,49 @@ public class NewUserController extends MainMenuController implements Initializab
     @FXML
     public void saveUser(ActionEvent event) throws IOException {
 
-            for (int counter=0;counter<Personal.info.size();counter++){
-                if(!Objects.equals(Personal.currentUser.getPrivilege(), "Admin")){
-                    Alert PrivilegeError = new Alert(Alert.AlertType.ERROR);
-                    PrivilegeError.setTitle("Error");
-                    PrivilegeError.setHeaderText("Permission Error");
-                    PrivilegeError.setContentText("You don't have permission for add personal.");
-                    PrivilegeError.showAndWait();
-                    isEmployee = true;
-                    break;
-                }
-                else if (Objects.equals(UsernameField.getText(), Personal.info.get(counter).getUsername())){
-                    Alert UserNameMatched = new Alert(Alert.AlertType.ERROR);
-                    UserNameMatched.setTitle("Error");
-                    UserNameMatched.setHeaderText("User Name Matched ");
-                    UserNameMatched.setContentText("Look like another employee use this username please found another one.");
-                    UserNameMatched.showAndWait();
-                    isEmployee = true;
-                    break;
-                }
-                else if(Objects.equals(IdNumberField.getText(), Personal.info.get(counter).getIdNumber())){
-                    Alert IdMatchedDB = new Alert(Alert.AlertType.ERROR);
-                    IdMatchedDB.setTitle("Error");
-                    IdMatchedDB.setHeaderText("ID Matched");
-                    IdMatchedDB.setContentText("Given ID number matched another person's ID in database Please check ID again.");
-                    IdMatchedDB.showAndWait();
-                    isEmployee = true;
-                    break;
-                }
-                else {
-                    isEmployee = false;
-                }
-
+            if ((Objects.equals(NameField.getText(), "") || Objects.equals(SurnameField.getText(), "") || Objects.equals(TelephoneField.getText(), "") ||
+                    Objects.equals(UsernameField.getText(), "") || Objects.equals(EmailField.getText(), "") || Objects.equals(PasswordField.getText(), "") ||
+                    Objects.equals(AddressField.getText(), "") || Objects.equals(IdNumberField.getText(), ""))){
+                Alert EmptyField = new Alert(Alert.AlertType.ERROR);
+                EmptyField.setTitle("Error");
+                EmptyField.setHeaderText("You must fill the boxes");
+                EmptyField.showAndWait();
+                isEmployee = true;
             }
+            else {
+                for (int counter = 0; counter < Personal.info.size(); counter++) {
+                    if (!Objects.equals(Personal.currentUser.getPrivilege(), "Admin")) {
+                        Alert PrivilegeError = new Alert(Alert.AlertType.ERROR);
+                        PrivilegeError.setTitle("Error");
+                        PrivilegeError.setHeaderText("Permission Error");
+                        PrivilegeError.setContentText("You don't have permission for add personal.");
+                        PrivilegeError.showAndWait();
+                        isEmployee = true;
+                        break;
+                    } else if (Objects.equals(UsernameField.getText(), Personal.info.get(counter).getUsername())) {
+                        Alert UserNameMatched = new Alert(Alert.AlertType.ERROR);
+                        UserNameMatched.setTitle("Error");
+                        UserNameMatched.setHeaderText("User Name Matched ");
+                        UserNameMatched.setContentText("Look like another employee use this username please found another one.");
+                        UserNameMatched.showAndWait();
+                        isEmployee = true;
+                        break;
+                    } else if (Objects.equals(IdNumberField.getText(), Personal.info.get(counter).getIdNumber())) {
+                        Alert IdMatchedDB = new Alert(Alert.AlertType.ERROR);
+                        IdMatchedDB.setTitle("Error");
+                        IdMatchedDB.setHeaderText("ID Matched");
+                        IdMatchedDB.setContentText("Given ID number matched another person's ID in database Please check ID again.");
+                        IdMatchedDB.showAndWait();
+                        isEmployee = true;
+                        break;
+                    }
 
+                    else {
+                        isEmployee = false;
+                    }
+
+                }
+            }
 
         if (!isEmployee){
             Personal newPersonal = new Personal(NameField.getText(),SurnameField.getText(),EmailField.getText(),TelephoneField.getText()
