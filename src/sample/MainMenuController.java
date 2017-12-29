@@ -46,6 +46,7 @@ public class MainMenuController {
         Parent newUserScreen = FXMLLoader.load(getClass().getResource("NewUserScreen.fxml"));
         Scene newUserScene = new Scene(newUserScreen);
         Stage newUserStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        newUserStage.setResizable(false);
         newUserStage.setScene(newUserScene);
         newUserStage.show();
     }
@@ -55,6 +56,7 @@ public class MainMenuController {
         Parent deleteUserScreen = FXMLLoader.load(getClass().getResource("DeleteUserScreen.fxml"));
         Scene deleteUserScene = new Scene(deleteUserScreen);
         Stage deleteUSerStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        deleteUSerStage.setResizable(false);
         deleteUSerStage.setScene(deleteUserScene);
         deleteUSerStage.show();
     }
@@ -64,6 +66,7 @@ public class MainMenuController {
         Parent vehicleDatabaseScreen = FXMLLoader.load(getClass().getResource("VehicleDatabaseScreen.fxml"));
         Scene vehicleDatabaseScene = new Scene(vehicleDatabaseScreen);
         Stage vehicleDatabaseStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        vehicleDatabaseStage.setResizable(false);
         vehicleDatabaseStage.setScene(vehicleDatabaseScene);
         vehicleDatabaseStage.show();
     }
@@ -73,6 +76,7 @@ public class MainMenuController {
         Parent newVehicleScreen = FXMLLoader.load(getClass().getResource("NewVehicleScreen.fxml"));
         Scene newVehicleScene = new Scene(newVehicleScreen);
         Stage newVehicleStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        newVehicleStage.setResizable(false);
         newVehicleStage.setScene(newVehicleScene);
         newVehicleStage.show();
     }
@@ -82,6 +86,7 @@ public class MainMenuController {
         Parent deleteVehicleScreen = FXMLLoader.load(getClass().getResource("DeleteVehicleScreen.fxml"));
         Scene deleteVehicleScene = new Scene(deleteVehicleScreen);
         Stage deleteVehicleStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        deleteVehicleStage.setResizable(false);
         deleteVehicleStage.setScene(deleteVehicleScene);
         deleteVehicleStage.show();
     }
@@ -91,6 +96,7 @@ public class MainMenuController {
         Parent rentVehicleScreen = FXMLLoader.load(getClass().getResource("RentVehicleScreen.fxml"));
         Scene rentVehicleScene = new Scene(rentVehicleScreen);
         Stage rentVehicleStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        rentVehicleStage.setResizable(false);
         rentVehicleStage.setScene(rentVehicleScene);
         rentVehicleStage.show();
     }
@@ -100,6 +106,7 @@ public class MainMenuController {
         Parent rentHistoryScreen = FXMLLoader.load(getClass().getResource("RentHistoryScreen.fxml"));
         Scene rentHistoryScene = new Scene(rentHistoryScreen);
         Stage rentHistoryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        rentHistoryStage.setResizable(false);
         rentHistoryStage.setScene(rentHistoryScene);
         rentHistoryStage.show();
     }
@@ -109,6 +116,7 @@ public class MainMenuController {
         Parent vehicleOffDutyScreen = FXMLLoader.load(getClass().getResource("VehicleOffDutyScreen.fxml"));
         Scene vehicleOffDutyScene = new Scene(vehicleOffDutyScreen);
         Stage vehicleOffDutyStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        vehicleOffDutyStage.setResizable(false);
         vehicleOffDutyStage.setScene(vehicleOffDutyScene);
         vehicleOffDutyStage.show();
     }
@@ -118,6 +126,7 @@ public class MainMenuController {
         Parent customerHistoryScreen = FXMLLoader.load(getClass().getResource("CustomerHistoryScreen.fxml"));
         Scene customerHistoryScene = new Scene(customerHistoryScreen);
         Stage customerHistoryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        customerHistoryStage.setResizable(false);
         customerHistoryStage.setScene(customerHistoryScene);
         customerHistoryStage.show();
     }
@@ -127,6 +136,7 @@ public class MainMenuController {
         Parent PersonalLog = FXMLLoader.load(getClass().getResource("PersonalLog.fxml"));
         Scene PersonalLogScene = new Scene(PersonalLog);
         Stage PersonalLogStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        PersonalLogStage.setResizable(false);
         PersonalLogStage.setScene(PersonalLogScene);
         PersonalLogStage.show();
     }
@@ -141,6 +151,7 @@ public class MainMenuController {
             Parent LogOut = FXMLLoader.load(getClass().getResource("LoginMenu.fxml"));
             Scene LogOutScene = new Scene(LogOut);
             Stage LogOutStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            LogOutStage.setResizable(false);
             LogOutStage.setScene(LogOutScene);
             LogOutStage.show();
             //Personal.currentUser = null;

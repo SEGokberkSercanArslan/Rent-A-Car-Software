@@ -67,6 +67,7 @@ public class Controller {
                     Parent MainMenu = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
                     Scene MainMenuScene = new Scene(MainMenu);
                     Stage MainMenuStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    MainMenuStage.setResizable(false);
                     MainMenuStage.setScene(MainMenuScene);
                     MainMenuStage.show();
                 }

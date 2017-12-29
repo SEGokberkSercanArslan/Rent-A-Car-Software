@@ -1,5 +1,0 @@
-
-
-Vehicle off duty controller line 48 calculation error fix it .
-Still read a one log , fix the error.
-Main menu log out bux fix.
